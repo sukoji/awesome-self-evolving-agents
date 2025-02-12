@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200" role="img" aria-label="Awesome Self-Evolving Agents">
+  <style>
+    .title { font: 600 34px -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #d85a30; }
+    .sub   { font: 400 15px -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #888780; }
+    .kick  { font: 500 12px ui-monospace, "SFMono-Regular", Menlo, monospace; fill: #1d9e75; letter-spacing: 2px; }
+    .node  { fill: none; stroke: #888780; stroke-width: 1.4; }
+    .edge  { stroke: #b4b2a9; stroke-width: 1.2; fill: none; }
+    .hot   { fill: #d85a30; stroke: #d85a30; }
+  </style>
+
+  <!-- iteration motif: an agent graph that folds back on itself -->
+  <g transform="translate(56,58)">
+    <path class="edge" d="M14 14 H86" />
+    <path class="edge" d="M86 14 V54" />
+    <path class="edge" d="M86 54 H14" />
+    <path class="edge" d="M14 54 V22" />
+    <path class="edge" d="M50 14 L50 54" stroke-dasharray="3 4" />
+    <circle class="node" cx="14" cy="14" r="6" />
+    <circle class="node" cx="86" cy="14" r="6" />
+    <circle class="node" cx="86" cy="54" r="6" />
+    <circle class="hot"  cx="14" cy="54" r="6" />
+    <circle class="node" cx="50" cy="14" r="5" />
+    <circle class="node" cx="50" cy="54" r="5" />
+  </g>
+
+  <text class="kick" x="176" y="52">AWESOME</text>
+  <text class="title" x="176" y="92">Self-Evolving Agents</text>
+  <text class="sub" x="176" y="120">Agents that improve themselves — and the ways that quietly goes wrong.</text>
+  <text class="sub" x="176" y="142">Curated papers · a runnable primer · a hard look at failure &amp; safety.</text>
+</svg>
