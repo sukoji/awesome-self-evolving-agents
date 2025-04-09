@@ -1,12 +1,34 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Awesome Self-Evolving Agents" width="820">
+  <img src="assets/banner.svg" alt="Awesome Self-Evolving Agents" width="840">
 </p>
 
 <p align="center">
-  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0%201.0-lightgrey.svg" alt="License: CC0-1.0"></a>
-  <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-1d9e75.svg" alt="Runnable code"></a>
-  <img src="https://img.shields.io/badge/last%20reviewed-2026--07-blue.svg" alt="Last reviewed 2026-07">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
+  <a href="https://github.com/OWNER/REPO/stargazers"><img src="https://img.shields.io/github/stars/OWNER/REPO?style=flat&labelColor=1b1b1b&color=d85a30" alt="Stars"></a>
+  <a href="https://github.com/OWNER/REPO/network/members"><img src="https://img.shields.io/github/forks/OWNER/REPO?style=flat&labelColor=1b1b1b&color=c0417a" alt="Forks"></a>
+  <a href="https://github.com/OWNER/REPO/commits/main"><img src="https://img.shields.io/github/last-commit/OWNER/REPO?style=flat&labelColor=1b1b1b&color=1d9e75" alt="Last commit"></a>
+  <a href="https://github.com/OWNER/REPO/graphs/contributors"><img src="https://img.shields.io/github/contributors/OWNER/REPO?style=flat&labelColor=1b1b1b&color=378add" alt="Contributors"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/papers-90+-8a63d2?style=flat&labelColor=1b1b1b" alt="90+ papers">
+  <img src="https://img.shields.io/badge/topics-13-1d9e75?style=flat&labelColor=1b1b1b" alt="13 topics">
+  <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-d85a30?style=flat&labelColor=1b1b1b" alt="Runnable code"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat&labelColor=1b1b1b" alt="PRs welcome"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat&labelColor=1b1b1b" alt="License: CC0-1.0"></a>
+</p>
+
+<p align="center">
+  <sub><b>90+ papers</b> across <b>13 topics</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-07</b></sub>
+</p>
+
+<p align="center">
+  <a href="docs/primer.md">Primer</a> ·
+  <a href="#the-four-evolution-pathways">Taxonomy</a> ·
+  <a href="#safety-misevolution-and-defenses">Safety</a> ·
+  <a href="#reference-implementations">Code</a> ·
+  <a href="#a-reading-path">Reading path</a> ·
+  <a href="#updates">Updates</a>
 </p>
 
 A curated, deliberately opinionated map of **self-evolving / self-improving LLM agents**: systems that keep changing themselves after deployment — refining their prompts, memory, tools, and even weights from their own experience.
@@ -37,6 +59,8 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 - [Domain applications](#domain-applications)
 - [Reference implementations](#reference-implementations)
 - [A reading path](#a-reading-path)
+- [Updates](#updates)
+- [How this list is maintained](#how-this-list-is-maintained)
 - [Related lists](#related-lists)
 - [Contributing](#contributing)
 - [License](#license)
@@ -327,6 +351,42 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 **If you care about deployment-time learning:** Reflexion → EvoTest → TT-SI → TMEM → TAME.
 
 **If you care about evaluation:** the surveys' benchmark sections → StuLife → Evo-Memory → SkillFlow.
+
+---
+
+## Updates
+
+A running log so you can see what changed without diffing. Newest first.
+
+- **2026-07** — Added the safety section around *misevolution* and its first defense (*TAME*); shipped the two runnable reference implementations and the primer. Expanded parametric-memory coverage (*TMEM*, *Doc-to-LoRA*).
+- **2026-05** — Added the RL-for-self-evolution cluster (*Evolving-RL*, meta-evaluation rewards) and the skill-evolution wave (*AutoSkill*, *SkillFlow*, *EvoSkill*, *SkillRL*).
+- **2026-03** — Reorganized around the four evolution pathways after the *What/When/How/Where* survey; folded in the automated-design lineage (ADAS → AFlow → MaAS → ABSTRAL).
+- **2026-01** — First public cut: surveys, foundations, and the failure-analysis section (*MAST*, *RAFFLES*).
+
+> Watching the repo (top-right of the page) is the reliable way to get these — the `last-commit` badge above updates on every merge.
+
+---
+
+## How this list is maintained
+
+A few notes on process, because a curated list is only as good as its upkeep:
+
+- **Entries are read, not scraped.** Each one gets a single neutral sentence describing what the work *does*. If a description reads like a press release, it hasn't been reviewed yet — open an issue.
+- **Links are checked, not guessed.** Where a stable ID could not be verified, the entry is kept without a link and flagged rather than given a fabricated one. Accuracy beats completeness.
+- **Monthly review pass.** Roughly once a month the newest work is triaged into the taxonomy and the [Updates](#updates) log is appended. The date in the banner reflects the last pass.
+- **Scope is enforced.** New sub-areas are added only when several papers justify them, to keep the list walkable rather than exhaustive. See [related lists](#related-lists) for wider, more encyclopedic coverage.
+
+Found something wrong or missing? Corrections are the most welcome PRs of all — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## Star history
+
+<p align="center">
+  <a href="https://star-history.com/#OWNER/REPO&Date">
+    <img src="https://api.star-history.com/svg?repos=OWNER/REPO&type=Date" alt="Star history chart" width="620">
+  </a>
+</p>
 
 ---
 

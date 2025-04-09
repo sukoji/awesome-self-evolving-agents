@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Awesome Self-Evolving Agents"
+message: "If this list helped your work, please consider citing or starring it."
+type: dataset
+authors:
+  - family-names: "YOUR_LAST_NAME"
+    given-names: "YOUR_FIRST_NAME"
+repository-code: "https://github.com/OWNER/REPO"
+url: "https://github.com/OWNER/REPO"
+abstract: >-
+  A curated, opinionated map of self-evolving and self-improving LLM agents:
+  automated agent/workflow design, test-time learning, evolving memory, skill
+  acquisition, reinforcement learning for self-improvement, and the failure and
+  safety problems these create — with two runnable reference implementations.
+keywords:
+  - large-language-models
+  - llm-agents
+  - self-evolving-agents
+  - self-improving-agents
+  - multi-agent-systems
+  - agent-safety
+  - misevolution
+license: CC0-1.0
+date-released: "2026-07-01"
