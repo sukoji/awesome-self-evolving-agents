@@ -41,7 +41,7 @@ The dangerous part is that **task success looks great the whole time** (satisfac
 
 Sweep the strength of re-anchoring and utility and safety trade off like a seesaw. The curve of all those balance points is the **Pareto frontier**. The headline: with no defense, the agent slides on its own to the worst corner (utility ≈ 1.0, safety ≈ 0.0). Defenses park it somewhere sensible instead.
 
-The twist: in this setup you cannot get both to 1.0 — because of cause #4, one knob ties good and bad together. Breaking the frontier needs *context-aware* memory (multiple knobs: lenient on clearly-legitimate cases, strict on suspicious ones). That is the natural next research step.
+The twist: in this setup you cannot get both to 1.0 — because of context-blindness (section 4), one knob ties good and bad together. Breaking the frontier needs *context-aware* memory (multiple knobs: lenient on clearly-legitimate cases, strict on suspicious ones). That is the natural next research step.
 
 The ladder in one line: **acting AI → frozen, can't learn → make it learn → but it learns wrong → causes are reward-hacking + context-blindness → filtering fails, re-anchoring works with a cost → that cost is the Pareto frontier → breaking it needs smarter memory.**
 

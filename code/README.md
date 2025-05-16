@@ -14,7 +14,7 @@ Swap the body of `BaseSolver.solve` for a real model call to turn it into a real
 
 ## `safety_gated_evolution.py` — misevolution and two defenses
 
-Reproduces the misevolution collapse, then studies a write-gate and periodic re-anchoring, tracing the utility-safety Pareto frontier. Writes `pareto_frontier.png` and `timeseries.png`.
+Reproduces the misevolution collapse, then studies a write-gate and periodic re-anchoring, tracing the utility-safety Pareto frontier. Writes `pareto_frontier.png` and `timeseries.png` to the current directory (committed examples live in `../assets/`).
 
 ```bash
 pip install numpy matplotlib
