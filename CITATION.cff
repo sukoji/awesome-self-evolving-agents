@@ -5,8 +5,8 @@ type: dataset
 authors:
   - family-names: "Jim"
     given-names: "Suko"
-repository-code: "https://github.com/jskh-201910840/awesome-self-evolving-agents"
-url: "https://github.com/jskh-201910840/awesome-self-evolving-agents"
+repository-code: "https://github.com/sukoji/awesome-self-evolving-agents"
+url: "https://github.com/sukoji/awesome-self-evolving-agents"
 abstract: >-
   A curated, opinionated map of self-evolving and self-improving LLM agents:
   automated agent/workflow design, test-time learning, evolving memory, skill
