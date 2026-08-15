@@ -208,6 +208,7 @@ The sharpest current design axis: keep experience as *text you retrieve* or writ
 
 Accumulate reusable capability across a long life of tasks — and try not to forget or drift.
 
+- **RewardHarness: Self-Evolving Agentic Post-Training** — 2026. [arXiv:2605.08703](https://arxiv.org/abs/2605.08703). Evolves a reusable library of scoring skills and tools from preference feedback while keeping the evaluator model frozen.
 - **Building Self-Evolving Agents via Experience-Driven Lifelong Learning (ELL) + StuLife** — 2025. [arXiv:2508.19005](https://arxiv.org/abs/2508.19005). Formalizes ELL (long-term memory, skill learning, self-motivation) and ships StuLife, a simulated college-life benchmark for it.
 - **Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System** — 2026. [arXiv:2601.18226](https://arxiv.org/abs/2601.18226). An end-to-end reproducible self-evolving system for open-ended tasks.
 - **AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution** — 2026. [arXiv:2603.01145](https://arxiv.org/abs/2603.01145). When to extract a skill, what to keep, how to control forgetting.
