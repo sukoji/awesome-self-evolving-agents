@@ -256,6 +256,8 @@ The corrective literature. If you are building any of the above, read this secti
 - **Dissecting Bug Triggers and Failure Modes in Modern Agentic Frameworks** — 2026. [arXiv:2604.08906](https://arxiv.org/abs/2604.08906). Empirical study on AutoGen, CrewAI, SmolAgents.
 - **Efficient Failure Management for Multi-Agent Systems with Reasoning Trace Representation** — 2026. [arXiv:2603.21522](https://arxiv.org/abs/2603.21522). Manages multi-agent failures using compact reasoning-trace representations.
 
+- **Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report** — arXiv 2026. [arXiv:2608.15763](https://arxiv.org/abs/2608.15763). Studies how fixed-harness training impedes later runtime edits and tests harness-state augmentation with frozen-weight edit evaluation.
+
 ---
 
 ## Safety: misevolution and defenses
