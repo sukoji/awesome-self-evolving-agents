@@ -27,7 +27,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 |---------|--------|---------|-------|
 | [**OpenHands**](https://github.com/OpenHands/OpenHands) | OpenHands | workflow · tool | Open platform for code agents — event stream, sandbox, delegation; active SWE-bench ecosystem. |
 | [**DSPy**](https://github.com/stanfordnlp/dspy) | Stanford NLP | workflow | Compile declarative LM pipelines into self-improving programs (prompt/weight optimizers). |
-| [**EvoAgentX**](https://github.com/EvoAgentX/EvoAgentX) | EvoAgentX | workflow | Framework for evolving multi-agent workflows with search and evaluation hooks. |
+| [**EvoAgentX**](https://github.com/ANative-Lab/EvoAgentX) | EvoAgentX | workflow | Framework for evolving multi-agent workflows with search and evaluation hooks. |
 | [**smolagents**](https://github.com/huggingface/smolagents) | Hugging Face | tool · workflow | Minimal agent library — code actions, tool routing, small surface area for experiments. |
 
 ---
@@ -49,7 +49,6 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 | [**AgentBench**](https://github.com/THUDM/AgentBench) | THUDM | — | Multi-environment benchmark for LLM-as-agent capability. |
 | [**τ-bench**](https://github.com/sierra-research/tau-bench) | Sierra Research | — | Tool–agent–user interaction in customer-service domains. |
 | [**sympo**](https://github.com/sukoji/sympo) | sukoji | workflow | Multi-agent PRD→WBS debate with eval harness and ablations. |
-| [**tierforge**](https://github.com/sukoji/tierforge) | sukoji | — | Agent failure taxonomy and trace tooling for production-style eval. |
 
 ---
 
@@ -57,7 +56,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 
 | Project | Author | Pathway | Focus |
 |---------|--------|---------|-------|
-| [**AgentHarm**](https://github.com/ai-safety-institute/AgentHarm) | UK AISI | — | Benchmark for harmful capabilities in tool-using agents. |
+| [**AgentHarm**](https://huggingface.co/datasets/ai-safety-institute/AgentHarm) | UK AISI | — | Benchmark for harmful capabilities in tool-using agents. |
 | [**Mem0**](https://github.com/mem0ai/mem0) | mem0ai | memory | Memory layer for personalized agents — write/retrieve over long horizons. |
 
 ---
@@ -66,7 +65,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 
 | Project | Author | Focus |
 |---------|--------|-------|
-| [**EvoAgentX/Awesome-Self-Evolving-Agents**](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents) | EvoAgentX | Companion awesome list to the comprehensive survey. |
+| [**EvoAgentX/Awesome-Self-Evolving-Agents**](https://github.com/ANative-Lab/Awesome-Self-Evolving-Agents) | EvoAgentX | Companion awesome list to the comprehensive survey. |
 | [**XMUDeepLIT/Awesome-Self-Evolving-Agents**](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents) | XMUDeepLIT | Survey-aligned paper collection (what/when/how/where). |
 | [**multi-agent-paper-log**](https://github.com/sukoji/multi-agent-paper-log) | sukoji | Paper-by-paper TIL on multi-agent systems (feeds this list). |
 
