@@ -131,6 +131,7 @@ Start here to get the shape of the field before diving into primary work.
 - **A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems** — arXiv 2025. [arXiv:2508.07407](https://arxiv.org/abs/2508.07407). Section 5.2 on self-evolving multi-agent systems is the cleanest short treatment of design-as-search.
 - **A Systematic Survey of Self-Evolving Agents: From Model-Centric to Environment-Driven Co-Evolution** — 2026 (Xiang et al.). [TechRxiv](https://doi.org/10.36227/techrxiv.177203250.05832634/v2). Taxonomy of model-centric, environment-centric, and co-evolutionary self-improvement loops.
 - **Lifelong Learning of Large Language Model Based Agents: A Roadmap** — IEEE TPAMI 2026 (Zheng et al.). [arXiv:2501.07278](https://arxiv.org/abs/2501.07278). Organizes the lifelong-agent problem around a perception / memory / action pipeline.
+- **Self-Improvements in Modern Agentic Systems: A Survey** — 2026. [arXiv:2607.13104](https://arxiv.org/abs/2607.13104). Surveys self-improvement across modern agentic systems, later than the two surveys above and covering the coding-agent and zero-data lines they predate.
 
 ---
 
