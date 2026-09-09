@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="Awesome Self-Evolving Agents">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff8a3d"/>
+      <stop offset="48%"  stop-color="#f2497f"/>
+      <stop offset="100%" stop-color="#20d29a"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff7a45" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#31c894" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#14161a"/>
+      <stop offset="100%" stop-color="#1f1e1c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#ground)"/>
+  <rect x="0" y="0" width="1280" height="7" fill="url(#rule)"/>
+
+  <g transform="translate(104,232) scale(2.0)" fill="none">
+    <g stroke="#4f4d47" stroke-width="2.4">
+      <path d="M16 16 H96 M96 16 V64 M96 64 H16 M16 64 V28"/>
+      <path d="M56 16 V64" stroke-dasharray="4 6"/>
+      <path d="M16 16 L56 64 M56 16 L96 64" stroke-opacity="0.45"/>
+    </g>
+    <g fill="#14161a" stroke="#83817a" stroke-width="2.6">
+      <circle cx="16" cy="16" r="7"/>
+      <circle cx="96" cy="16" r="7"/>
+      <circle cx="96" cy="64" r="7"/>
+      <circle cx="56" cy="16" r="6"/>
+      <circle cx="56" cy="64" r="6"/>
+    </g>
+    <circle cx="16" cy="64" r="8.5" fill="#ff7a45" stroke="none"/>
+  </g>
+
+  <text x="420" y="188" font-family="Arial" font-size="21" font-weight="bold" letter-spacing="7" fill="#31c894">AWESOME LIST</text>
+  <text x="416" y="296" font-family="Arial" font-size="76" font-weight="bold" fill="url(#grad)">Self-Evolving Agents</text>
+  <rect x="420" y="330" width="620" height="5" rx="2.5" fill="url(#rule)"/>
+  <text x="420" y="392" font-family="Arial" font-size="29" fill="#bdbbb4">Agents that improve themselves — and the</text>
+  <text x="420" y="432" font-family="Arial" font-size="29" fill="#bdbbb4">ways that quietly goes wrong.</text>
+  <text x="420" y="500" font-family="Arial" font-size="24" font-weight="bold" fill="#94928b">145+ papers · 16 topics · 2 runnable demos</text>
+  <text x="420" y="536" font-family="Arial" font-size="24" font-weight="bold" fill="#94928b">every link machine-checked in CI</text>
+  <text x="420" y="594" font-family="Arial" font-size="21" fill="#726f69">github.com/sukoji/awesome-self-evolving-agents</text>
+</svg>
