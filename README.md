@@ -257,6 +257,7 @@ Software engineering has become the flagship domain for self-evolution, because 
 - **AlphaApollo: A System for Deep Agentic Reasoning** — 2026. [arXiv:2510.06261](https://arxiv.org/abs/2510.06261).
 - **SEMAG: Self-Evolutionary Multi-Agent Code Generation** — 2026. [arXiv:2603.15707](https://arxiv.org/abs/2603.15707).
 - **Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents** — 2025. [arXiv:2505.22954](https://arxiv.org/abs/2505.22954). Rewrites its own code and keeps an archive of every variant, so improvements that look like dead ends stay available to build on later.
+- **AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery** — 2025. [arXiv:2506.13131](https://arxiv.org/abs/2506.13131). Evolves programs against an automated evaluator, and reports discovered algorithms that improve on the best known ones.
 - **Co-evolving LLM Coder and Unit Tester via Reinforcement Learning** — NeurIPS 2025. Coder and test-writer improve against each other.
 
 ---
