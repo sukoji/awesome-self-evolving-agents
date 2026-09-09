@@ -22,6 +22,26 @@ Contributions are welcome. This list aims to stay *walkable*, so quality and acc
 
 ---
 
+## What happens after you open a pull request
+
+Two checks run, and between them they decide whether a human needs to read your
+pull request at all.
+
+- **link check** re-resolves every arXiv identifier in the list through the arXiv
+  API, compares each returned title with the entry's own, and requests every
+  other link.
+- **entry guard** looks at your diff. If it only *adds* to `README.md` or
+  `COMMUNITY.md`, is at most three lines, matches the entry format, links
+  somewhere that answers, and is not already in the list, the pull request is
+  put on auto-merge and lands as soon as the checks are green.
+
+Anything else — a reworded description, a new section, a change under
+`.github/`, `code/`, or `docs/` — is left for a maintainer, and the guard
+comments on the pull request saying which rule sent it there. That is not a
+rejection; most substantive contributions land this way.
+
+---
+
 ## Community projects
 
 **Papers** live in `README.md`. **Runnable repos, harnesses, and benchmarks** live in [`COMMUNITY.md`](COMMUNITY.md).

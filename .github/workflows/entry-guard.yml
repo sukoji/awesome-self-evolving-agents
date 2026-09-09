@@ -1,0 +1,65 @@
+name: entry guard
+
+# Decides whether a pull request is a routine list addition and, if it is,
+# turns on GitHub's auto-merge so it lands once the required checks pass.
+#
+# Runs on pull_request_target, which means a write-capable token. It therefore
+# never checks out the pull request: it checks out this repository's default
+# branch and reads the pull request only as diff text through the API. Nothing
+# from a contributor's branch is executed here.
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Judge the diff
+        id: judge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          gh pr diff "$PR" --patch > /tmp/pr.patch
+          if python .github/scripts/check_entry.py < /tmp/pr.patch > /tmp/verdict.txt; then
+            echo "routine=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "routine=false" >> "$GITHUB_OUTPUT"
+          fi
+          cat /tmp/verdict.txt
+
+      - name: Enable auto-merge
+        if: steps.judge.outputs.routine == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: gh pr merge "$PR" --auto --squash
+
+      - name: Explain why a human is needed
+        if: steps.judge.outputs.routine == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          {
+            echo "This pull request is not a routine list addition, so it will not"
+            echo "be merged automatically. A maintainer will read it."
+            echo
+            sed 's/^BLOCK /- /' /tmp/verdict.txt
+          } > /tmp/comment.md
+          gh pr comment "$PR" --body-file /tmp/comment.md
