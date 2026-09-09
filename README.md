@@ -130,7 +130,7 @@ Start here to get the shape of the field before diving into primary work.
 - **A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence** — TMLR 2026. [arXiv:2507.21046](https://arxiv.org/abs/2507.21046). Organizes work by the *what/when/how/where* of evolution and traces the ADAS→AFlow→MaAS lineage.
 - **A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems** — arXiv 2025. [arXiv:2508.07407](https://arxiv.org/abs/2508.07407). Section 5.2 on self-evolving multi-agent systems is the cleanest short treatment of design-as-search.
 - **A Systematic Survey of Self-Evolving Agents: From Model-Centric to Environment-Driven Co-Evolution** — 2026 (Xiang et al.). [TechRxiv](https://doi.org/10.36227/techrxiv.177203250.05832634/v2). Taxonomy of model-centric, environment-centric, and co-evolutionary self-improvement loops.
-- **Lifelong Learning of Large Language Model Based Agents: A Roadmap** — IEEE TPAMI 2026 (Zheng et al.). needs-link. Organizes the lifelong-agent problem around a perception / memory / action pipeline.
+- **Lifelong Learning of Large Language Model Based Agents: A Roadmap** — IEEE TPAMI 2026 (Zheng et al.). `needs-link`. Organizes the lifelong-agent problem around a perception / memory / action pipeline.
 
 ---
 
@@ -160,20 +160,20 @@ Design the multi-agent system by *searching* over prompts, roles, and topology i
 - **AFlow: Automating Agentic Workflow Generation** — ICLR 2025 (Oral). [arXiv:2410.10762](https://arxiv.org/abs/2410.10762). Makes ADAS practical with reusable operators and Monte Carlo Tree Search over workflows.
 - **Multi-agent Architecture Search via Agentic Supernet (MaAS)** — ICML 2025 (Oral). [arXiv:2502.04180](https://arxiv.org/abs/2502.04180). Samples a query-specific multi-agent system from a probabilistic supernet.
 - **AgentSquare: Automatic LLM Agent Search in Modular Design Space** — ICLR 2025. [arXiv:2410.06153](https://arxiv.org/abs/2410.06153). Searches modular planning / reasoning / tool-use / memory combinations via module evolution and recombination.
-- **Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies (MASS)** — 2025. needs-link. Co-optimizes prompts and multi-agent topology jointly.
-- **G-Designer: Architecting Multi-agent Communication Topologies** — 2024. needs-link. Generates task-specific communication topologies with a graph auto-encoder.
-- **EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms** — 2024. needs-link. Evolves a population of agents from a single-agent seed.
-- **AutoAgents: A Framework for Automatic Agent Generation** — 2023. needs-link. Instantiates task-specific agent teams under a planner/manager.
-- **MAS-GPT: Training LLMs to Build LLM-Based Multi-Agent Systems** — 2025. needs-link. Learns to emit an executable multi-agent program from a query.
-- **FlowReasoner: Reinforcing Query-Level Meta-Agents** — 2025. needs-link. RL-trained meta-agent that designs a workflow per query.
-- **ScoreFlow: Mastering LLM Agent Workflows via Score-Based Preference Optimization** — 2025. needs-link. Preference optimization over workflow variants.
-- **MetaAgent: Automatically Constructing Multi-Agent Systems Based on Finite State Machines** — ICML 2025. needs-link. Constructs multi-agent systems as finite state machines.
+- **Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies (MASS)** — 2025. `needs-link`. Co-optimizes prompts and multi-agent topology jointly.
+- **G-Designer: Architecting Multi-agent Communication Topologies** — 2024. `needs-link`. Generates task-specific communication topologies with a graph auto-encoder.
+- **EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms** — 2024. `needs-link`. Evolves a population of agents from a single-agent seed.
+- **AutoAgents: A Framework for Automatic Agent Generation** — 2023. `needs-link`. Instantiates task-specific agent teams under a planner/manager.
+- **MAS-GPT: Training LLMs to Build LLM-Based Multi-Agent Systems** — 2025. `needs-link`. Learns to emit an executable multi-agent program from a query.
+- **FlowReasoner: Reinforcing Query-Level Meta-Agents** — 2025. `needs-link`. RL-trained meta-agent that designs a workflow per query.
+- **ScoreFlow: Mastering LLM Agent Workflows via Score-Based Preference Optimization** — 2025. `needs-link`. Preference optimization over workflow variants.
+- **MetaAgent: Automatically Constructing Multi-Agent Systems Based on Finite State Machines** — ICML 2025. `needs-link`. Constructs multi-agent systems as finite state machines.
 - **AutoMaAS / AdaptMaAS: Self-Evolving Multi-Agent Architecture Search** — 2025. [arXiv:2510.02669](https://arxiv.org/abs/2510.02669). Adds a dynamic operator lifecycle, online feedback, and explicit cost-awareness to supernet search.
-- **ABSTRAL: Automated Multi-Agent System Design via Skill-Referenced Adaptive Search** — 2026. [arXiv:2603.22791](https://arxiv.org/abs/2603.22791). Varies topology *and* stores human-readable design rationale, and distinguishes genuine role novelty from mere relabeling.
-- **Evolutionary Generation of Multi-Agent Systems** — 2026. [arXiv:2602.06511](https://arxiv.org/abs/2602.06511). Survey-plus-method view of automatic MAS generation.
+- **ABSTRAL: Automated Multi-Agent System Design via Skill-Referenced Adaptive Search** — 2026. [arXiv:2603.22791](https://arxiv.org/abs/2603.22791). Treats MAS architecture as an evolving natural-language document refined by contrastive trace analysis. Measures the coordination tax (26% turn efficiency under fixed budgets), shows design knowledge transfers across domains, and discovers specialist roles absent from any initial design.
+- **Evolutionary Generation of Multi-Agent Systems** — 2026. `needs-link`. Survey-plus-method view of automatic MAS generation.
 - **Difficulty-Aware Agent Orchestration in LLM-Powered Workflows** — 2025. [arXiv:2509.11079](https://arxiv.org/abs/2509.11079). Allocates deliberation to a query in proportion to its difficulty.
-- **CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery** — 2026. needs-link. Open-ended multi-agent evolution for discovery.
-- **R&D-Agent: Automating Data-Driven AI Solution Building** — 2025. needs-link. Automates research, development, and iteration over data-driven AI solutions.
+- **CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery** — 2026. `needs-link`. Open-ended multi-agent evolution for discovery.
+- **R&D-Agent: Automating Data-Driven AI Solution Building** — 2025. `needs-link`. Automates research, development, and iteration over data-driven AI solutions.
 
 ---
 
@@ -185,9 +185,9 @@ Improve *during deployment*, with or without weight updates. The fastest-moving 
 - **EvoTest: Evolutionary Test-Time Learning for Self-Improving Agentic Systems** — 2025. [arXiv:2510.13220](https://arxiv.org/abs/2510.13220). An Act–Evolve loop that evolves the *whole* configuration (policy, hyperparameters, memory rules), using the full trajectory transcript as rich narrative feedback for credit assignment.
 - **Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory** — 2025. [arXiv:2504.07952](https://arxiv.org/abs/2504.07952). A running, self-curated scratchpad of reusable tips.
 - **TTRL: Test-Time Reinforcement Learning** — 2025. [arXiv:2504.16084](https://arxiv.org/abs/2504.16084). RL updates at inference time without ground-truth labels.
-- **Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification** — 2026. [arXiv:2601.15808](https://arxiv.org/abs/2601.15808). Scales the *verifier*, not just the generator, for research agents.
+- **Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification** — 2026. [arXiv:2601.15808](https://arxiv.org/abs/2601.15808). Scales the *verifier* rather than the generator. Derives rubrics from an automatically constructed failure taxonomy (5 categories, 13 sub-categories) and reports 12-48% meta-evaluation F1 gains over agent-as-judge baselines.
 - **Learning to Reason Without External Rewards** — 2025. [arXiv:2505.19590](https://arxiv.org/abs/2505.19590). Intrinsic signals in place of external reward.
-- **Reinforcement Learning from Meta-Evaluation** — 2026. [arXiv:2601.21268](https://arxiv.org/abs/2601.21268). Builds a reward from meta-evaluation when ground truth is unavailable.
+- **Reinforcement Learning from Meta-Evaluation: Aligning Language Models Without Ground-Truth Labels** — 2026. [arXiv:2601.21268](https://arxiv.org/abs/2601.21268). Reaches accuracy and sample efficiency comparable to label-based training, with controllable trade-offs among objectives, in open-domain settings where labels do not exist.
 - **GEPA: Reflective Prompt Evolution** — ICLR 2026. [arXiv:2507.19457](https://arxiv.org/abs/2507.19457). Reflective prompt evolution using natural-language feedback from trajectories.
 
 ---
@@ -200,10 +200,10 @@ The sharpest current design axis: keep experience as *text you retrieve* or writ
 - **Memento: Fine-tuning LLM Agents without Fine-tuning LLMs** — 2025. [arXiv:2508.16153](https://arxiv.org/abs/2508.16153). Case-based memory with online reinforcement learning, without weight updates.
 - **ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory** — 2025. [arXiv:2509.04439](https://arxiv.org/abs/2509.04439). Stores reusable concept-level abstractions for compositional reasoning.
 - **Agent KB: Leveraging Cross-Domain Experience for Agentic Problem Solving** — 2025. [arXiv:2507.06229](https://arxiv.org/abs/2507.06229). A shared experience base transferable across tasks.
-- **ExpSeek: Self-Triggered Experience Seeking for Web Agents** — 2026. needs-link. Lets the agent decide when to retrieve relevant past experience.
-- **Doc-to-LoRA: Learning to Instantly Internalize Contexts** — 2026. [arXiv:2602.15902](https://arxiv.org/abs/2602.15902). Turns a document/context directly into LoRA weights on the fly.
-- **Scaling Self-Evolving Agents via Parametric Memory (TMEM)** — 2026. [arXiv:2606.04536](https://arxiv.org/abs/2606.04536). Intra-episode self-evolution by distilling experience into fast LoRA weights — Distills experience into fast LoRA weights as parametric memory.
-- **Learning to Self-Evolve** — 2026. [arXiv:2603.18620](https://arxiv.org/abs/2603.18620). Trains models to refine their own test-time contexts with improvement-based rewards.
+- **ExpSeek: Self-Triggered Experience Seeking for Web Agents** — 2026. `needs-link`. Lets the agent decide when to retrieve relevant past experience.
+- **Doc-to-LoRA: Learning to Instantly Internalize Contexts** — 2026. [arXiv:2602.15902](https://arxiv.org/abs/2602.15902). A hypernetwork that meta-learns approximate context distillation in a single forward pass, generating a LoRA adapter from an unseen prompt so later queries skip re-reading the context. Included as the mechanism parametric memory builds on.
+- **Scaling Self-Evolving Agents via Parametric Memory (TMEM)** — 2026. [arXiv:2606.04536](https://arxiv.org/abs/2606.04536). Argues prompt-space memory lets an agent *look up* experience but never *learn from* it, since the policy stays frozen. Absorbs distilled supervision into fast LoRA weights within a single episode; setting the weight delta to zero recovers explicit-memory agents as a special case.
+- **Learning to Self-Evolve** — 2026. `needs-link`. Trains models to refine their own test-time contexts with improvement-based rewards.
 
 ---
 
@@ -213,13 +213,13 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 
 - **RewardHarness: Self-Evolving Agentic Post-Training** — 2026. [arXiv:2605.08703](https://arxiv.org/abs/2605.08703). Evolves a reusable library of scoring skills and tools from preference feedback while keeping the evaluator model frozen.
 - **Building Self-Evolving Agents via Experience-Driven Lifelong Learning (ELL) + StuLife** — 2025. [arXiv:2508.19005](https://arxiv.org/abs/2508.19005). Formalizes ELL (long-term memory, skill learning, self-motivation) and ships StuLife, a simulated college-life benchmark for it.
-- **Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System** — 2026. [arXiv:2601.18226](https://arxiv.org/abs/2601.18226). An end-to-end reproducible self-evolving system for open-ended tasks.
+- **Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks** — 2026. [arXiv:2601.18226](https://arxiv.org/abs/2601.18226). Identifies *tool evolution* as the key pathway because it yields verifiable binary feedback; uses Parallel Batch Evolution to merge similar tools and prevent tool explosion. Starts from an empty toolset.
 - **OpenSkill: Open-World Self-Evolution for LLM Agents** — 2026. [arXiv:2606.06741](https://arxiv.org/abs/2606.06741). Acquires reusable skills from public resources and constructs verification signals without target-task supervision.
-- **AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution** — 2026. [arXiv:2603.01145](https://arxiv.org/abs/2603.01145). When to extract a skill, what to keep, how to control forgetting.
+- **AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution** — 2026. [arXiv:2603.01145](https://arxiv.org/abs/2603.01145). Derives, maintains, and reuses skills from dialogue traces as a model-agnostic plugin layer, injecting relevant skills into future requests without retraining.
 - **SkillFlow: Benchmarking Lifelong Skill Discovery and Evolution for Autonomous Agents** — 2026. [arXiv:2604.17308](https://arxiv.org/abs/2604.17308). Method plus benchmark for continuous skill revision.
 - **EvoSkill: Automated Skill Discovery for Multi-Agent Systems** — 2026. [arXiv:2603.02766](https://arxiv.org/abs/2603.02766). Discovers reusable skills for multi-agent teams from experience.
 - **SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning** — 2026. [arXiv:2602.08234](https://arxiv.org/abs/2602.08234). Evolves agents with recursively composed skill libraries under RL.
-- **SkillClaw: Let Skills Evolve Collectively with an Agentic Evolver** — 2026. [arXiv:2604.08377](https://arxiv.org/abs/2604.08377). Evolves a shared skill pool collectively across agents.
+- **SkillClaw: Let Skills Evolve Collectively with an Agentic Evolver** — 2026. `needs-link`. Evolves a shared skill pool collectively across agents.
 - **ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical RL** — 2026. [arXiv:2603.16060](https://arxiv.org/abs/2603.16060). Learns hierarchical skills intrinsically during agent reasoning.
 - **PolySkill: Polymorphic Skill Abstraction for Cross-Domain Agent Generalization** — ICLR 2026. Abstracts skills so they transfer across domains rather than overfitting to one.
 - **Self-Evolving LLMs via Continual Instruction Tuning** — 2025. [arXiv:2509.18133](https://arxiv.org/abs/2509.18133). Continually updates instruction-following behavior from new experience.
@@ -264,9 +264,9 @@ Software engineering has become the flagship domain for self-evolution, because 
 
 Instead of hand-designing the improvement rule, learn the *capacity to improve*.
 
-- **Evolving-RL: End-to-End Optimization of Experience-Driven Self-Evolving Capability within Agents** — 2026. [arXiv:2605.10663](https://arxiv.org/abs/2605.10663). Optimizes the self-evolving capability itself, end to end.
+- **Evolving-RL: End-to-End Optimization of Experience-Driven Self-Evolving Capability within Agents** — 2026. [arXiv:2605.10663](https://arxiv.org/abs/2605.10663). Jointly optimizes experience *extraction* and *utilization* rather than treating them separately. Notably reports that skills a base model extracts on its own can *degrade* performance versus injecting nothing.
 - **Self-Evolved Reward Learning for LLMs** — 2024. [arXiv:2411.00418](https://arxiv.org/abs/2411.00418). The reward model bootstraps itself.
-- **Complementary Reinforcement Learning** — 2026. [arXiv:2603.17621](https://arxiv.org/abs/2603.17621). Combines complementary RL signals for agent improvement.
+- **Complementary RL: Towards Efficient Experience-Driven Agent Learning** — 2026. [arXiv:2603.17621](https://arxiv.org/abs/2603.17621). Combines parametric RL with experience-driven learning rather than treating them as alternatives.
 - **SEAS: Self-Evolving Adversarial Safety Optimization** — AAAI 2025. [arXiv:2408.02632](https://arxiv.org/abs/2408.02632). Co-evolves attacker and defender models for adversarial safety hardening.
 
 ---
@@ -275,10 +275,10 @@ Instead of hand-designing the improvement rule, learn the *capacity to improve*.
 
 Several agents (or an agent and its data generator) improve against each other.
 
-- **Multi-Agent Evolve: LLM Self-Improve through Co-Evolution** — 2025. needs-link. Self-play-style improvement among cooperating or competing agents.
-- **AgentNet: Decentralized Evolutionary Coordination for LLM-Based Multi-Agent Systems** — 2025. needs-link. Decentralized evolutionary coordination among LLM agents.
-- **X-MAS: Towards Building Multi-Agent Systems with Heterogeneous LLMs** — 2025. needs-link. Builds multi-agent teams from heterogeneous LLM backbones.
-- **Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence** — 2026. needs-link. Co-evolves agents with synthesized real-world environments.
+- **Multi-Agent Evolve: LLM Self-Improve through Co-Evolution** — 2025. `needs-link`. Self-play-style improvement among cooperating or competing agents.
+- **AgentNet: Decentralized Evolutionary Coordination for LLM-Based Multi-Agent Systems** — 2025. `needs-link`. Decentralized evolutionary coordination among LLM agents.
+- **X-MAS: Towards Building Multi-Agent Systems with Heterogeneous LLMs** — 2025. `needs-link`. Builds multi-agent teams from heterogeneous LLM backbones.
+- **Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence** — 2026. `needs-link`. Co-evolves agents with synthesized real-world environments.
 - **Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing** — 2026. [arXiv:2602.04837](https://arxiv.org/abs/2602.04837). A population of agents improves by sharing experience rather than each learning alone.
 - **TerraLingua: Emergence and Analysis of Open-Endedness in LLM Ecologies** — 2026. [arXiv:2603.16910](https://arxiv.org/abs/2603.16910). Studies open-endedness in populations of interacting models.
 - **MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory** — 2026. [arXiv:2601.03192](https://arxiv.org/abs/2601.03192). RL applied at runtime over episodic memory.
@@ -293,6 +293,7 @@ An agent that keeps updating itself can quietly *lose* capabilities it already h
 - **Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation** — 2026. [arXiv:2605.09315](https://arxiv.org/abs/2605.09315). Documents classical catastrophic forgetting under vanilla self-evolution: later updates overwrite parameter regions supporting earlier behaviors. Proposes Capability-Preserving Evolution, an EWC-style regularizer using Fisher importance weights, and argues stable long-horizon evolution requires *explicitly preserving* old capabilities, not just acquiring new ones.
 - **Self-Evolving Agents with Anytime-Valid Certificates** — 2026. [arXiv:2607.00871](https://arxiv.org/abs/2607.00871). Names the **endogenous-loop failure mode**: the evolving policy generates the data it trains on, the evaluator it is judged by, and the hypothesis space it searches — so continual-learning and PAC-Bayes guarantees proved for *exogenous* environments no longer apply. The sharpest theoretical critique in the field right now.
 - **Governing Evolving Memory in LLM Agents: the SSGM Framework** — 2026. [arXiv:2603.11768](https://arxiv.org/abs/2603.11768). Argues unconstrained memory autonomy is the primary catalyst for semantic drift, forgetting, and adversarial memory poisoning, and proposes decoupling the agent's policy from its memory substrate via governance middleware. Also names the hard open problem: telling *drift* apart from a *legitimate update*.
+- **EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective** — 2026. [arXiv:2605.18421](https://arxiv.org/abs/2605.18421). Compares 15 memory methods against strong long-context baselines and finds no memory form wins consistently — long-context remains highly competitive.
 - **EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle** — 2025. [arXiv:2510.16079](https://arxiv.org/abs/2510.16079). Distills abstract strategic knowledge rather than storing raw trajectories.
 - **Towards Trustworthy Agentic AI: Safety, Robustness, Privacy, and System Security** — 2026. [arXiv:2605.23989](https://arxiv.org/abs/2605.23989). Broad survey; its lifelong-adaptation section frames the trust-utility trade-off.
 - **Towards Healthy Evolution: Human-Agent Interaction in Self-Evolving Systems** — 2026. [arXiv:2606.06114](https://arxiv.org/abs/2606.06114). Where human input belongs in an otherwise autonomous loop.
@@ -306,13 +307,13 @@ An agent that keeps updating itself can quietly *lose* capabilities it already h
 The corrective literature. If you are building any of the above, read this section before you trust your numbers.
 
 - **Why Do Multi-Agent LLM Systems Fail?** — 2025. [arXiv:2503.13657](https://arxiv.org/abs/2503.13657). Introduces the MAST taxonomy: 14 failure modes across system design, inter-agent misalignment, and verification, from 1,600+ annotated traces. The key finding: better base models will not fix most of them.
-- **Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems** — ICML 2025. needs-link. Attributes multi-agent failures to the responsible agent and step.
+- **Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems** — ICML 2025. `needs-link`. Attributes multi-agent failures to the responsible agent and step.
 - **RAFFLES: Reasoning-based Attribution of Faults for LLM Systems** — 2025. [arXiv:2509.06822](https://arxiv.org/abs/2509.06822). Attributes faults in LLM systems via structured reasoning.
 - **GUARDIAN: Safeguarding LLM Multi-Agent Collaborations with Temporal Graph Modeling** — 2025. [arXiv:2505.19234](https://arxiv.org/abs/2505.19234). Models multi-agent collaboration dynamics with temporal graphs for safeguarding.
 - **Aegis: Taxonomy and Optimizations for Overcoming Agent-Environment Failures** — 2025. [arXiv:2508.19504](https://arxiv.org/abs/2508.19504). Treats the environment as a first-class component.
-- **The Six Sigma Agent: Enterprise-Grade Reliability via Consensus-Driven Decomposed Execution** — 2026. [arXiv:2601.22290](https://arxiv.org/abs/2601.22290). Decomposes execution with consensus checks for higher reliability.
-- **Dissecting Bug Triggers and Failure Modes in Modern Agentic Frameworks** — 2026. [arXiv:2604.08906](https://arxiv.org/abs/2604.08906). Empirical study on AutoGen, CrewAI, SmolAgents.
-- **Efficient Failure Management for Multi-Agent Systems with Reasoning Trace Representation** — 2026. [arXiv:2603.21522](https://arxiv.org/abs/2603.21522). Manages multi-agent failures using compact reasoning-trace representations.
+- **The Six Sigma Agent: Enterprise-Grade Reliability via Consensus-Driven Decomposed Execution** — 2026. `needs-link`. Decomposes execution with consensus checks for higher reliability.
+- **Understanding Bugs in Modern Agentic Frameworks: Symptoms, Root Causes, and Triggering Conditions** — 2026. [arXiv:2604.08906](https://arxiv.org/abs/2604.08906). 409 fixed bugs across five agentic frameworks under a five-layer architectural abstraction; finds the model-integration layer most bug-prone yet least covered by tests.
+- **Efficient Failure Management for Multi-Agent Systems with Reasoning Trace Representation** — 2026. `needs-link`. Manages multi-agent failures using compact reasoning-trace representations.
 
 - **Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report** — arXiv 2026. [arXiv:2608.15763](https://arxiv.org/abs/2608.15763). Studies how fixed-harness training impedes later runtime edits and tests harness-state augmentation with frozen-weight edit evaluation.
 
@@ -323,9 +324,9 @@ The corrective literature. If you are building any of the above, read this secti
 The part of the field that is under-appreciated relative to how important it is. Self-improvement can silently erode alignment.
 
 - **Your Agent May Misevolve: Emergent Risks in Self-Evolving LLM Agents** — ICLR 2026. [arXiv:2509.26354](https://arxiv.org/abs/2509.26354). The paper this list is oriented around. Defines *misevolution* along the model/memory/tool/workflow pathways and shows it is pervasive even on top-tier backbones — including safety-refusal rates dropping sharply after self-training. Its four distinguishing traits (temporal emergence, environmental origin, limited data control, expanded risk surface) are why static safety evaluation misses it.
-- **TAME: A Trustworthy Test-Time Evolution of Agent Memory with Systematic Benchmarking** — 2026. [arXiv:2602.03224](https://arxiv.org/abs/2602.03224). Trustworthy test-time memory evolution with systematic benchmarking.
+- **TAME: A Trustworthy Test-Time Evolution of Agent Memory with Systematic Benchmarking** — 2026. [arXiv:2602.03224](https://arxiv.org/abs/2602.03224). The closest thing to a defense. Introduces the Trust-Memevo benchmark, confirms trustworthiness declines even under *benign* task evolution, and proposes a dual-memory framework that evolves executor memory and evaluator memory separately so utility and safety improve together rather than trading off.
 - **SEAS: Self-Evolving Adversarial Safety Optimization** — AAAI 2025. [arXiv:2408.02632](https://arxiv.org/abs/2408.02632). (Also in [RL section](#reinforcement-learning-for-self-evolution).) Co-evolutionary red-teaming.
-- **Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses** — 2026. needs-link. Surveys risks, attacks, and defenses for embodied AI systems.
+- **Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses** — 2026. `needs-link`. Surveys risks, attacks, and defenses for embodied AI systems.
 - **AgenticRed: Optimizing Agentic Systems for Automated Red-teaming** — 2026. [arXiv:2601.13518](https://arxiv.org/abs/2601.13518). Turns the optimization machinery on the attack side — automated red-teaming of agentic systems.
 - **Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward** — 2026. [arXiv:2602.12430](https://arxiv.org/abs/2602.12430). Treats self-acquired skills as a security surface, not just a capability store.
 - **Identifying the Risks of LM Agents with an LM-Emulated Sandbox (ToolEmu)** — 2023. [arXiv:2309.15817](https://arxiv.org/abs/2309.15817). The precursor for sandboxed risk discovery, still the standard reference for testing agents safely.
@@ -342,9 +343,9 @@ Evaluation is the field's bottleneck; static one-shot benchmarks cannot see drif
 - **Evo-Memory** — 2025. [arXiv:2511.20857](https://arxiv.org/abs/2511.20857). Benchmarks test-time learning with self-evolving memory across sequential tasks.
 - **SkillFlow** — 2026. [arXiv:2604.17308](https://arxiv.org/abs/2604.17308). Lifelong skill discovery and evolution.
 - **LifelongAgentBench** — 2025. [arXiv:2505.11942](https://arxiv.org/abs/2505.11942). Interdependent task sequences across DB / OS / KG that require building on prior skills.
-- **LTMBenchmark** — 2024. needs-link. Tests long-term memory retention under interleaved, distracted dialogue.
-- **MLGym: A Framework and Benchmark for Advancing AI Research Agents** — 2025. needs-link. Benchmarks agents that perform ML research tasks.
-- **EvoClinician: A Self-Evolving Agent for Multi-Turn Medical Diagnosis** — 2026. [arXiv:2601.22964](https://arxiv.org/abs/2601.22964). Test-time evolutionary learning in a clinical setting.
+- **LTMBenchmark** — 2024. `needs-link`. Tests long-term memory retention under interleaved, distracted dialogue.
+- **MLGym: A Framework and Benchmark for Advancing AI Research Agents** — 2025. `needs-link`. Benchmarks agents that perform ML research tasks.
+- **EvoClinician: A Self-Evolving Agent for Multi-Turn Medical Diagnosis via Test-Time Evolutionary Learning** — 2026. [arXiv:2601.22964](https://arxiv.org/abs/2601.22964). Ships the Med-Inquire benchmark for iterative diagnosis and a Diagnose-Grade-Evolve loop in which a Process Grader assigns credit per action on both clinical yield and resource cost.
 
 ---
 
@@ -356,8 +357,8 @@ Self-evolving tool use and multi-agent delegation increasingly ride on shared pr
 - **A2A (Agent-to-Agent)** — Google, 2025. Agent-to-agent discovery, delegation, and collaboration across vendors.
 - **ACP (Agent Communication Protocol)** — IBM. REST-native agent messaging (later converging with A2A).
 - **ANP (Agent Network Protocol)** — community. Decentralized, DID-based agent networks.
-- **Beyond Message Passing: A Semantic View of Agent Communication Protocols** — 2026. [arXiv:2604.02369](https://arxiv.org/abs/2604.02369). A semantic comparison across A2A/MCP/ACP/ANP.
-- **Permission Manifests for Web Agents** — 2026. [arXiv:2601.02371](https://arxiv.org/abs/2601.02371). Capability scoping for agents acting on the web.
+- **Beyond Message Passing: A Semantic View of Agent Communication Protocols** — 2026. [arXiv:2604.02369](https://arxiv.org/abs/2604.02369). Analyzes 18 protocols across communication, syntactic, and semantic layers, finding transport and schema support mature while clarification, context alignment, and verification remain thin.
+- **Permission Manifests for Web Agents** — 2026. `needs-link`. Capability scoping for agents acting on the web.
 
 ---
 
@@ -366,11 +367,12 @@ Self-evolving tool use and multi-agent delegation increasingly ride on shared pr
 Self-evolution grounded in a specific domain, useful as end-to-end case studies.
 
 - **GenoMAS: A Multi-Agent Framework for Scientific Discovery via Code-Driven Gene Expression Analysis** — 2025. [arXiv:2507.21035](https://arxiv.org/abs/2507.21035). Multi-agent scientific discovery via code-driven gene-expression analysis.
-- **Mimosa: Toward Evolving Multi-Agent Systems for Scientific Research** — 2026. [arXiv:2603.28986](https://arxiv.org/abs/2603.28986). Evolving multi-agent workflows for scientific research.
+- **EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery** — 2026. [arXiv:2603.08127](https://arxiv.org/abs/2603.08127). Evolves both ideation and experiment-execution strategies under one objective across the full discovery pipeline.
+- **Mimosa Framework: Toward Evolving Multi-Agent Systems for Scientific Research** — 2026. [arXiv:2603.28986](https://arxiv.org/abs/2603.28986). Synthesizes task-specific workflows and refines them via experimental feedback, using MCP for dynamic tool discovery. Finds that the benefit of workflow evolution depends heavily on the backbone model.
 - **PestMA: LLM-based Multi-Agent System for Informed Pest Management** — 2025. [arXiv:2504.09855](https://arxiv.org/abs/2504.09855). Multi-agent pest-management decisions from field and policy data.
 - **OWL: Optimized Workforce Learning for General Multi-Agent Assistance** — 2025. [arXiv:2505.23885](https://arxiv.org/abs/2505.23885). Learns workforce-style coordination for general multi-agent assistance.
-- **Self-Evolving Embodied AI** — 2026. [arXiv:2602.04411](https://arxiv.org/abs/2602.04411). Self-improving embodied agents in interactive environments.
-- **Administrative Decentralization in Edge-Cloud Multi-Agent for Mobile Automation** — 2026. [arXiv:2604.07767](https://arxiv.org/abs/2604.07767). Edge–cloud multi-agent coordination for mobile automation.
+- **Self-Evolving Embodied AI** — 2026. `needs-link`. Self-improving embodied agents in interactive environments.
+- **Administrative Decentralization in Edge-Cloud Multi-Agent for Mobile Automation** — 2026. `needs-link`. Edge–cloud multi-agent coordination for mobile automation.
 
 ---
 
@@ -448,6 +450,7 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 
 A running log so you can see what changed without diffing. Newest first.
 
+- **2026-09b** — Ran a link-verification pass over every post-2026 entry. Corrected one wrong title (the agentic-framework bug study), sharpened a dozen descriptions against their abstracts, added *EvoScientist* and *EvoMemBench*, and marked nine unverifiable entries `needs-link`.
 - **2026-09** — Added three sections: [zero-data self-evolution](#zero-data-self-evolution-and-self-play) (*Absolute Zero*, *R-Zero*, *Tool-R0*), [self-evolving coding agents](#self-evolving-coding-agents) following the August survey, and [forgetting, drift, and stability](#forgetting-drift-and-stability) (*Do Self-Evolving Agents Forget?*, *anytime-valid certificates*, *SSGM*). Added experience-sharing and red-teaming work.
 - **2026-07** — Community layer: [`COMMUNITY.md`](COMMUNITY.md) project board, [contributing guide](docs/contributing-guide.md), issue/PR templates, and spotlight strip above.
 - **2026-07** — Initial public release: 90+ papers across 13 topics, four-pathway taxonomy, misevolution safety section, primer, and two runnable reference implementations.
@@ -461,7 +464,7 @@ A running log so you can see what changed without diffing. Newest first.
 A few notes on process, because a curated list is only as good as its upkeep:
 
 - **Entries are read, not scraped.** Each one gets a single neutral sentence describing what the work *does*. If a description reads like a press release, it hasn't been reviewed yet — open an issue.
-- **Links are checked, not guessed.** Where a stable ID could not be verified, the entry is kept without a link and flagged rather than given a fabricated one. Accuracy beats completeness.
+- **Links are checked, not guessed.** Where a stable ID could not be verified, the entry is kept without a link and marked `needs-link` rather than given a fabricated one. Accuracy beats completeness. Nine entries currently carry that marker — PRs supplying a verified link are welcome.
 - **Monthly review pass.** Roughly once a month the newest work is triaged into the taxonomy and the [Updates](#updates) log is appended. The date in the banner reflects the last pass.
 - **Scope is enforced.** New sub-areas are added only when several papers justify them, to keep the list walkable rather than exhaustive. See [related lists](#related-lists) for wider, more encyclopedic coverage.
 
