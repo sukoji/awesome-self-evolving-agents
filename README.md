@@ -128,9 +128,9 @@ The sections below are organized roughly along these pathways, plus the cross-cu
 Start here to get the shape of the field before diving into primary work.
 
 - **A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence** — TMLR 2026. [arXiv:2507.21046](https://arxiv.org/abs/2507.21046). Organizes work by the *what/when/how/where* of evolution and traces the ADAS→AFlow→MaAS lineage.
-- **A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems** — arXiv 2025. [arXiv:2508.07407](https://arxiv.org/abs/2508.07407). Section 5.2 on self-evolving multi-agent systems is the cleanest short treatment of design-as-search.
+- **A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems** — 2025. [arXiv:2508.07407](https://arxiv.org/abs/2508.07407). Section 5.2 on self-evolving multi-agent systems is the cleanest short treatment of design-as-search.
 - **A Systematic Survey of Self-Evolving Agents: From Model-Centric to Environment-Driven Co-Evolution** — 2026 (Xiang et al.). [TechRxiv](https://doi.org/10.36227/techrxiv.177203250.05832634/v2). Taxonomy of model-centric, environment-centric, and co-evolutionary self-improvement loops.
-- **Lifelong Learning of Large Language Model Based Agents: A Roadmap** — IEEE TPAMI 2026 (Zheng et al.). [arXiv:2501.07278](https://arxiv.org/abs/2501.07278). Organizes the lifelong-agent problem around a perception / memory / action pipeline.
+- **Lifelong Learning of Large Language Model Based Agents: A Roadmap** — IEEE TPAMI 2026. [arXiv:2501.07278](https://arxiv.org/abs/2501.07278). Organizes the lifelong-agent problem around a perception / memory / action pipeline.
 - **Self-Improvements in Modern Agentic Systems: A Survey** — 2026. [arXiv:2607.13104](https://arxiv.org/abs/2607.13104). Surveys self-improvement across modern agentic systems, later than the two surveys above and covering the coding-agent and zero-data lines they predate.
 
 ---
@@ -320,7 +320,7 @@ The corrective literature. If you are building any of the above, read this secti
 - **Understanding Bugs in Modern Agentic Frameworks: Symptoms, Root Causes, and Triggering Conditions** — 2026. [arXiv:2604.08906](https://arxiv.org/abs/2604.08906). 409 fixed bugs across five agentic frameworks under a five-layer architectural abstraction; finds the model-integration layer most bug-prone yet least covered by tests.
 - **Efficient Failure Management for Multi-Agent Systems with Reasoning Trace Representation** — 2026. [arXiv:2603.21522](https://arxiv.org/abs/2603.21522). Manages multi-agent failures using compact reasoning-trace representations.
 
-- **Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report** — arXiv 2026. [arXiv:2608.15763](https://arxiv.org/abs/2608.15763). Studies how fixed-harness training impedes later runtime edits and tests harness-state augmentation with frozen-weight edit evaluation.
+- **Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report** — 2026. [arXiv:2608.15763](https://arxiv.org/abs/2608.15763). Studies how fixed-harness training impedes later runtime edits and tests harness-state augmentation with frozen-weight edit evaluation.
 
 ---
 
