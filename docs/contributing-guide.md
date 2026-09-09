@@ -45,7 +45,7 @@ Use the [table of contents](../README.md#contents). If it spans multiple areas, 
 If you cannot verify a stable ID:
 
 ```markdown
-- **Paper Title** — Venue'Year. needs-link. One neutral sentence. (PR note: could not verify arXiv ID.)
+- **Paper Title** — Venue'Year. `needs-link`. One neutral sentence. (PR note: could not verify arXiv ID.)
 ```
 
 ### 4. Open a PR
