@@ -107,3 +107,4 @@ Success is split in two: utility (correct handling of legitimate requests) and s
 ## Try this
 
 The fastest way to feel the mechanism: break the context-blindness on purpose. Give `hard_legit` a different signal from `illegit` (say `0.60` vs `0.45`) and rerun. Now a single knob *can* separate good from bad, the frontier lifts, and you can approach both-high — which is precisely the promise of context-aware memory.
+
