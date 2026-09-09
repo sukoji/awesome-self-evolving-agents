@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/papers-90+-8a63d2?style=flat&labelColor=1b1b1b" alt="90+ papers">
-  <img src="https://img.shields.io/badge/topics-13-1d9e75?style=flat&labelColor=1b1b1b" alt="13 topics">
+  <img src="https://img.shields.io/badge/papers-130+-8a63d2?style=flat&labelColor=1b1b1b" alt="130+ papers">
+  <img src="https://img.shields.io/badge/topics-16-1d9e75?style=flat&labelColor=1b1b1b" alt="16 topics">
   <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/community_projects-15+-c0417a?style=flat&labelColor=1b1b1b" alt="Community projects"></a>
   <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-d85a30?style=flat&labelColor=1b1b1b" alt="Runnable code"></a>
   <a href="https://github.com/sukoji/awesome-self-evolving-agents/issues/new/choose"><img src="https://img.shields.io/badge/suggest-paper_or_project-issue-378add?style=flat&labelColor=1b1b1b" alt="Suggest via issue"></a>
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <sub><b>90+ papers</b> across <b>13 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-07</b></sub>
+  <sub><b>130+ papers</b> across <b>16 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-09</b></sub>
 </p>
 
 <p align="center">
@@ -54,8 +54,11 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 - [Test-time learning and self-improvement](#test-time-learning-and-self-improvement)
 - [Memory: non-parametric to parametric](#memory-non-parametric-to-parametric)
 - [Experience-driven lifelong learning and skills](#experience-driven-lifelong-learning-and-skills)
+- [Zero-data self-evolution and self-play](#zero-data-self-evolution-and-self-play)
+- [Self-evolving coding agents](#self-evolving-coding-agents)
 - [Reinforcement learning for self-evolution](#reinforcement-learning-for-self-evolution)
 - [Multi-agent co-evolution](#multi-agent-co-evolution)
+- [Forgetting, drift, and stability](#forgetting-drift-and-stability)
 - [Why they fail: failure analysis and attribution](#why-they-fail-failure-analysis-and-attribution)
 - [Safety: misevolution and defenses](#safety-misevolution-and-defenses)
 - [Benchmarks and environments](#benchmarks-and-environments)
@@ -218,9 +221,42 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 - **SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning** — 2026. [arXiv:2602.08234](https://arxiv.org/abs/2602.08234). Evolves agents with recursively composed skill libraries under RL.
 - **SkillClaw: Let Skills Evolve Collectively with an Agentic Evolver** — 2026. [arXiv:2604.08377](https://arxiv.org/abs/2604.08377). Evolves a shared skill pool collectively across agents.
 - **ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical RL** — 2026. [arXiv:2603.16060](https://arxiv.org/abs/2603.16060). Learns hierarchical skills intrinsically during agent reasoning.
+- **PolySkill: Polymorphic Skill Abstraction for Cross-Domain Agent Generalization** — ICLR 2026. Abstracts skills so they transfer across domains rather than overfitting to one.
 - **Self-Evolving LLMs via Continual Instruction Tuning** — 2025. [arXiv:2509.18133](https://arxiv.org/abs/2509.18133). Continually updates instruction-following behavior from new experience.
 - **Self-Evolving Curriculum for LLM Reasoning** — 2025. [arXiv:2505.14970](https://arxiv.org/abs/2505.14970). The agent designs its own curriculum.
 - **ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction** — EMNLP Findings 2026. [arXiv:2608.20920](https://arxiv.org/abs/2608.20920). Separates question-specific factual memory from persistent experiential memory and evolves an Experience Bank together with MemGuide/MemTool procedures through validation-gated updates.
+
+---
+
+## Zero-data self-evolution and self-play
+
+The most striking recent claim in the field: an agent can bootstrap capability with **no human-curated tasks or labels at all**, by generating its own curriculum. Usually a *proposer* invents tasks and a *solver* learns to solve them, with an executor or majority vote supplying verification in place of ground truth.
+
+- **Absolute Zero: Reinforced Self-play Reasoning with Zero Data** — 2025. [arXiv:2505.03335](https://arxiv.org/abs/2505.03335). A single model proposes tasks that maximize its own learning progress and improves by solving them, using a code executor as the unified source of verifiable feedback. Reaches strong coding/math results with no external data.
+- **R-Zero: Self-Evolving Reasoning LLM from Zero Data** — ICLR 2026. [arXiv:2508.05004](https://arxiv.org/abs/2508.05004). A Challenger and a Solver, both initialized from the same base model, co-evolve; filtering plus majority vote substitutes for labels. Reports roughly +6.5 on math and +7.5 on general reasoning for a 4B backbone.
+- **SPIRAL** — 2025. Frames self-improvement as multi-turn zero-sum self-play.
+- **Agent0** — 2025. Adds tool-integrated execution to self-generated curricula.
+- **MM-Zero: Self-Evolving Multimodal Models from Zero Data** — 2026. Extends the proposer/solver idea to vision-language via self-generation and self-verification.
+- **Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation** — 2025. [arXiv:2509.15194](https://arxiv.org/abs/2509.15194). Analyzes what actually drives label-free evolution.
+- **Towards Understanding Self-play for LLM Reasoning** — 2025. [arXiv:2510.27072](https://arxiv.org/abs/2510.27072). An empirical dissection of the AZR recipe — useful before you trust the headline numbers.
+- **Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data** — 2026. [arXiv:2602.21320](https://arxiv.org/abs/2602.21320). The zero-data recipe applied to tool use.
+
+> Read this cluster together with [forgetting and drift](#forgetting-drift-and-stability). Self-generated curricula are exactly the setting where the agent supplies its own data, its own evaluator, and its own prior — which is where most guarantees stop applying.
+
+---
+
+## Self-evolving coding agents
+
+Software engineering has become the flagship domain for self-evolution, because executable feedback, repository context, and test suites give an unusually reliable reward signal.
+
+- **Self-Evolving Coding Agents: A Survey** — 2026. [arXiv:2608.03392](https://arxiv.org/abs/2608.03392). A target-centered taxonomy of *what* evolves, plus *when* evolution happens and which code-specific signals drive it. Notes that executable feedback and repo-level context make software a natural fit — while introducing feedback reliability, benchmark overfitting, reversibility, and cost problems. Ships a curated companion list updated through August 2026.
+- **A Self-Improving Coding Agent** — 2025. [OpenReview](https://openreview.net/forum?id=rShJCyLsOr). An agent that edits its own codebase to get better at editing codebases.
+- **Gödel Agent: A Self-Referential Framework for Recursive Self-Improvement** — ACL 2025. The clearest statement of recursive self-modification in this space.
+- **R&D-Agent: An LLM-Agent Framework Towards Autonomous Data Science** — 2025. [arXiv:2505.14738](https://arxiv.org/abs/2505.14738). Automated research/development loops for data-driven work.
+- **Controlled Self-Evolution for Algorithmic Code Optimization** — 2026. [arXiv:2601.07348](https://arxiv.org/abs/2601.07348). Puts explicit controls around the self-modification loop.
+- **AlphaApollo: A System for Deep Agentic Reasoning** — 2026. [arXiv:2510.06261](https://arxiv.org/abs/2510.06261).
+- **SEMAG: Self-Evolutionary Multi-Agent Code Generation** — 2026. [arXiv:2603.15707](https://arxiv.org/abs/2603.15707).
+- **Co-evolving LLM Coder and Unit Tester via Reinforcement Learning** — NeurIPS 2025. Coder and test-writer improve against each other.
 
 ---
 
@@ -243,6 +279,25 @@ Several agents (or an agent and its data generator) improve against each other.
 - **AgentNet: Decentralized Evolutionary Coordination for LLM-Based Multi-Agent Systems** — 2025. needs-link. Decentralized evolutionary coordination among LLM agents.
 - **X-MAS: Towards Building Multi-Agent Systems with Heterogeneous LLMs** — 2025. needs-link. Builds multi-agent teams from heterogeneous LLM backbones.
 - **Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence** — 2026. needs-link. Co-evolves agents with synthesized real-world environments.
+- **Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing** — 2026. [arXiv:2602.04837](https://arxiv.org/abs/2602.04837). A population of agents improves by sharing experience rather than each learning alone.
+- **TerraLingua: Emergence and Analysis of Open-Endedness in LLM Ecologies** — 2026. [arXiv:2603.16910](https://arxiv.org/abs/2603.16910). Studies open-endedness in populations of interacting models.
+- **MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory** — 2026. [arXiv:2601.03192](https://arxiv.org/abs/2601.03192). RL applied at runtime over episodic memory.
+- **Agent-Pro: Learning to Evolve via Policy-Level Reflection and Optimization** — ACL 2024. Reflection at the level of policy rather than individual actions.
+
+---
+
+## Forgetting, drift, and stability
+
+An agent that keeps updating itself can quietly *lose* capabilities it already had. This is the plasticity-vs-stability problem, and it is the second-biggest corrective thread after misevolution.
+
+- **Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation** — 2026. [arXiv:2605.09315](https://arxiv.org/abs/2605.09315). Documents classical catastrophic forgetting under vanilla self-evolution: later updates overwrite parameter regions supporting earlier behaviors. Proposes Capability-Preserving Evolution, an EWC-style regularizer using Fisher importance weights, and argues stable long-horizon evolution requires *explicitly preserving* old capabilities, not just acquiring new ones.
+- **Self-Evolving Agents with Anytime-Valid Certificates** — 2026. [arXiv:2607.00871](https://arxiv.org/abs/2607.00871). Names the **endogenous-loop failure mode**: the evolving policy generates the data it trains on, the evaluator it is judged by, and the hypothesis space it searches — so continual-learning and PAC-Bayes guarantees proved for *exogenous* environments no longer apply. The sharpest theoretical critique in the field right now.
+- **Governing Evolving Memory in LLM Agents: the SSGM Framework** — 2026. [arXiv:2603.11768](https://arxiv.org/abs/2603.11768). Argues unconstrained memory autonomy is the primary catalyst for semantic drift, forgetting, and adversarial memory poisoning, and proposes decoupling the agent's policy from its memory substrate via governance middleware. Also names the hard open problem: telling *drift* apart from a *legitimate update*.
+- **EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle** — 2025. [arXiv:2510.16079](https://arxiv.org/abs/2510.16079). Distills abstract strategic knowledge rather than storing raw trajectories.
+- **Towards Trustworthy Agentic AI: Safety, Robustness, Privacy, and System Security** — 2026. [arXiv:2605.23989](https://arxiv.org/abs/2605.23989). Broad survey; its lifelong-adaptation section frames the trust-utility trade-off.
+- **Towards Healthy Evolution: Human-Agent Interaction in Self-Evolving Systems** — 2026. [arXiv:2606.06114](https://arxiv.org/abs/2606.06114). Where human input belongs in an otherwise autonomous loop.
+
+> Memory accumulation alone does not solve continual learning — several independent lines report the opposite, with stale or misleading experiences acting as an active failure mode unless refinement and verification are explicit.
 
 ---
 
@@ -271,6 +326,9 @@ The part of the field that is under-appreciated relative to how important it is.
 - **TAME: A Trustworthy Test-Time Evolution of Agent Memory with Systematic Benchmarking** — 2026. [arXiv:2602.03224](https://arxiv.org/abs/2602.03224). Trustworthy test-time memory evolution with systematic benchmarking.
 - **SEAS: Self-Evolving Adversarial Safety Optimization** — AAAI 2025. [arXiv:2408.02632](https://arxiv.org/abs/2408.02632). (Also in [RL section](#reinforcement-learning-for-self-evolution).) Co-evolutionary red-teaming.
 - **Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses** — 2026. needs-link. Surveys risks, attacks, and defenses for embodied AI systems.
+- **AgenticRed: Optimizing Agentic Systems for Automated Red-teaming** — 2026. [arXiv:2601.13518](https://arxiv.org/abs/2601.13518). Turns the optimization machinery on the attack side — automated red-teaming of agentic systems.
+- **Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward** — 2026. [arXiv:2602.12430](https://arxiv.org/abs/2602.12430). Treats self-acquired skills as a security surface, not just a capability store.
+- **Identifying the Risks of LM Agents with an LM-Emulated Sandbox (ToolEmu)** — 2023. [arXiv:2309.15817](https://arxiv.org/abs/2309.15817). The precursor for sandboxed risk discovery, still the standard reference for testing agents safely.
 
 > If you take one idea from this list into production: aggregate task-success curves will look great while safety silently collapses. Measure utility and safety on separate axes, over time. The [reference implementation](#reference-implementations) exists to make that failure — and its partial fixes — visible in the reference code.
 
@@ -390,6 +448,7 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 
 A running log so you can see what changed without diffing. Newest first.
 
+- **2026-09** — Added three sections: [zero-data self-evolution](#zero-data-self-evolution-and-self-play) (*Absolute Zero*, *R-Zero*, *Tool-R0*), [self-evolving coding agents](#self-evolving-coding-agents) following the August survey, and [forgetting, drift, and stability](#forgetting-drift-and-stability) (*Do Self-Evolving Agents Forget?*, *anytime-valid certificates*, *SSGM*). Added experience-sharing and red-teaming work.
 - **2026-07** — Community layer: [`COMMUNITY.md`](COMMUNITY.md) project board, [contributing guide](docs/contributing-guide.md), issue/PR templates, and spotlight strip above.
 - **2026-07** — Initial public release: 90+ papers across 13 topics, four-pathway taxonomy, misevolution safety section, primer, and two runnable reference implementations.
 
