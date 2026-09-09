@@ -385,7 +385,7 @@ Papers are the spine of this repo; **open-source projects** are the hands. [`COM
   <a href="https://github.com/stanfordnlp/dspy"><img src="https://img.shields.io/badge/DSPy-compile_&_optimize-8a63d2?style=flat&labelColor=1b1b1b" alt="DSPy"></a>
   <a href="https://github.com/FoundationAgents/aflow"><img src="https://img.shields.io/badge/AFlow-workflow_search-1d9e75?style=flat&labelColor=1b1b1b" alt="AFlow"></a>
   <a href="https://github.com/THUDM/AgentBench"><img src="https://img.shields.io/badge/AgentBench-eval-378add?style=flat&labelColor=1b1b1b" alt="AgentBench"></a>
-  <a href="https://github.com/ai-safety-institute/AgentHarm"><img src="https://img.shields.io/badge/AgentHarm-safety-c0417a?style=flat&labelColor=1b1b1b" alt="AgentHarm"></a>
+  <a href="https://huggingface.co/datasets/ai-safety-institute/AgentHarm"><img src="https://img.shields.io/badge/AgentHarm-safety-c0417a?style=flat&labelColor=1b1b1b" alt="AgentHarm"></a>
   <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/→_full_board-15+_projects-1b1b1b?style=flat&labelColor=1b1b1b&color=666" alt="Full community board"></a>
 </p>
 
@@ -464,6 +464,7 @@ A few notes on process, because a curated list is only as good as its upkeep:
 
 - **Entries are read, not scraped.** Each one gets a single neutral sentence describing what the work *does*. If a description reads like a press release, it hasn't been reviewed yet — open an issue.
 - **Links are checked, not guessed.** Every arXiv identifier in the list has been resolved against the arXiv API and its title compared with the entry's, so no link here is a guess. Where a work has no stable paper ID, the entry links its canonical repository instead; where neither exists, it is kept without a link and marked `needs-link` rather than given a fabricated one. No entry currently carries that marker.
+- **The link policy is enforced by CI.** [`.github/workflows/link-check.yml`](.github/workflows/link-check.yml) re-resolves every arXiv identifier through the arXiv API, compares the returned title with the entry's, and requests every other link — on each pull request and once a month. A broken or mislabelled link fails the check.
 - **Monthly review pass.** Roughly once a month the newest work is triaged into the taxonomy and the [Updates](#updates) log is appended. The date in the banner reflects the last pass.
 - **Scope is enforced.** New sub-areas are added only when several papers justify them, to keep the list walkable rather than exhaustive. See [related lists](#related-lists) for wider, more encyclopedic coverage.
 
@@ -485,7 +486,7 @@ Found something wrong or missing? Corrections are the most welcome PRs of all �
 
 This list is curated to be walkable rather than exhaustive; these go wider and are worth watching:
 
-- [EvoAgentX/Awesome-Self-Evolving-Agents](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents) — companion to the *Comprehensive Survey*.
+- [EvoAgentX/Awesome-Self-Evolving-Agents](https://github.com/ANative-Lab/Awesome-Self-Evolving-Agents) — companion to the *Comprehensive Survey*.
 - [XMUDeepLIT/Awesome-Self-Evolving-Agents](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents) — companion to the *What/When/How/Where* survey.
 
 If a paper here is mis-attributed or missing a stable link, that is on this list, not on those.
