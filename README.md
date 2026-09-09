@@ -220,6 +220,7 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 - **ARISE: Agent Reasoning with Intrinsic Skill Evolution in Hierarchical RL** — 2026. [arXiv:2603.16060](https://arxiv.org/abs/2603.16060). Learns hierarchical skills intrinsically during agent reasoning.
 - **Self-Evolving LLMs via Continual Instruction Tuning** — 2025. [arXiv:2509.18133](https://arxiv.org/abs/2509.18133). Continually updates instruction-following behavior from new experience.
 - **Self-Evolving Curriculum for LLM Reasoning** — 2025. [arXiv:2505.14970](https://arxiv.org/abs/2505.14970). The agent designs its own curriculum.
+- **ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction** — EMNLP Findings 2026. [arXiv:2608.20920](https://arxiv.org/abs/2608.20920). Separates question-specific factual memory from persistent experiential memory and evolves an Experience Bank together with MemGuide/MemTool procedures through validation-gated updates.
 
 ---
 
