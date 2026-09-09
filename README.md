@@ -226,6 +226,7 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 - **Self-Evolving LLMs via Continual Instruction Tuning** — 2025. [arXiv:2509.18133](https://arxiv.org/abs/2509.18133). Continually updates instruction-following behavior from new experience.
 - **Self-Evolving Curriculum for LLM Reasoning** — 2025. [arXiv:2505.14970](https://arxiv.org/abs/2505.14970). The agent designs its own curriculum.
 - **ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction** — EMNLP Findings 2026. [arXiv:2608.20920](https://arxiv.org/abs/2608.20920). Separates question-specific factual memory from persistent experiential memory and evolves an Experience Bank together with MemGuide/MemTool procedures through validation-gated updates.
+- **ExpeL: LLM Agents Are Experiential Learners** — 2023. [arXiv:2308.10144](https://arxiv.org/abs/2308.10144). Collects trajectories across a task set, extracts natural-language insights from them, and reuses both at inference without touching the weights.
 
 ---
 
