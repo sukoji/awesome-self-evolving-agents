@@ -210,6 +210,7 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 
 - **Building Self-Evolving Agents via Experience-Driven Lifelong Learning (ELL) + StuLife** — 2025. [arXiv:2508.19005](https://arxiv.org/abs/2508.19005). Formalizes ELL (long-term memory, skill learning, self-motivation) and ships StuLife, a simulated college-life benchmark for it.
 - **Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System** — 2026. [arXiv:2601.18226](https://arxiv.org/abs/2601.18226). An end-to-end reproducible self-evolving system for open-ended tasks.
+- **OpenSkill: Open-World Self-Evolution for LLM Agents** — 2026. [arXiv:2606.06741](https://arxiv.org/abs/2606.06741). Acquires reusable skills from public resources and constructs verification signals without target-task supervision.
 - **AutoSkill: Experience-Driven Lifelong Learning via Skill Self-Evolution** — 2026. [arXiv:2603.01145](https://arxiv.org/abs/2603.01145). When to extract a skill, what to keep, how to control forgetting.
 - **SkillFlow: Benchmarking Lifelong Skill Discovery and Evolution for Autonomous Agents** — 2026. [arXiv:2604.17308](https://arxiv.org/abs/2604.17308). Method plus benchmark for continuous skill revision.
 - **EvoSkill: Automated Skill Discovery for Multi-Agent Systems** — 2026. [arXiv:2603.02766](https://arxiv.org/abs/2603.02766). Discovers reusable skills for multi-agent teams from experience.
