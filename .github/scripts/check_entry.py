@@ -20,6 +20,7 @@ from pathlib import Path
 
 ALLOWED_FILES = {"README.md", "COMMUNITY.md"}
 MAX_ADDED_LINES = 3
+MAX_REASONS = 8   # a comment listing every line of a large diff helps nobody
 
 # - **Title** — Venue'Year. [label](url). One sentence.
 ENTRY = re.compile(
@@ -35,6 +36,16 @@ UA = {"User-Agent": "awesome-self-evolving-agents entry guard"}
 
 def fail(message):
     print("BLOCK " + message)
+
+
+def report(problems):
+    for problem in problems[:MAX_REASONS]:
+        fail(problem)
+    if len(problems) > MAX_REASONS:
+        fail("and %d further reason(s), not listed"
+             % (len(problems) - MAX_REASONS))
+    print("%d reason(s) this needs a human" % len(problems))
+    return 1
 
 
 def parse(diff):
@@ -75,8 +86,10 @@ def main():
 
     outside = sorted(f for f in files if f not in ALLOWED_FILES)
     if outside:
-        problems.append("touches %s; only %s may be auto-merged"
-                        % (", ".join(outside), " and ".join(sorted(ALLOWED_FILES))))
+        # Once the diff reaches outside the list, checking its lines one by one
+        # says nothing useful — this is a human's pull request either way.
+        return report(["touches %s; only %s may be auto-merged"
+                       % (", ".join(outside), " and ".join(sorted(ALLOWED_FILES)))])
     if removed:
         problems.append("removes or rewrites %d line(s); additions only" % removed)
 
@@ -104,11 +117,8 @@ def main():
         if title in existing:
             problems.append("%r is already in the list" % title)
 
-    for problem in problems:
-        fail(problem)
     if problems:
-        print("%d reason(s) this needs a human" % len(problems))
-        return 1
+        return report(problems)
     print("OK routine list addition: %d line(s), links live, no duplicates"
           % len(body))
     return 0
