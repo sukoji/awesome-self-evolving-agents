@@ -148,6 +148,7 @@ Not self-evolving on their own, but every later method assumes these.
 - **Large Language Models as Optimizers (OPRO)** — 2023. [arXiv:2309.03409](https://arxiv.org/abs/2309.03409). The model itself proposes improved instructions.
 - **Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution** — 2023. [arXiv:2309.16797](https://arxiv.org/abs/2309.16797). Evolutionary prompt mutation, including of the mutation prompts.
 - **TextGrad: Automatic "Differentiation" via Text** — 2024. [arXiv:2406.07496](https://arxiv.org/abs/2406.07496). Backprop-style credit assignment through natural-language feedback.
+- **STaR: Bootstrapping Reasoning With Reasoning** — 2022. [arXiv:2203.14465](https://arxiv.org/abs/2203.14465). Trains a model on the rationales it generated and got right, then repeats — the bootstrap loop most later self-training work is a variation on.
 
 ---
 
