@@ -1,5 +1,12 @@
 name: link check
 
+# Re-resolves every arXiv identifier through the arXiv API, compares the
+# returned title with the entry's own, and requests every other link.
+#
+# A pull request's Markdown is checked, but never its code: the script that
+# does the checking comes from this repository's default branch, and the pull
+# request is checked out into a separate directory that is only read.
+
 on:
   pull_request:
     paths:
@@ -10,12 +17,27 @@ on:
     - cron: "0 6 1 * *"   # monthly, alongside the review pass
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out the default branch (trusted scripts)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - name: Check out the content under test
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+        with:
+          path: subject
+          persist-credentials: false
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5
         with:
           python-version: "3.12"
-      - run: python .github/scripts/check_links.py
+
+      - run: python .github/scripts/check_links.py --root subject

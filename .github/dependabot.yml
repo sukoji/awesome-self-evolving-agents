@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # The workflows here hold a write token, so a stale action version is the one
+  # dependency worth watching. Everything else in this repository is prose.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "chore"
+    labels:
+      - dependencies
