@@ -36,7 +36,7 @@
     </circle>
   </g>
 
-  <text class="kick"  x="182" y="58">AWESOME · UPDATED 2026-07</text>
+  <text class="kick"  x="182" y="58">AWESOME · UPDATED 2026-09</text>
   <text class="title" x="180" y="102">Self-Evolving Agents</text>
   <rect x="182" y="116" width="330" height="3" rx="1.5" fill="url(#rule)"/>
   <text class="sub" x="182" y="146">Agents that improve themselves — and the ways that quietly goes wrong.</text>
