@@ -12,6 +12,7 @@ Two checks, both against live sources:
 Exits non-zero and prints one line per problem.
 """
 
+import argparse
 import difflib
 import html
 import re
@@ -146,7 +147,13 @@ def check_urls(urls):
 
 
 def main():
-    root = Path(__file__).resolve().parents[2]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--root", type=Path, default=Path(__file__).resolve().parents[2],
+        help="directory holding the Markdown to check (default: this checkout). "
+             "Lets a workflow run this trusted copy of the script against a "
+             "pull request's files without executing the pull request's own.")
+    root = parser.parse_args().root
     papers, urls = collect(root)
     print("checking %d arXiv identifiers and %d other links"
           % (len(papers), len({u for _, u in urls})))

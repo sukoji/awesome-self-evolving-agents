@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/papers-130+-8a63d2?style=flat&labelColor=1b1b1b" alt="130+ papers">
+  <img src="https://img.shields.io/badge/papers-145+-8a63d2?style=flat&labelColor=1b1b1b" alt="145+ papers">
   <img src="https://img.shields.io/badge/topics-16-1d9e75?style=flat&labelColor=1b1b1b" alt="16 topics">
   <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/community_projects-15+-c0417a?style=flat&labelColor=1b1b1b" alt="Community projects"></a>
   <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-d85a30?style=flat&labelColor=1b1b1b" alt="Runnable code"></a>
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <sub><b>130+ papers</b> across <b>16 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-09</b></sub>
+  <sub><b>145+ papers</b> across <b>16 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-09</b></sub>
 </p>
 
 <p align="center">
