@@ -55,8 +55,8 @@ def get(url, timeout=40):
 
 def skippable(url):
     """Links a bot cannot meaningfully verify, or that verify nothing."""
-    if "img.shields.io" in url or "arxiv.org" in url:
-        return True   # badge images; arXiv is checked through the API instead
+    if "img.shields.io" in url or "api.star-history.com" in url or "arxiv.org" in url:
+        return True   # badge and chart images; arXiv is checked through the API instead
     if any(token in url for token in PLACEHOLDERS):
         return True   # documentation examples, not real destinations
     if re.match(r"https?://github\.com/[^/]+/[^/]+/"

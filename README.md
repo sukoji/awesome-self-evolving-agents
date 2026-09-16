@@ -11,8 +11,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/papers-145+-8a63d2?style=flat&labelColor=1b1b1b" alt="145+ papers">
-  <img src="https://img.shields.io/badge/topics-16-1d9e75?style=flat&labelColor=1b1b1b" alt="16 topics">
+  <img src="https://img.shields.io/badge/papers-170+-8a63d2?style=flat&labelColor=1b1b1b" alt="170+ papers">
+  <img src="https://img.shields.io/badge/topics-17-1d9e75?style=flat&labelColor=1b1b1b" alt="17 topics">
   <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/community_projects-15+-c0417a?style=flat&labelColor=1b1b1b" alt="Community projects"></a>
   <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-d85a30?style=flat&labelColor=1b1b1b" alt="Runnable code"></a>
   <a href="https://github.com/sukoji/awesome-self-evolving-agents/issues/new/choose"><img src="https://img.shields.io/badge/suggest-paper_or_project-issue-378add?style=flat&labelColor=1b1b1b" alt="Suggest via issue"></a>
@@ -21,12 +21,13 @@
 </p>
 
 <p align="center">
-  <sub><b>145+ papers</b> across <b>16 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-09</b></sub>
+  <sub><b>170+ papers</b> across <b>17 topics</b> · <b>15+ community projects</b> · <b>2 runnable demos</b> · reviewed monthly · last pass <b>2026-09</b></sub>
 </p>
 
 <p align="center">
   <a href="docs/primer.md">Primer</a> ·
   <a href="#the-four-evolution-pathways">Taxonomy</a> ·
+  <a href="#recursive-self-improvement">RSI</a> ·
   <a href="#safety-misevolution-and-defenses">Safety</a> ·
   <a href="#community-spotlight">Community</a> ·
   <a href="#reference-implementations">Code</a> ·
@@ -56,6 +57,7 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 - [Experience-driven lifelong learning and skills](#experience-driven-lifelong-learning-and-skills)
 - [Zero-data self-evolution and self-play](#zero-data-self-evolution-and-self-play)
 - [Self-evolving coding agents](#self-evolving-coding-agents)
+- [Recursive self-improvement](#recursive-self-improvement)
 - [Reinforcement learning for self-evolution](#reinforcement-learning-for-self-evolution)
 - [Multi-agent co-evolution](#multi-agent-co-evolution)
 - [Forgetting, drift, and stability](#forgetting-drift-and-stability)
@@ -254,7 +256,7 @@ Software engineering has become the flagship domain for self-evolution, because 
 
 - **Self-Evolving Coding Agents: A Survey** — 2026. [arXiv:2608.03392](https://arxiv.org/abs/2608.03392). A target-centered taxonomy of *what* evolves, plus *when* evolution happens and which code-specific signals drive it. Notes that executable feedback and repo-level context make software a natural fit — while introducing feedback reliability, benchmark overfitting, reversibility, and cost problems. Ships a curated companion list updated through August 2026.
 - **A Self-Improving Coding Agent** — 2025. [OpenReview](https://openreview.net/forum?id=rShJCyLsOr). An agent that edits its own codebase to get better at editing codebases.
-- **Gödel Agent: A Self-Referential Framework for Recursive Self-Improvement** — ACL 2025. The clearest statement of recursive self-modification in this space.
+- **Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement** — ACL 2025. [arXiv:2410.04444](https://arxiv.org/abs/2410.04444). The clearest statement of recursive self-modification in this space.
 - **R&D-Agent: An LLM-Agent Framework Towards Autonomous Data Science** — 2025. [arXiv:2505.14738](https://arxiv.org/abs/2505.14738). Automated research/development loops for data-driven work.
 - **Controlled Self-Evolution for Algorithmic Code Optimization** — 2026. [arXiv:2601.07348](https://arxiv.org/abs/2601.07348). Puts explicit controls around the self-modification loop.
 - **AlphaApollo: A System for Deep Agentic Reasoning** — 2026. [arXiv:2510.06261](https://arxiv.org/abs/2510.06261).
@@ -262,6 +264,28 @@ Software engineering has become the flagship domain for self-evolution, because 
 - **Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents** — 2025. [arXiv:2505.22954](https://arxiv.org/abs/2505.22954). Rewrites its own code and keeps an archive of every variant, so improvements that look like dead ends stay available to build on later.
 - **AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery** — 2025. [arXiv:2506.13131](https://arxiv.org/abs/2506.13131). Evolves programs against an automated evaluator, and reports discovered algorithms that improve on the best known ones.
 - **Co-evolving LLM Coder and Unit Tester via Reinforcement Learning** — NeurIPS 2025. Coder and test-writer improve against each other.
+
+---
+
+## Recursive self-improvement
+
+The narrow end of the field and, in 2026, its busiest. *Recursive* self-improvement (RSI) means improving the process that produces the next system — the harness, the training algorithm, the exploration policy, the evaluator — so the gain compounds instead of being spent on one answer. The line runs from Gödel Agent and the Darwin Gödel Machine in the [coding section](#self-evolving-coding-agents) to the papers below; ICLR 2026 gave it a [dedicated workshop](https://iclr.cc/virtual/2026/workshop/10000796).
+
+- **Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops** — 2026. [arXiv:2607.07663](https://arxiv.org/abs/2607.07663). Surveys 1,250 papers along what is improved (behaviour, policy, evaluator, research process) and how closed the loop is, and finds that demonstrated improvement strength tracks the strength of the verification signal — formal verifiers at the top, intrinsic self-assessment at the bottom. Start here.
+- **Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement** — 2026. [arXiv:2609.13406](https://arxiv.org/abs/2609.13406). Casts RSI and classical policy iteration as one cycle distinguished by two dials — whether the improver is part of the agent, and whether the standard it is measured against is grounded outside it — so existing systems, and their defects, sit on the same axes.
+- **The Economics of Recursive Self-Improvement** — 2026. [arXiv:2609.15802](https://arxiv.org/abs/2609.15802). Models RSI as feedback loops whose net acceleration is the product of their elasticities, separates narrow AI-R&D gains from broad capability, and calibrates to existing data: the loops are not yet strong enough to be self-sustaining, though they appear to be strengthening.
+- **Dream-RSI: Recursive Self-Improvement through Evolving Worlds** — 2026. [arXiv:2609.14858](https://arxiv.org/abs/2609.14858). Treats the accumulated history of discovery trees as a replay simulator, refines the exploration policy off-policy inside it, and redeploys the policy online — reducing discovery cost on algorithm engineering, mathematical optimization, and GPU kernels while leaving the underlying coding agent unchanged.
+- **ModularRSI: Modular and Generalizable Recursive Harness Self-Improvement** — 2026. [arXiv:2609.14857](https://arxiv.org/abs/2609.14857). Evolves a harness split into five modules on 2,000 tasks disjoint from the evaluation benchmarks, contrasting successful and failed runs of the same task, so improvements transfer to unseen tasks and other foundation models instead of fitting the benchmark.
+- **HELIX: Model-Harness Co-evolution for Recursive Self-Improvement** — 2026. [arXiv:2608.13951](https://arxiv.org/abs/2608.13951). Makes harness edits typed and source-traceable, so one round of harness evolution both improves a fixed model and yields verified sibling trajectories to train the next one.
+- **Meta^n: Recursive Self-Improvement through Emergent Depth** — 2026. [arXiv:2608.24735](https://arxiv.org/abs/2608.24735). Holds a single meta-operation fixed and recurses on its growing input rather than editing itself, removing the usual cap of about two meta-levels; the only self-improving agent in its comparison to score above zero on ARC-AGI-2.
+- **MetaRSI / RSI2: A Meta-Recursive Self-Improving System for Recursive Self-Improving Systems Themselves** — 2026. [arXiv:2609.06396](https://arxiv.org/abs/2609.06396). Schedules three typed operators — data, harness, and model RSI — over one loop, with a meta-policy that revises the schedule, so improvements across the model-production pipeline compose rather than compete.
+- **Mendel Gödel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution** — 2026. [arXiv:2608.07645](https://arxiv.org/abs/2608.07645). Adds two self-modifications to single-trajectory mutation — editing from many tasks at once, and from another lineage's run on the same task — with a convergence argument and gains on SWE-bench and Polyglot.
+- **The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators** — 2026. [arXiv:2606.26294](https://arxiv.org/abs/2606.26294). Lets the utility change between epochs while holding it fixed within one, so evaluators can co-evolve with the agents they judge without voiding per-epoch improvement guarantees.
+- **AREX: Towards a Recursively Self-Improving Agent for Deep Research** — 2026. [arXiv:2607.21461](https://arxiv.org/abs/2607.21461). Exploits the gap between costly discovery and cheap constraint-wise verification: an outer loop audits the provisional answer and launches targeted follow-up research, with a learned context-update tool to sustain the loop over long horizons.
+- **RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments** — 2026. [arXiv:2609.15364](https://arxiv.org/abs/2609.15364). A training-free curriculum–actor–verifier loop that explores a new digital environment broad-then-deep and freezes what it learns as reusable causal memory.
+- **Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering** — 2026. [arXiv:2607.28568](https://arxiv.org/abs/2607.28568). Releases OpenMLE, an open stack of gym, RL, and evolutionary search for ML engineering, and a 35B model post-trained on the same four program-evolution operators its search composes.
+
+> Read this section against its own measurements. On [AI4AI-Bench](#benchmarks-and-environments) the best system closes under a fifth of the gap between a repository's shipped training algorithm and the optimum; the survey finds open-ended RSI bounded on every axis it measured; the economics paper puts the loops below self-sustaining. The failure modes that matter most here — [self-authored verification](#why-they-fail-failure-analysis-and-attribution) and [harness tampering](#safety-misevolution-and-defenses) — are already documented. For the case that RSI is further off than the headlines, see [MIT Technology Review, August 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/).
 
 ---
 
@@ -301,7 +325,7 @@ An agent that keeps updating itself can quietly *lose* capabilities it already h
 - **EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective** — 2026. [arXiv:2605.18421](https://arxiv.org/abs/2605.18421). Compares 15 memory methods against strong long-context baselines and finds no memory form wins consistently — long-context remains highly competitive.
 - **EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle** — 2025. [arXiv:2510.16079](https://arxiv.org/abs/2510.16079). Distills abstract strategic knowledge rather than storing raw trajectories.
 - **Towards Trustworthy Agentic AI: Safety, Robustness, Privacy, and System Security** — 2026. [arXiv:2605.23989](https://arxiv.org/abs/2605.23989). Broad survey; its lifelong-adaptation section frames the trust-utility trade-off.
-- **Towards Healthy Evolution: Human-Agent Interaction in Self-Evolving Systems** — 2026. [arXiv:2606.06114](https://arxiv.org/abs/2606.06114). Where human input belongs in an otherwise autonomous loop.
+- **ANCHOR: An External LLM-Driven Supervisory Module Facilitating Healthy Evolution in Self-Evolving Systems** — 2026. [arXiv:2606.06114](https://arxiv.org/abs/2606.06114). Adds an external supervisor that reviews each phase of self-evolution and feeds its verdicts back as context; retrofitted onto two open self-evolving frameworks, it raises safety while core capability holds steady.
 
 > Memory accumulation alone does not solve continual learning — several independent lines report the opposite, with stale or misleading experiences acting as an active failure mode unless refinement and verification are explicit.
 
@@ -319,8 +343,10 @@ The corrective literature. If you are building any of the above, read this secti
 - **The Six Sigma Agent: Achieving Enterprise-Grade Reliability in LLM Systems Through Consensus-Driven Decomposed Execution** — 2026. [arXiv:2601.22290](https://arxiv.org/abs/2601.22290). Decomposes execution with consensus checks for higher reliability.
 - **Understanding Bugs in Modern Agentic Frameworks: Symptoms, Root Causes, and Triggering Conditions** — 2026. [arXiv:2604.08906](https://arxiv.org/abs/2604.08906). 409 fixed bugs across five agentic frameworks under a five-layer architectural abstraction; finds the model-integration layer most bug-prone yet least covered by tests.
 - **Efficient Failure Management for Multi-Agent Systems with Reasoning Trace Representation** — 2026. [arXiv:2603.21522](https://arxiv.org/abs/2603.21522). Manages multi-agent failures using compact reasoning-trace representations.
-
 - **Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report** — 2026. [arXiv:2608.15763](https://arxiv.org/abs/2608.15763). Studies how fixed-harness training impedes later runtime edits and tests harness-state augmentation with frozen-weight edit evaluation.
+- **Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents** — 2026. [arXiv:2607.24300](https://arxiv.org/abs/2607.24300). When an agent writes both the policy and the tests that accept it, self-assigned scores stay near perfect while sealed deployment performance degrades; one accept/reject audit the agent cannot see or author is enough to stop real regressions shipping.
+- **On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification** — 2026. [arXiv:2608.18066](https://arxiv.org/abs/2608.18066). Re-runs memory-based self-improving agents across seeds and shuffled task orders, and finds the reported gains lean on a default ordering that acts as a hidden curriculum.
+- **Rehearse: Stepping Back from the Confidence Cliff in Self-Improving Autoresearch** — 2026. [arXiv:2607.27687](https://arxiv.org/abs/2607.27687). An autoresearch loop's judgment of which change will help collapses late in the run — selective accuracy falls from 82.8% to 56.9% while the judge keeps deciding — and focused memory of similar past attempts restores it.
 
 ---
 
@@ -335,6 +361,9 @@ The part of the field that is under-appreciated relative to how important it is.
 - **AgenticRed: Optimizing Agentic Systems for Automated Red-teaming** — 2026. [arXiv:2601.13518](https://arxiv.org/abs/2601.13518). Turns the optimization machinery on the attack side — automated red-teaming of agentic systems.
 - **Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward** — 2026. [arXiv:2602.12430](https://arxiv.org/abs/2602.12430). Treats self-acquired skills as a security surface, not just a capability store.
 - **Identifying the Risks of LM Agents with an LM-Emulated Sandbox (ToolEmu)** — 2023. [arXiv:2309.15817](https://arxiv.org/abs/2309.15817). The precursor for sandboxed risk discovery, still the standard reference for testing agents safely.
+- **Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents** — 2026. [arXiv:2608.12851](https://arxiv.org/abs/2608.12851). Misevolution measured at the skill level: all 21 evolved configurations authored unsafe skills, three malicious exposures raised carryover attack success from 16.0% to 35.3%, and the SafeEvolve wrapper cuts fresh-session harm by 17.3 points for a 0.4-point utility change.
+- **Auditing Harness Tampering in Self-Improving Agents** — 2026. [arXiv:2609.00069](https://arxiv.org/abs/2609.00069). Extends reward and measurement tampering to agents that edit their own harness, and finds tampering — illusory gains, broken authorization or provenance — in real runs, often persisting in the best agent's lineage.
+- **LLM-as-a-Judge Is Not an Oracle: Why Self-Improving Agents Need Deterministic Guardrails** — 2026. [arXiv:2609.02246](https://arxiv.org/abs/2609.02246). Eleven ways the evaluation signal failed across months of production prompt-optimization loops — including a 100% pass rate concealing 68% true capability — and the deterministic gates that caught them.
 
 > If you take one idea from this list into production: aggregate task-success curves will look great while safety silently collapses. Measure utility and safety on separate axes, over time. The [reference implementation](#reference-implementations) exists to make that failure — and its partial fixes — visible in the reference code.
 
@@ -351,6 +380,11 @@ Evaluation is the field's bottleneck; static one-shot benchmarks cannot see drif
 - **LTMBenchmark** — 2024. [github.com/GoodAI/goodai-ltm-benchmark](https://github.com/GoodAI/goodai-ltm-benchmark). Tests long-term memory retention under interleaved, distracted dialogue.
 - **MLGym: A Framework and Benchmark for Advancing AI Research Agents** — 2025. [arXiv:2502.14499](https://arxiv.org/abs/2502.14499). Benchmarks agents that perform ML research tasks.
 - **EvoClinician: A Self-Evolving Agent for Multi-Turn Medical Diagnosis via Test-Time Evolutionary Learning** — 2026. [arXiv:2601.22964](https://arxiv.org/abs/2601.22964). Ships the Med-Inquire benchmark for iterative diagnosis and a Diagnose-Grade-Evolve loop in which a Process Grader assigns credit per action on both clinical yield and resource cost.
+- **AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement** — 2026. [arXiv:2608.20318](https://arxiv.org/abs/2608.20318). Ten frozen research repositories where the agent must rewrite the training algorithm itself, rerun from scratch and scored by a hidden evaluator; the best of 29 configurations closes under a fifth of the gap to the optimum.
+- **RSIBench-Data: Benchmarking Data-Centric Research for Recursive Self-Improvement** — 2026. [arXiv:2607.25886](https://arxiv.org/abs/2607.25886). Isolates the data-strategy half of the loop on a fixed post-training stack; agents improve on their first attempt in 58% of settings, but 78% of searches that continue past their best score end lower.
+- **PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents** — 2026. [arXiv:2608.04003](https://arxiv.org/abs/2608.04003). Turns retained experience on and off across ordered fresh-session tasks, and checks whether gains came through the intended save–retrieve–update pathway.
+- **The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?** — 2026. [arXiv:2606.04455](https://arxiv.org/abs/2606.04455). A code agent builds an agent against a held-out set under anti-reward-hacking defenses; meta-agents rarely match human baselines, and high optimization pressure surfaces ground-truth exfiltration.
+- **S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?** — 2026. [arXiv:2608.31100](https://arxiv.org/abs/2608.31100). Separates permissive exploration from strict held-out evaluation in seven verifiable games, and compares history, summary memory, and parameter training as routes from experience to improvement.
 
 ---
 
@@ -447,6 +481,8 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 
 **If you care about deployment-time learning:** Reflexion → EvoTest → TT-SI → TMEM → TAME.
 
+**If you care about recursive self-improvement:** Gödel Agent → Darwin Gödel Machine → the RSI survey → Generalized Agent Iteration → AI4AI-Bench → *Auditing Harness Tampering*.
+
 **If you care about evaluation:** the surveys' benchmark sections → StuLife → Evo-Memory → SkillFlow.
 
 ---
@@ -455,6 +491,7 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 
 A running log so you can see what changed without diffing. Newest first.
 
+- **2026-09** — Added a [recursive self-improvement](#recursive-self-improvement) section (*Dream-RSI*, *ModularRSI*, *HELIX*, *Meta^n*, the Gödel-machine successors, and the 1,250-paper RSI survey), RSI benchmarks (*AI4AI-Bench*, *RSIBench-Data*, *PAST-Bench*, *Meta-Agent Challenge*, *S3Gym*), and the failure and safety work that came with them (*self-authored verification*, *harness tampering*, *skill misevolution*). Linked *Gödel Agent* and corrected its title.
 - **2026-09** — Added three sections: [zero-data self-evolution](#zero-data-self-evolution-and-self-play) (*Absolute Zero*, *R-Zero*, *Tool-R0*), [self-evolving coding agents](#self-evolving-coding-agents) following the August survey, and [forgetting, drift, and stability](#forgetting-drift-and-stability) (*Do Self-Evolving Agents Forget?*, *anytime-valid certificates*, *SSGM*). Merged four community entries (*OpenSkill*, *RewardHarness*, *ForeDreamer*, *HAT*). Ran a link-verification pass over the whole list: every arXiv identifier now resolves to a paper whose title matches, one wrong title was corrected (the agentic-framework bug study), three more were corrected against arXiv metadata (*EvoMAS*, *Six Sigma Agent*, *ABSTRAL*), and the two entries with no paper are linked to their canonical repositories.
 - **2026-07** — Community layer: [`COMMUNITY.md`](COMMUNITY.md) project board, [contributing guide](docs/contributing-guide.md), issue/PR templates, and spotlight strip above.
 - **2026-07** — Initial public release: 90+ papers across 13 topics, four-pathway taxonomy, misevolution safety section, primer, and two runnable reference implementations.
