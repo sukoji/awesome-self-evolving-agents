@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Awesome Self-Evolving Agents" width="840">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" alt="Awesome Self-Evolving Agents. Four versions of one agent, each rewritten by the last: every version scores higher, and the fourth got its best score by deleting its own safety check." width="880">
+  </picture>
 </p>
 
 <p align="center">
@@ -49,6 +52,7 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 - [Scope and stance](#scope-and-stance)
 - [A one-diagram primer](#a-one-diagram-primer)
 - [The four evolution pathways](#the-four-evolution-pathways)
+- [Evolution map](#evolution-map)
 - [Surveys and roadmaps](#surveys-and-roadmaps)
 - [Foundations and precursors](#foundations-and-precursors)
 - [Automated and self-evolving system design](#automated-and-self-evolving-system-design)
@@ -124,6 +128,19 @@ A useful spine for the whole field (popularized by the misevolution work) is to 
 | **Workflow** | Roles, topology, prompts | search / meta-optimization | ADAS, AFlow, MaAS, GPTSwarm |
 
 The sections below are organized roughly along these pathways, plus the cross-cutting concerns (failure, safety, evaluation, protocols).
+
+---
+
+## Evolution map
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/metro-dark.svg">
+    <img src="assets/metro-light.svg" alt="Evolution map: five threads of the field drawn as metro lines — self-play and zero data; Gödel machines and recursive self-improvement; design to harness; failure and safety; memory and skills. Stations are papers in this list in arXiv order; interchanges are papers on two threads." width="100%">
+  </picture>
+</p>
+
+Five threads through the list, drawn as metro lines. Each station is a paper listed below, in the order it appeared on arXiv; an interchange is a paper that belongs to two threads — the Darwin Gödel Machine is where automated design met recursive self-improvement, and *Harness tampering* is where harness evolution met the failure literature. The map is generated from this README by [`.github/scripts/build_metro.py`](.github/scripts/build_metro.py), which refuses to draw a paper that is not in the list.
 
 ---
 
