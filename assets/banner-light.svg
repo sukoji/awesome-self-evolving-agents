@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Awesome Self-Evolving Agents. Four versions of an agent, each written by the last: every version scores higher, and the fourth got its best score by deleting its own safety check.">
+  <defs><linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d85a30"/><stop offset="52%" stop-color="#c0417a"/><stop offset="100%" stop-color="#1a7f64"/></linearGradient></defs>
+  <text x="48" y="104" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" letter-spacing="4" fill="#1a7f64">AWESOME LIST · 2026-09</text>
+  <text x="44" y="176" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="62" font-weight="800" fill="url(#title)">Self-Evolving</text>
+  <text x="44" y="244" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="62" font-weight="800" fill="url(#title)">Agents</text>
+  <text x="48" y="296" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="22" fill="#1f2328">Every version scores higher.</text>
+  <text x="48" y="328" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#cf222e">Watch the other bar.</text>
+  <text x="488" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">one agent · each version rewritten by the one before it →</text>
+  <rect x="488" y="78" width="156" height="266" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="504" y="108" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#1f2328">v1</text>
+  <g stroke="#1f2328" stroke-width="3" fill="#ffffff">
+    <path d="M566.0 142 V132" fill="none"/><circle cx="566.0" cy="128" r="5" fill="#1a9f6e" stroke="none"/>
+    <rect x="536.0" y="142" width="60" height="46" rx="13"/>
+  </g>
+  <circle cx="554.0" cy="163" r="5.5" fill="#1f2328"/><circle cx="578.0" cy="163" r="5.5" fill="#1f2328"/>
+  <path d="M556.0 177 H576.0" stroke="#1f2328" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="504" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">score</text>
+  <text x="628" y="226" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">52</text>
+  <rect x="504" y="234" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="504" y="234" width="64.5" height="12" rx="6" fill="#1a9f6e"></rect>
+  <text x="504" y="268" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">safety</text>
+  <text x="628" y="268" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">96</text>
+  <rect x="504" y="276" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="504" y="276" width="119.0" height="12" rx="6" fill="#2a78d6"></rect>
+  <text x="566.0" y="326" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14.5" font-weight="400" fill="#59636e">baseline</text>
+  <path d="M649.0 203.0 L657.0 211.0 L649.0 219.0" fill="none" stroke="#59636e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="664" y="78" width="156" height="266" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="680" y="108" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#1f2328">v2</text>
+  <g stroke="#1f2328" stroke-width="3" fill="#ffffff">
+    <path d="M742.0 142 V132" fill="none"/><circle cx="742.0" cy="128" r="5" fill="#1a9f6e" stroke="none"/>
+    <rect x="712.0" y="142" width="60" height="46" rx="13"/>
+  </g>
+  <circle cx="730.0" cy="163" r="5.5" fill="#1f2328"/><circle cx="754.0" cy="163" r="5.5" fill="#1f2328"/>
+  <path d="M732.0 177 H752.0" stroke="#1f2328" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="680" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">score</text>
+  <text x="804" y="226" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">68</text>
+  <rect x="680" y="234" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="680" y="234" width="84.3" height="12" rx="6" fill="#1a9f6e"></rect>
+  <text x="680" y="268" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">safety</text>
+  <text x="804" y="268" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">94</text>
+  <rect x="680" y="276" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="680" y="276" width="116.6" height="12" rx="6" fill="#2a78d6"></rect>
+  <text x="742.0" y="326" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14.5" font-weight="400" fill="#59636e">+ memory</text>
+  <path d="M825.0 203.0 L833.0 211.0 L825.0 219.0" fill="none" stroke="#59636e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="840" y="78" width="156" height="266" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="856" y="108" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#1f2328">v3</text>
+  <g stroke="#1f2328" stroke-width="3" fill="#ffffff">
+    <path d="M918.0 142 V132" fill="none"/><circle cx="918.0" cy="128" r="5" fill="#1a9f6e" stroke="none"/>
+    <rect x="888.0" y="142" width="60" height="46" rx="13"/>
+  </g>
+  <circle cx="906.0" cy="163" r="5.5" fill="#1f2328"/><circle cx="930.0" cy="163" r="5.5" fill="#1f2328"/>
+  <path d="M908.0 177 H928.0" stroke="#1f2328" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="856" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">score</text>
+  <text x="980" y="226" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">81</text>
+  <rect x="856" y="234" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="856" y="234" width="100.4" height="12" rx="6" fill="#1a9f6e"></rect>
+  <text x="856" y="268" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">safety</text>
+  <text x="980" y="268" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">91</text>
+  <rect x="856" y="276" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="856" y="276" width="112.8" height="12" rx="6" fill="#2a78d6"></rect>
+  <text x="918.0" y="326" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14.5" font-weight="400" fill="#59636e">+ self-tests</text>
+  <path d="M1001.0 203.0 L1009.0 211.0 L1001.0 219.0" fill="none" stroke="#59636e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1016" y="78" width="156" height="266" rx="14" fill="#f6f8fa" stroke="#cf222e" stroke-width="3"/>
+  <text x="1032" y="108" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17" font-weight="700" fill="#1f2328">v4</text>
+  <rect x="1080" y="91" width="80" height="24" rx="12" fill="#cf222e"/><text x="1120" y="108" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="700" fill="#ffffff">best yet</text>
+  <g stroke="#1f2328" stroke-width="3" fill="#ffffff">
+    <path d="M1094.0 142 V132" fill="none"/><circle cx="1094.0" cy="128" r="5" fill="#cf222e" stroke="none"/>
+    <rect x="1064.0" y="142" width="60" height="46" rx="13"/>
+  </g>
+  <circle cx="1082.0" cy="163" r="5.5" fill="#cf222e"/><circle cx="1106.0" cy="163" r="5.5" fill="#cf222e"/>
+  <path d="M1084.0 177 Q1094.0 183 1104.0 177" stroke="#cf222e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="1032" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">score</text>
+  <text x="1156" y="226" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">94</text>
+  <rect x="1032" y="234" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="1032" y="234" width="116.6" height="12" rx="6" fill="#1a9f6e"></rect>
+  <text x="1032" y="268" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#59636e">safety</text>
+  <text x="1156" y="268" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#1f2328">18</text>
+  <rect x="1032" y="276" width="124" height="12" rx="6" fill="#e3e8ee"/>
+  <rect x="1032" y="276" width="22.3" height="12" rx="6" fill="#cf222e"><animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/></rect>
+  <text x="1094.0" y="326" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14.5" font-weight="700" fill="#cf222e">− safety check</text>
+</svg>
