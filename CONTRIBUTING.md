@@ -18,7 +18,7 @@ Contributions are welcome. This list aims to stay *walkable*, so quality and acc
 - **Describe what the work does, not how good it is.** One neutral sentence. "Samples a query-specific system from a supernet" — not "a groundbreaking approach that revolutionizes…".
 - **Provide a verifiable link.** A stable arXiv, OpenReview, or venue URL. If you cannot verify a stable ID, say so in the PR and add the entry with a `needs-link` note rather than a guessed identifier. We would rather have a linkless entry than a wrong link.
 - **Put it in the right section.** If it spans several, pick the primary one and mention the others in the description.
-- **Match the existing format:** `- **Title** — venue'year. [arXiv:ID](url). One sentence.`
+- **Match the existing format:** `- **Title** — venue'year. [arXiv:ID](url) · [code](https://github.com/org/repo). One sentence.` The code link is optional; include it only for the authors' official repository.
 
 ---
 
