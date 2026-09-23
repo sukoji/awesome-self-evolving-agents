@@ -16,6 +16,7 @@ import argparse
 import difflib
 import html
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -48,15 +49,24 @@ def normalise(text):
     return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
 
 
-def get_arxiv(url, attempts=5):
-    """arXiv answers 406 or 429 when it is throttling a busy address, which a
-    shared CI runner often is. Back off and retry before calling it broken."""
+def get_arxiv(url, attempts=4):
+    """Fetch an arXiv API response with curl.
+
+    Since 2026-09-23 arXiv's front end answers Python's HTTP client with 406
+    for any batch larger than a few identifiers, from local machines and CI
+    runners alike, while the byte-identical request from curl succeeds. curl
+    ships on every runner, so use it here and keep urllib for everything else.
+    Transient throttling (429/503) is still retried with backoff.
+    """
     for attempt in range(attempts):
-        try:
-            return get(url, timeout=90).read().decode()
-        except urllib.error.HTTPError as exc:
-            if exc.code not in (406, 429, 503) or attempt == attempts - 1:
-                raise
+        done = subprocess.run(
+            ["curl", "-sS", "--max-time", "90", "-A", UA["User-Agent"], "-w", "\n%{http_code}", url],
+            capture_output=True, text=True, encoding="utf-8")
+        body, _, code = done.stdout.rpartition("\n")
+        if done.returncode == 0 and code == "200":
+            return body
+        if code not in ("429", "503") or attempt == attempts - 1:
+            raise urllib.error.URLError("curl exit %d, HTTP %s" % (done.returncode, code or "none"))
         time.sleep(15 * 2 ** attempt)
 
 
