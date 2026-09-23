@@ -22,10 +22,12 @@ ALLOWED_FILES = {"README.md", "COMMUNITY.md"}
 MAX_ADDED_LINES = 3
 MAX_REASONS = 8   # a comment listing every line of a large diff helps nobody
 
-# - **Title** — Venue'Year. [label](url). One sentence.
+# - **Title** — Venue'Year. [label](url) · [code](github url). One sentence.
+# (the code link is optional)
 ENTRY = re.compile(
     r"^- \*\*[^*]{4,200}\*\* — [^.]{2,60}\. "
-    r"\[[^\]]{4,120}\]\((https?://[^\s)]+)\)\. "
+    r"\[[^\]]{4,120}\]\((https?://[^\s)]+)\)"
+    r"(?: · \[code\]\((https://github\.com/[^\s)]+)\))?\. "
     r"[A-Z][^\n]{15,400}$")
 # | [**name**](url) | author | pathway | focus |
 ROW = re.compile(
@@ -110,9 +112,9 @@ def main():
         if not match:
             problems.append("line does not match the entry format: %.90s" % stripped)
             continue
-        url = match.group(1)
-        if not link_ok(url):
-            problems.append("link does not resolve: %s" % url)
+        for url in filter(None, match.groups()):
+            if not link_ok(url):
+                problems.append("link does not resolve: %s" % url)
         title = stripped.split("**")[1]
         if title in existing:
             problems.append("%r is already in the list" % title)
