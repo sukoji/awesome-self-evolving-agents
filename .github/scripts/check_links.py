@@ -16,6 +16,7 @@ import argparse
 import difflib
 import html
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -46,6 +47,27 @@ PLACEHOLDERS = ("github.com/org/repo", "OWNER/REPO")
 
 def normalise(text):
     return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
+
+
+def get_arxiv(url, attempts=4):
+    """Fetch an arXiv API response with curl.
+
+    Since 2026-09-23 arXiv's front end answers Python's HTTP client with 406
+    for any batch larger than a few identifiers, from local machines and CI
+    runners alike, while the byte-identical request from curl succeeds. curl
+    ships on every runner, so use it here and keep urllib for everything else.
+    Transient throttling (429/503) is still retried with backoff.
+    """
+    for attempt in range(attempts):
+        done = subprocess.run(
+            ["curl", "-sS", "--max-time", "90", "-A", UA["User-Agent"], "-w", "\n%{http_code}", url],
+            capture_output=True, text=True, encoding="utf-8")
+        body, _, code = done.stdout.rpartition("\n")
+        if done.returncode == 0 and code == "200":
+            return body
+        if code not in ("429", "503") or attempt == attempts - 1:
+            raise urllib.error.URLError("curl exit %d, HTTP %s" % (done.returncode, code or "none"))
+        time.sleep(15 * 2 ** attempt)
 
 
 def get(url, timeout=40):
@@ -94,7 +116,7 @@ def check_arxiv(papers):
     for start in range(0, len(ids), BATCH):
         chunk = ids[start:start + BATCH]
         try:
-            body = get(ARXIV_API % (",".join(chunk), BATCH)).read().decode()
+            body = get_arxiv(ARXIV_API % (",".join(chunk), BATCH))
         except (urllib.error.URLError, OSError) as exc:
             problems.append("arXiv API unreachable for %s: %s" % (chunk[0], exc))
             continue
