@@ -38,7 +38,7 @@ LINES = [
     ("Gödel machines & RSI", 2, [
         ("2309.16797", "Promptbreeder"), ("2310.02304", "STOP"), ("2410.04444", "Gödel Agent"),
         ("2505.22954", "Darwin Gödel Machine"), ("2506.13131", "AlphaEvolve"), ("2510.21614", "Huxley-Gödel Machine"),
-        ("2606.20657", "A-Evolve-Training"), ("2607.07663", "RSI survey"), ("2609.14858", "Dream-RSI"),
+        ("2603.19461", "Hyperagents"), ("2606.20657", "A-Evolve-Training"), ("2607.07663", "RSI survey"), ("2609.14858", "Dream-RSI"),
         ("2609.24972", "RRSI"),
     ]),
     ("Design → harness", 0, [
