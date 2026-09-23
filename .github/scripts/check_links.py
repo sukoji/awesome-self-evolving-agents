@@ -48,6 +48,18 @@ def normalise(text):
     return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
 
 
+def get_arxiv(url, attempts=5):
+    """arXiv answers 406 or 429 when it is throttling a busy address, which a
+    shared CI runner often is. Back off and retry before calling it broken."""
+    for attempt in range(attempts):
+        try:
+            return get(url, timeout=90).read().decode()
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (406, 429, 503) or attempt == attempts - 1:
+                raise
+        time.sleep(15 * 2 ** attempt)
+
+
 def get(url, timeout=40):
     return urllib.request.urlopen(
         urllib.request.Request(url, headers=UA), timeout=timeout)
@@ -94,7 +106,7 @@ def check_arxiv(papers):
     for start in range(0, len(ids), BATCH):
         chunk = ids[start:start + BATCH]
         try:
-            body = get(ARXIV_API % (",".join(chunk), BATCH)).read().decode()
+            body = get_arxiv(ARXIV_API % (",".join(chunk), BATCH))
         except (urllib.error.URLError, OSError) as exc:
             problems.append("arXiv API unreachable for %s: %s" % (chunk[0], exc))
             continue
