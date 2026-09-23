@@ -4,13 +4,13 @@
 <text x="40" y="48" font-size="24" font-weight="700" fill="#e6edf3">Evolution map</text>
 <text x="40" y="76" font-size="14.5" fill="#9198a1">Five threads through this list. Each station is a paper in it, in the order it appeared on arXiv (ordered, not to scale);</text>
 <text x="40" y="96" font-size="14.5" fill="#9198a1">an interchange is a paper that belongs to two threads. Hover a station for its full title.</text>
-<text x="363.0" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2022–23</text>
-<rect x="457.9" y="130" width="118.6" height="618" fill="#30363d" opacity="0.4"/>
-<text x="517.1" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2024</text>
-<text x="671.3" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2025</text>
-<rect x="766.1" y="130" width="355.7" height="618" fill="#30363d" opacity="0.4"/>
-<text x="944.0" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2026</text>
-<path d="M260 250 H1060.9" stroke="#c98500" stroke-width="9" stroke-linecap="round"/>
+<text x="360.7" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2022–23</text>
+<rect x="452.9" y="130" width="115.3" height="618" fill="#30363d" opacity="0.4"/>
+<text x="510.6" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2024</text>
+<text x="660.4" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2025</text>
+<rect x="752.6" y="130" width="368.9" height="618" fill="#30363d" opacity="0.4"/>
+<text x="937.1" y="774" font-size="14" font-weight="700" text-anchor="middle" fill="#9198a1">2026</text>
+<path d="M260 250 H1062.8" stroke="#c98500" stroke-width="9" stroke-linecap="round"/>
 <rect x="40" y="241" width="18" height="18" rx="5" fill="#c98500"/>
 <text x="66" y="255" font-size="14.5" font-weight="600" fill="#e6edf3">Self-play &amp; zero data</text>
 <path d="M260 366 H1132.0" stroke="#199e70" stroke-width="9" stroke-linecap="round"/>
@@ -19,92 +19,94 @@
 <path d="M260 482 H1132.0" stroke="#3987e5" stroke-width="9" stroke-linecap="round"/>
 <rect x="40" y="473" width="18" height="18" rx="5" fill="#3987e5"/>
 <text x="66" y="487" font-size="14.5" font-weight="600" fill="#e6edf3">Design → harness</text>
-<path d="M260 598 H1084.6" stroke="#d55181" stroke-width="9" stroke-linecap="round"/>
+<path d="M260 598 H1085.9" stroke="#d55181" stroke-width="9" stroke-linecap="round"/>
 <rect x="40" y="589" width="18" height="18" rx="5" fill="#d55181"/>
 <text x="66" y="603" font-size="14.5" font-weight="600" fill="#e6edf3">Failure &amp; safety</text>
-<path d="M260 714 H1037.1" stroke="#d95926" stroke-width="9" stroke-linecap="round"/>
+<path d="M260 714 H1039.8" stroke="#d95926" stroke-width="9" stroke-linecap="round"/>
 <rect x="40" y="705" width="18" height="18" rx="5" fill="#d95926"/>
 <text x="66" y="719" font-size="14.5" font-weight="600" fill="#e6edf3">Memory &amp; skills</text>
-<rect x="650.4" y="357" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
+<rect x="639.9" y="357" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
 <rect x="1101.0" y="357" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
-<rect x="1053.6" y="473" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
-<rect x="1006.1" y="589" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
+<rect x="1054.9" y="473" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
+<rect x="1008.8" y="589" width="18" height="134" rx="9" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/>
 <circle cx="280.0" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>STaR · arXiv:2203.14465</title></circle>
 <text x="284.0" y="236" transform="rotate(-38 284.0 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">STaR<title>STaR · arXiv:2203.14465</title></text>
-<circle cx="469.7" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>Self-Rewarding LMs · arXiv:2401.10020</title></circle>
-<text x="473.7" y="236" transform="rotate(-38 473.7 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Self-Rewarding LMs<title>Self-Rewarding LMs · arXiv:2401.10020</title></text>
-<circle cx="635.7" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>Absolute Zero · arXiv:2505.03335</title></circle>
-<text x="639.7" y="236" transform="rotate(-38 639.7 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Absolute Zero<title>Absolute Zero · arXiv:2505.03335</title></text>
-<circle cx="706.9" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>R-Zero · arXiv:2508.05004</title></circle>
-<text x="710.9" y="236" transform="rotate(-38 710.9 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">R-Zero<title>R-Zero · arXiv:2508.05004</title></text>
-<circle cx="1038.9" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>SPADE · arXiv:2608.19197</title></circle>
-<text x="1042.9" y="236" transform="rotate(-38 1042.9 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SPADE<title>SPADE · arXiv:2608.19197</title></text>
-<circle cx="398.6" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Promptbreeder · arXiv:2309.16797</title></circle>
-<text x="402.6" y="352" transform="rotate(-38 402.6 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Promptbreeder<title>Promptbreeder · arXiv:2309.16797</title></text>
-<circle cx="422.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>STOP · arXiv:2310.02304</title></circle>
-<text x="426.3" y="352" transform="rotate(-38 426.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">STOP<title>STOP · arXiv:2310.02304</title></text>
-<circle cx="540.9" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Gödel Agent · arXiv:2410.04444</title></circle>
-<text x="544.9" y="352" transform="rotate(-38 544.9 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Gödel Agent<title>Gödel Agent · arXiv:2410.04444</title></text>
-<circle cx="659.4" cy="366" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Darwin Gödel Machine · arXiv:2505.22954</title></circle>
-<text x="663.4" y="352" transform="rotate(-38 663.4 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Darwin Gödel Machine<title>Darwin Gödel Machine · arXiv:2505.22954</title></text>
-<circle cx="683.1" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>AlphaEvolve · arXiv:2506.13131</title></circle>
-<text x="687.1" y="352" transform="rotate(-38 687.1 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AlphaEvolve<title>AlphaEvolve · arXiv:2506.13131</title></text>
-<circle cx="754.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Huxley-Gödel Machine · arXiv:2510.21614</title></circle>
-<text x="758.3" y="352" transform="rotate(-38 758.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Huxley-Gödel Machine<title>Huxley-Gödel Machine · arXiv:2510.21614</title></text>
-<circle cx="944.0" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>A-Evolve-Training · arXiv:2606.20657</title></circle>
-<text x="948.0" y="352" transform="rotate(-38 948.0 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">A-Evolve-Training<title>A-Evolve-Training · arXiv:2606.20657</title></text>
-<circle cx="967.7" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>RSI survey · arXiv:2607.07663</title></circle>
-<text x="971.7" y="352" transform="rotate(-38 971.7 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">RSI survey<title>RSI survey · arXiv:2607.07663</title></text>
-<circle cx="1086.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Dream-RSI · arXiv:2609.14858</title></circle>
-<text x="1090.3" y="352" transform="rotate(-38 1090.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Dream-RSI<title>Dream-RSI · arXiv:2609.14858</title></text>
+<circle cx="464.4" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>Self-Rewarding LMs · arXiv:2401.10020</title></circle>
+<text x="468.4" y="236" transform="rotate(-38 468.4 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Self-Rewarding LMs<title>Self-Rewarding LMs · arXiv:2401.10020</title></text>
+<circle cx="625.8" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>Absolute Zero · arXiv:2505.03335</title></circle>
+<text x="629.8" y="236" transform="rotate(-38 629.8 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Absolute Zero<title>Absolute Zero · arXiv:2505.03335</title></text>
+<circle cx="695.0" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>R-Zero · arXiv:2508.05004</title></circle>
+<text x="699.0" y="236" transform="rotate(-38 699.0 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">R-Zero<title>R-Zero · arXiv:2508.05004</title></text>
+<circle cx="1040.8" cy="250" r="6.5" fill="#0d1117" stroke="#c98500" stroke-width="3.5"><title>SPADE · arXiv:2608.19197</title></circle>
+<text x="1044.8" y="236" transform="rotate(-38 1044.8 236)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SPADE<title>SPADE · arXiv:2608.19197</title></text>
+<circle cx="395.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Promptbreeder · arXiv:2309.16797</title></circle>
+<text x="399.3" y="352" transform="rotate(-38 399.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Promptbreeder<title>Promptbreeder · arXiv:2309.16797</title></text>
+<circle cx="418.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>STOP · arXiv:2310.02304</title></circle>
+<text x="422.3" y="352" transform="rotate(-38 422.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">STOP<title>STOP · arXiv:2310.02304</title></text>
+<circle cx="533.6" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Gödel Agent · arXiv:2410.04444</title></circle>
+<text x="537.6" y="352" transform="rotate(-38 537.6 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Gödel Agent<title>Gödel Agent · arXiv:2410.04444</title></text>
+<circle cx="648.9" cy="366" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Darwin Gödel Machine · arXiv:2505.22954</title></circle>
+<text x="652.9" y="352" transform="rotate(-38 652.9 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Darwin Gödel Machine<title>Darwin Gödel Machine · arXiv:2505.22954</title></text>
+<circle cx="671.9" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>AlphaEvolve · arXiv:2506.13131</title></circle>
+<text x="675.9" y="352" transform="rotate(-38 675.9 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AlphaEvolve<title>AlphaEvolve · arXiv:2506.13131</title></text>
+<circle cx="741.1" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Huxley-Gödel Machine · arXiv:2510.21614</title></circle>
+<text x="745.1" y="352" transform="rotate(-38 745.1 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Huxley-Gödel Machine<title>Huxley-Gödel Machine · arXiv:2510.21614</title></text>
+<circle cx="810.3" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Hyperagents · arXiv:2603.19461</title></circle>
+<text x="814.3" y="352" transform="rotate(-38 814.3 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Hyperagents<title>Hyperagents · arXiv:2603.19461</title></text>
+<circle cx="948.6" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>A-Evolve-Training · arXiv:2606.20657</title></circle>
+<text x="952.6" y="352" transform="rotate(-38 952.6 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">A-Evolve-Training<title>A-Evolve-Training · arXiv:2606.20657</title></text>
+<circle cx="971.7" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>RSI survey · arXiv:2607.07663</title></circle>
+<text x="975.7" y="352" transform="rotate(-38 975.7 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">RSI survey<title>RSI survey · arXiv:2607.07663</title></text>
+<circle cx="1086.9" cy="366" r="6.5" fill="#0d1117" stroke="#199e70" stroke-width="3.5"><title>Dream-RSI · arXiv:2609.14858</title></circle>
+<text x="1090.9" y="352" transform="rotate(-38 1090.9 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Dream-RSI<title>Dream-RSI · arXiv:2609.14858</title></text>
 <circle cx="1110.0" cy="366" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>RRSI · arXiv:2609.24972</title></circle>
 <text x="1114.0" y="352" transform="rotate(-38 1114.0 352)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">RRSI<title>RRSI · arXiv:2609.24972</title></text>
-<circle cx="493.4" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>GPTSwarm · arXiv:2402.16823</title></circle>
-<text x="497.4" y="468" transform="rotate(-38 497.4 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">GPTSwarm<title>GPTSwarm · arXiv:2402.16823</title></text>
-<circle cx="517.1" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>ADAS · arXiv:2408.08435</title></circle>
-<text x="521.1" y="468" transform="rotate(-38 521.1 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ADAS<title>ADAS · arXiv:2408.08435</title></text>
-<circle cx="564.6" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>AFlow · arXiv:2410.10762</title></circle>
-<text x="568.6" y="468" transform="rotate(-38 568.6 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AFlow<title>AFlow · arXiv:2410.10762</title></text>
-<circle cx="588.3" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>MaAS · arXiv:2502.04180</title></circle>
-<text x="592.3" y="468" transform="rotate(-38 592.3 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MaAS<title>MaAS · arXiv:2502.04180</title></text>
-<circle cx="659.4" cy="482" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Darwin Gödel Machine · arXiv:2505.22954</title></circle>
-<circle cx="825.4" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>ABSTRAL · arXiv:2603.22791</title></circle>
-<text x="829.4" y="468" transform="rotate(-38 829.4 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ABSTRAL<title>ABSTRAL · arXiv:2603.22791</title></text>
-<circle cx="920.3" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>Self-Harness · arXiv:2606.09498</title></circle>
-<text x="924.3" y="468" transform="rotate(-38 924.3 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Self-Harness<title>Self-Harness · arXiv:2606.09498</title></text>
-<circle cx="991.4" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>DarwinX · arXiv:2608.07545</title></circle>
-<text x="995.4" y="468" transform="rotate(-38 995.4 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">DarwinX<title>DarwinX · arXiv:2608.07545</title></text>
-<circle cx="1062.6" cy="482" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Harness tampering · arXiv:2609.00069</title></circle>
-<text x="1066.6" y="468" transform="rotate(-38 1066.6 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Harness tampering<title>Harness tampering · arXiv:2609.00069</title></text>
+<circle cx="487.5" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>GPTSwarm · arXiv:2402.16823</title></circle>
+<text x="491.5" y="468" transform="rotate(-38 491.5 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">GPTSwarm<title>GPTSwarm · arXiv:2402.16823</title></text>
+<circle cx="510.6" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>ADAS · arXiv:2408.08435</title></circle>
+<text x="514.6" y="468" transform="rotate(-38 514.6 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ADAS<title>ADAS · arXiv:2408.08435</title></text>
+<circle cx="556.7" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>AFlow · arXiv:2410.10762</title></circle>
+<text x="560.7" y="468" transform="rotate(-38 560.7 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AFlow<title>AFlow · arXiv:2410.10762</title></text>
+<circle cx="579.7" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>MaAS · arXiv:2502.04180</title></circle>
+<text x="583.7" y="468" transform="rotate(-38 583.7 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MaAS<title>MaAS · arXiv:2502.04180</title></text>
+<circle cx="648.9" cy="482" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Darwin Gödel Machine · arXiv:2505.22954</title></circle>
+<circle cx="833.3" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>ABSTRAL · arXiv:2603.22791</title></circle>
+<text x="837.3" y="468" transform="rotate(-38 837.3 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ABSTRAL<title>ABSTRAL · arXiv:2603.22791</title></text>
+<circle cx="925.6" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>Self-Harness · arXiv:2606.09498</title></circle>
+<text x="929.6" y="468" transform="rotate(-38 929.6 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Self-Harness<title>Self-Harness · arXiv:2606.09498</title></text>
+<circle cx="994.7" cy="482" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"><title>DarwinX · arXiv:2608.07545</title></circle>
+<text x="998.7" y="468" transform="rotate(-38 998.7 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">DarwinX<title>DarwinX · arXiv:2608.07545</title></text>
+<circle cx="1063.9" cy="482" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Harness tampering · arXiv:2609.00069</title></circle>
+<text x="1067.9" y="468" transform="rotate(-38 1067.9 468)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Harness tampering<title>Harness tampering · arXiv:2609.00069</title></text>
 <circle cx="1110.0" cy="482" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>RRSI · arXiv:2609.24972</title></circle>
-<circle cx="612.0" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>MAST · arXiv:2503.13657</title></circle>
-<text x="616.0" y="584" transform="rotate(-38 616.0 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MAST<title>MAST · arXiv:2503.13657</title></text>
-<circle cx="730.6" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>Misevolution · arXiv:2509.26354</title></circle>
-<text x="734.6" y="584" transform="rotate(-38 734.6 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Misevolution<title>Misevolution · arXiv:2509.26354</title></text>
-<circle cx="778.0" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>TAME · arXiv:2602.03224</title></circle>
-<text x="782.0" y="584" transform="rotate(-38 782.0 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">TAME<title>TAME · arXiv:2602.03224</title></text>
-<circle cx="896.6" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>PACE · arXiv:2606.08106</title></circle>
-<text x="900.6" y="584" transform="rotate(-38 900.6 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">PACE<title>PACE · arXiv:2606.08106</title></text>
-<circle cx="1015.1" cy="598" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Skill misevolution · arXiv:2608.12851</title></circle>
-<text x="1019.1" y="584" transform="rotate(-38 1019.1 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Skill misevolution<title>Skill misevolution · arXiv:2608.12851</title></text>
-<circle cx="1062.6" cy="598" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Harness tampering · arXiv:2609.00069</title></circle>
-<circle cx="303.7" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Reflexion · arXiv:2303.11366</title></circle>
-<text x="307.7" y="700" transform="rotate(-38 307.7 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Reflexion<title>Reflexion · arXiv:2303.11366</title></text>
-<circle cx="327.4" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Generative Agents · arXiv:2304.03442</title></circle>
-<text x="331.4" y="700" transform="rotate(-38 331.4 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Generative Agents<title>Generative Agents · arXiv:2304.03442</title></text>
-<circle cx="351.1" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Voyager · arXiv:2305.16291</title></circle>
-<text x="355.1" y="700" transform="rotate(-38 355.1 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Voyager<title>Voyager · arXiv:2305.16291</title></text>
-<circle cx="374.9" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>ExpeL · arXiv:2308.10144</title></circle>
-<text x="378.9" y="700" transform="rotate(-38 378.9 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ExpeL<title>ExpeL · arXiv:2308.10144</title></text>
-<circle cx="446.0" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>MemGPT · arXiv:2310.08560</title></circle>
-<text x="450.0" y="700" transform="rotate(-38 450.0 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MemGPT<title>MemGPT · arXiv:2310.08560</title></text>
-<circle cx="801.7" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>AutoSkill · arXiv:2603.01145</title></circle>
-<text x="805.7" y="700" transform="rotate(-38 805.7 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AutoSkill<title>AutoSkill · arXiv:2603.01145</title></text>
-<circle cx="849.1" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>SkillOS · arXiv:2605.06614</title></circle>
-<text x="853.1" y="700" transform="rotate(-38 853.1 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SkillOS<title>SkillOS · arXiv:2605.06614</title></text>
-<circle cx="872.9" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>TMEM · arXiv:2606.04536</title></circle>
-<text x="876.9" y="700" transform="rotate(-38 876.9 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">TMEM<title>TMEM · arXiv:2606.04536</title></text>
-<circle cx="1015.1" cy="714" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Skill misevolution · arXiv:2608.12851</title></circle>
+<circle cx="602.8" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>MAST · arXiv:2503.13657</title></circle>
+<text x="606.8" y="584" transform="rotate(-38 606.8 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MAST<title>MAST · arXiv:2503.13657</title></text>
+<circle cx="718.1" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>Misevolution · arXiv:2509.26354</title></circle>
+<text x="722.1" y="584" transform="rotate(-38 722.1 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Misevolution<title>Misevolution · arXiv:2509.26354</title></text>
+<circle cx="764.2" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>TAME · arXiv:2602.03224</title></circle>
+<text x="768.2" y="584" transform="rotate(-38 768.2 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">TAME<title>TAME · arXiv:2602.03224</title></text>
+<circle cx="902.5" cy="598" r="6.5" fill="#0d1117" stroke="#d55181" stroke-width="3.5"><title>PACE · arXiv:2606.08106</title></circle>
+<text x="906.5" y="584" transform="rotate(-38 906.5 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">PACE<title>PACE · arXiv:2606.08106</title></text>
+<circle cx="1017.8" cy="598" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Skill misevolution · arXiv:2608.12851</title></circle>
+<text x="1021.8" y="584" transform="rotate(-38 1021.8 584)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="700">Skill misevolution<title>Skill misevolution · arXiv:2608.12851</title></text>
+<circle cx="1063.9" cy="598" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Harness tampering · arXiv:2609.00069</title></circle>
+<circle cx="303.1" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Reflexion · arXiv:2303.11366</title></circle>
+<text x="307.1" y="700" transform="rotate(-38 307.1 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Reflexion<title>Reflexion · arXiv:2303.11366</title></text>
+<circle cx="326.1" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Generative Agents · arXiv:2304.03442</title></circle>
+<text x="330.1" y="700" transform="rotate(-38 330.1 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Generative Agents<title>Generative Agents · arXiv:2304.03442</title></text>
+<circle cx="349.2" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>Voyager · arXiv:2305.16291</title></circle>
+<text x="353.2" y="700" transform="rotate(-38 353.2 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Voyager<title>Voyager · arXiv:2305.16291</title></text>
+<circle cx="372.2" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>ExpeL · arXiv:2308.10144</title></circle>
+<text x="376.2" y="700" transform="rotate(-38 376.2 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">ExpeL<title>ExpeL · arXiv:2308.10144</title></text>
+<circle cx="441.4" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>MemGPT · arXiv:2310.08560</title></circle>
+<text x="445.4" y="700" transform="rotate(-38 445.4 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">MemGPT<title>MemGPT · arXiv:2310.08560</title></text>
+<circle cx="787.2" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>AutoSkill · arXiv:2603.01145</title></circle>
+<text x="791.2" y="700" transform="rotate(-38 791.2 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">AutoSkill<title>AutoSkill · arXiv:2603.01145</title></text>
+<circle cx="856.4" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>SkillOS · arXiv:2605.06614</title></circle>
+<text x="860.4" y="700" transform="rotate(-38 860.4 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SkillOS<title>SkillOS · arXiv:2605.06614</title></text>
+<circle cx="879.4" cy="714" r="6.5" fill="#0d1117" stroke="#d95926" stroke-width="3.5"><title>TMEM · arXiv:2606.04536</title></circle>
+<text x="883.4" y="700" transform="rotate(-38 883.4 700)" font-size="13" fill="#e6edf3" stroke="#0d1117" stroke-width="4" stroke-linejoin="round" paint-order="stroke">TMEM<title>TMEM · arXiv:2606.04536</title></text>
+<circle cx="1017.8" cy="714" r="6" fill="#0d1117" stroke="#e6edf3" stroke-width="3"><title>Skill misevolution · arXiv:2608.12851</title></circle>
 <circle cx="46" cy="804" r="6.5" fill="#0d1117" stroke="#3987e5" stroke-width="3.5"/><text x="60" y="809" font-size="12.5" fill="#9198a1">paper</text>
 <rect x="118" y="790" width="16" height="28" rx="8" fill="#0d1117" stroke="#e6edf3" stroke-width="3"/><text x="142" y="809" font-size="12.5" fill="#9198a1">interchange — one paper, two threads</text>
 <text x="1160" y="809" font-size="12.5" text-anchor="end" fill="#9198a1">Generated by .github/scripts/build_metro.py from README.md</text>
