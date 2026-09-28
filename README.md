@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <img src="assets/banner-light.svg" alt="Awesome Self-Evolving Agents. Four versions of one agent, each rewritten by the last: every version scores higher, and the fourth got its best score by deleting its own safety check." width="880">
+    <img src="assets/banner-light.svg" alt="Awesome Self-Evolving Agents. Agents that rewrite themselves, each year one layer deeper: prompts, memory, workflow, own code, harness, training, and the process that improves them." width="880">
   </picture>
 </p>
 
