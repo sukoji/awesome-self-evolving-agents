@@ -110,24 +110,52 @@ def collect(root):
     return papers, urls
 
 
+UNVERIFIED = []
+
+
+def abs_page_title(arxiv_id):
+    """Title from arxiv.org/abs/<id>: the title string, "" if the page says the
+    paper does not exist, or None if arXiv would not answer at all."""
+    done = subprocess.run(
+        ["curl", "-sS", "-L", "--max-time", "40", "-A", UA["User-Agent"], "-w", "\n%{http_code}",
+         "https://arxiv.org/abs/" + arxiv_id],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    body, _, code = done.stdout.rpartition("\n")
+    if code == "404":
+        return ""
+    if code != "200":
+        return None
+    m = re.search(r'<meta name="citation_title" content="([^"]*)"', body)
+    return html.unescape(m.group(1)).strip() if m else None
+
+
 def check_arxiv(papers):
     problems = []
     ids = sorted(papers)
     for start in range(0, len(ids), BATCH):
         chunk = ids[start:start + BATCH]
+        found = {}
         try:
             body = get_arxiv(ARXIV_API % (",".join(chunk), BATCH))
-        except (urllib.error.URLError, OSError) as exc:
-            problems.append("arXiv API unreachable for %s: %s" % (chunk[0], exc))
-            continue
-        found = {}
-        for entry in re.findall(r"<entry>(.*?)</entry>", body, re.S):
-            match = re.search(r"abs/(\d{4}\.\d{4,5})", entry)
-            title = re.search(r"<title>(.*?)</title>", entry, re.S)
-            if match and title:
-                found[match.group(1)] = html.unescape(
-                    re.sub(r"\s+", " ", title.group(1))).strip()
+            for entry in re.findall(r"<entry>(.*?)</entry>", body, re.S):
+                match = re.search(r"abs/(\d{4}\.\d{4,5})", entry)
+                title = re.search(r"<title>(.*?)</title>", entry, re.S)
+                if match and title:
+                    found[match.group(1)] = html.unescape(
+                        re.sub(r"\s+", " ", title.group(1))).strip()
+        except (urllib.error.URLError, OSError):
+            # The API refuses some networks (CI runners) with 406. Fall back
+            # to each paper's abstract page, which carries the same title.
+            for arxiv_id in chunk:
+                title = abs_page_title(arxiv_id)
+                if title is None:
+                    UNVERIFIED.append(arxiv_id)
+                elif title:
+                    found[arxiv_id] = title
+                time.sleep(1)
         for arxiv_id in chunk:
+            if arxiv_id in UNVERIFIED:
+                continue
             if arxiv_id not in found:
                 problems.append("arXiv:%s does not resolve (listed as %r)"
                                 % (arxiv_id, papers[arxiv_id][0]))
@@ -182,7 +210,9 @@ def main():
     problems = check_arxiv(papers) + check_urls(urls)
     for problem in problems:
         print("FAIL " + problem)
-    print("%d problem(s)" % len(problems))
+    for arxiv_id in UNVERIFIED:
+        print("WARN arXiv:%s could not be checked: arXiv refused both the API and the abstract page" % arxiv_id)
+    print("%d problem(s), %d unverifiable" % (len(problems), len(UNVERIFIED)))
     return 1 if problems else 0
 
 
