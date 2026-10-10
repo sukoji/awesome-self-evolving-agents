@@ -243,6 +243,7 @@ The sharpest current design axis: keep experience as *text you retrieve* or writ
 
 Accumulate reusable capability across a long life of tasks — and try not to forget or drift.
 
+- **From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning** — arXiv 2026. [arXiv:2610.11373](https://arxiv.org/abs/2610.11373). Evolves a repertoire of functions across sequential tasks, refining existing functions for compatible updates and creating new ones for conflicting updates without changing model parameters.
 - **RewardHarness: Self-Evolving Agentic Post-Training** — 2026. [arXiv:2605.08703](https://arxiv.org/abs/2605.08703) · [code](https://github.com/TIGER-AI-Lab/RewardHarness). Evolves a reusable library of scoring skills and tools from preference feedback while keeping the evaluator model frozen.
 - **Building Self-Evolving Agents via Experience-Driven Lifelong Learning (ELL) + StuLife** — 2025. [arXiv:2508.19005](https://arxiv.org/abs/2508.19005). Formalizes ELL (long-term memory, skill learning, self-motivation) and ships StuLife, a simulated college-life benchmark for it.
 - **Yunjue Agent Tech Report: A Fully Reproducible, Zero-Start In-Situ Self-Evolving Agent System for Open-Ended Tasks** — 2026. [arXiv:2601.18226](https://arxiv.org/abs/2601.18226) · [code](https://github.com/YunjueTech/Yunjue-Agent). Identifies *tool evolution* as the key pathway because it yields verifiable binary feedback; uses Parallel Batch Evolution to merge similar tools and prevent tool explosion. Starts from an empty toolset.
