@@ -40,7 +40,7 @@ def banner(t):
          f'aria-label="Awesome Self-Evolving Agents. Concentric layers an agent has learned to rewrite, outermost first: its prompts (2023), '
          f'its memory (2023), its workflow (2024), its own code (2025), its harness (2026), its training (2026), and at the centre the process that improves it (2026).">\n',
          f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n',
-         f'<text x="56" y="100" font-family="{MONO}" font-size="13" letter-spacing="3" fill="{c["sub"]}">AWESOME LIST · 240+ PAPERS · SEPTEMBER 2026</text>\n',
+         f'<text x="56" y="100" font-family="{MONO}" font-size="13" letter-spacing="3" fill="{c["sub"]}">AWESOME LIST · 285+ PAPERS · OCTOBER 2026</text>\n',
          f'<text x="52" y="176" font-family="{SERIF}" font-size="66" font-style="italic" fill="{c["ink"]}">Self-Evolving</text>\n',
          f'<text x="52" y="244" font-family="{SERIF}" font-size="66" fill="{c["ink"]}">Agents</text>\n',
          f'<rect x="56" y="270" width="56" height="3" fill="{c["core"]}"/>\n',
