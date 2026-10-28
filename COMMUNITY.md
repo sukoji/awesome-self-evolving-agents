@@ -39,6 +39,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 | [**ADAS** (reference impl.)](https://github.com/ShengranHu/ADAS) | Shengran Hu et al. | workflow | Automated Design of Agentic Systems — meta-agent search over agentic code. |
 | [**AFlow** (reference impl.)](https://github.com/FoundationAgents/aflow) | FoundationAgents | workflow | MCTS over reusable workflow operators; practical ADAS successor. |
 | [**GPTSwarm**](https://github.com/metauto-ai/gptswarm) | metauto-ai | workflow | Language agents as optimizable graphs — node/edge-level search. |
+| [**MAIOS Project Kernel**](https://github.com/GrazianoGuiducci/maios-project-kernel) | GrazianoGuiducci | workflow | Agent kernel whose competence and method files are revised from completed work, so later tasks run on the updated methods. |
 
 ---
 
@@ -77,7 +78,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 
 | Date | Project | Contributor |
 |------|---------|-------------|
-| — | *Be the first community addition* | [open an issue](https://github.com/sukoji/awesome-self-evolving-agents/issues/new?template=suggest-project.yml) |
+| 2026-10 | [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel) | @GrazianoGuiducci (#34) |
 
 ---
 
