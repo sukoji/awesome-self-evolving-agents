@@ -310,6 +310,8 @@ Software engineering has become the flagship domain for self-evolution, because 
 - **Hill Sampling for Test-Time Scaling: A Simple and Better Alternative to Repeated Sampling, Evolution, and Training** — 2026. [arXiv:2609.25510](https://arxiv.org/abs/2609.25510). Asks how much evolutionary machinery test-time search needs. Repeatedly sampling edits to the best program so far, from a frozen model, sets a new circle-packing state of the art and beats the AlphaEvolve reference on Erdős' minimum-overlap problem, while evolution strategies on the weights do worse than a learning rate of zero.
 - **Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?** — 2026. [arXiv:2511.13646](https://arxiv.org/abs/2511.13646) · [code](https://github.com/OpenAutoCoder/live-swe-agent). Starts from a bash-only scaffold and evolves its own scaffold while it solves tasks, with no offline self-improvement phase: 77.4% on SWE-bench Verified without test-time scaling, and 45.8% on SWE-Bench Pro.
 
+- **Learning from Repair Experience: Self-Evolving Agents for Automated Vulnerability Repair** — ICSE 2027 (accepted). [arXiv:2605.30105](https://arxiv.org/abs/2605.30105) · [code](https://github.com/iSEngLab/Learn-from-Repair-Experience). Extracts, scores, and updates repair experience for reuse across vulnerability-repair episodes.
+
 ---
 
 ## Recursive self-improvement
