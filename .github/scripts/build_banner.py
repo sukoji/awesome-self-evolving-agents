@@ -68,6 +68,17 @@ def banner(t):
     return "".join(s)
 
 
+def social():
+    """1280x640 social preview: the dark banner, scaled, with the repo address under it."""
+    c, inner = T["dark"], banner("dark").split("\n", 1)[1].rsplit("</svg>", 1)[0]
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">\n'
+            f'<rect width="1280" height="640" fill="{c["bg"]}"/>\n'
+            f'<g transform="translate(0,72) scale(1.0667)">\n{inner}</g>\n'
+            f'<text x="60" y="580" font-family="{MONO}" font-size="20" fill="{c["sub"]}">github.com/sukoji/awesome-self-evolving-agents</text>\n'
+            f'</svg>\n')
+
+
 for t in T:
     (ROOT / "assets" / f"banner-{t}.svg").write_text(banner(t), encoding="utf-8")
+(ROOT / "assets" / "social-preview.svg").write_text(social(), encoding="utf-8")
 print("ok")
