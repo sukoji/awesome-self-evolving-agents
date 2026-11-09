@@ -6,21 +6,26 @@
 </p>
 
 <p align="center">
-  <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <a href="https://github.com/sukoji/awesome-self-evolving-agents/stargazers"><img src="https://img.shields.io/github/stars/sukoji/awesome-self-evolving-agents?logo=github&logoColor=white&style=flat&labelColor=1b1b1b&color=d85a30" alt="Stars"></a>
-  <a href="https://github.com/sukoji/awesome-self-evolving-agents/network/members"><img src="https://img.shields.io/github/forks/sukoji/awesome-self-evolving-agents?logo=github&logoColor=white&style=flat&labelColor=1b1b1b&color=c0417a" alt="Forks"></a>
-  <a href="https://github.com/sukoji/awesome-self-evolving-agents/commits/main"><img src="https://img.shields.io/github/last-commit/sukoji/awesome-self-evolving-agents?style=flat&labelColor=1b1b1b&color=1d9e75" alt="Last commit"></a>
-  <a href="https://github.com/sukoji/awesome-self-evolving-agents/graphs/contributors"><img src="https://img.shields.io/github/contributors/sukoji/awesome-self-evolving-agents?style=flat&labelColor=1b1b1b&color=378add" alt="Contributors"></a>
+  <a href="https://awesome.re"><img src="https://img.shields.io/badge/awesome-list-fc60a8?style=for-the-badge&logo=awesomelists&logoColor=white&labelColor=1b1b1b" alt="Awesome"></a>
+  <a href="#contents"><img src="https://img.shields.io/badge/papers-315+-2a78d6?style=for-the-badge&labelColor=1b1b1b" alt="315+ papers"></a>
+  <a href="#updates"><img src="https://img.shields.io/badge/last_pass-2026--11-1a7f64?style=for-the-badge&labelColor=1b1b1b" alt="Last pass 2026-11"></a>
+  <a href="https://github.com/sukoji/awesome-self-evolving-agents/actions/workflows/link-check.yml"><img src="https://img.shields.io/github/actions/workflow/status/sukoji/awesome-self-evolving-agents/link-check.yml?branch=main&label=links%20checked&style=for-the-badge&labelColor=1b1b1b" alt="Link check"></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/papers-315+-8a63d2?style=flat&labelColor=1b1b1b" alt="315+ papers">
-  <img src="https://img.shields.io/badge/topics-18-1d9e75?style=flat&labelColor=1b1b1b" alt="18 topics">
-  <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/community_projects-15+-c0417a?style=flat&labelColor=1b1b1b" alt="Community projects"></a>
-  <a href="#reference-implementations"><img src="https://img.shields.io/badge/code-runnable-d85a30?style=flat&labelColor=1b1b1b" alt="Runnable code"></a>
-  <a href="https://github.com/sukoji/awesome-self-evolving-agents/issues/new/choose"><img src="https://img.shields.io/badge/suggest-paper_or_project-issue-378add?style=flat&labelColor=1b1b1b" alt="Suggest via issue"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat&labelColor=1b1b1b" alt="PRs welcome"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0%201.0-lightgrey?style=flat&labelColor=1b1b1b" alt="License: CC0-1.0"></a>
+  <a href="https://github.com/sukoji/awesome-self-evolving-agents/stargazers"><img src="https://img.shields.io/github/stars/sukoji/awesome-self-evolving-agents?logo=github&logoColor=white&style=flat&labelColor=1b1b1b&color=2a78d6" alt="Stars"></a>
+  <a href="https://github.com/sukoji/awesome-self-evolving-agents/network/members"><img src="https://img.shields.io/github/forks/sukoji/awesome-self-evolving-agents?logo=github&logoColor=white&style=flat&labelColor=1b1b1b&color=2a78d6" alt="Forks"></a>
+  <a href="https://github.com/sukoji/awesome-self-evolving-agents/graphs/contributors"><img src="https://img.shields.io/github/contributors/sukoji/awesome-self-evolving-agents?style=flat&labelColor=1b1b1b&color=2a78d6" alt="Contributors"></a>
+  <a href="https://github.com/sukoji/awesome-self-evolving-agents/commits/main"><img src="https://img.shields.io/github/last-commit/sukoji/awesome-self-evolving-agents?style=flat&labelColor=1b1b1b&color=1a7f64" alt="Last commit"></a>
+  <a href="COMMUNITY.md"><img src="https://img.shields.io/badge/community_projects-15+-1a7f64?style=flat&labelColor=1b1b1b" alt="15+ community projects"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-1a7f64?style=flat&labelColor=1b1b1b" alt="PRs welcome"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0_1.0-59636e?style=flat&labelColor=1b1b1b" alt="License: CC0-1.0"></a>
+</p>
+
+<p align="center">
+  <a href="docs/primer.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-read-dark.svg"><img src="assets/card-read-light.svg" width="280" alt="The primer: builds the ideas from the ground up."></picture></a>
+  <a href="#evolution-map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-see-dark.svg"><img src="assets/card-see-light.svg" width="280" alt="Evolution map: five threads through the field."></picture></a>
+  <a href="#reference-implementations"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-run-dark.svg"><img src="assets/card-run-light.svg" width="280" alt="Reference code: two short Python demos."></picture></a>
 </p>
 
 <p align="center">
@@ -45,41 +50,16 @@ Most lists in this space are link dumps. This one tries to be a *map you can wal
 
 If you read one thing first, read the [**primer**](docs/primer.md). If you run one thing, run [`code/safety_gated_evolution.py`](code/safety_gated_evolution.py).
 
+> [!NOTE]
+> **New in the 2026-11-09 pass:** 28 papers — harness search and what it actually buys, capability formation that the usual signals miss, and safeguards that erode under self-evolution. [Read the log →](#updates)
+
 ---
 
 ## Contents
 
-- [Scope and stance](#scope-and-stance)
-- [A one-diagram primer](#a-one-diagram-primer)
-- [The four evolution pathways](#the-four-evolution-pathways)
-- [Evolution map](#evolution-map)
-- [Surveys and roadmaps](#surveys-and-roadmaps)
-- [Foundations and precursors](#foundations-and-precursors)
-- [Automated and self-evolving system design](#automated-and-self-evolving-system-design)
-- [Test-time learning and self-improvement](#test-time-learning-and-self-improvement)
-- [Memory: non-parametric to parametric](#memory-non-parametric-to-parametric)
-- [Experience-driven lifelong learning and skills](#experience-driven-lifelong-learning-and-skills)
-- [Zero-data self-evolution and self-play](#zero-data-self-evolution-and-self-play)
-- [Self-evolving coding agents](#self-evolving-coding-agents)
-- [Recursive self-improvement](#recursive-self-improvement)
-- [Harness evolution](#harness-evolution)
-- [Reinforcement learning for self-evolution](#reinforcement-learning-for-self-evolution)
-- [Multi-agent co-evolution](#multi-agent-co-evolution)
-- [Forgetting, drift, and stability](#forgetting-drift-and-stability)
-- [Why they fail: failure analysis and attribution](#why-they-fail-failure-analysis-and-attribution)
-- [Safety: misevolution and defenses](#safety-misevolution-and-defenses)
-- [Benchmarks and environments](#benchmarks-and-environments)
-- [Interoperability protocols](#interoperability-protocols)
-- [Domain applications](#domain-applications)
-- [Community spotlight](#community-spotlight)
-- [Reference implementations](#reference-implementations)
-- [A reading path](#a-reading-path)
-- [Updates](#updates)
-- [How this list is maintained](#how-this-list-is-maintained)
-- [Beyond papers](#beyond-papers)
-- [Related lists](#related-lists)
-- [Contributing](#contributing)
-- [License](#license)
+| **Start here** | **How agents evolve** | **Does it hold up?** | **Beyond the list** |
+|---|---|---|---|
+| [Scope and stance](#scope-and-stance)<br>[A one-diagram primer](#a-one-diagram-primer)<br>[The four evolution pathways](#the-four-evolution-pathways)<br>[Evolution map](#evolution-map)<br>[Surveys and roadmaps](#surveys-and-roadmaps)<br>[Foundations and precursors](#foundations-and-precursors) | [Automated and self-evolving system design](#automated-and-self-evolving-system-design)<br>[Test-time learning and self-improvement](#test-time-learning-and-self-improvement)<br>[Memory: non-parametric to parametric](#memory-non-parametric-to-parametric)<br>[Experience-driven lifelong learning and skills](#experience-driven-lifelong-learning-and-skills)<br>[Zero-data self-evolution and self-play](#zero-data-self-evolution-and-self-play)<br>[Self-evolving coding agents](#self-evolving-coding-agents)<br>[Recursive self-improvement](#recursive-self-improvement)<br>[Harness evolution](#harness-evolution)<br>[Reinforcement learning for self-evolution](#reinforcement-learning-for-self-evolution)<br>[Multi-agent co-evolution](#multi-agent-co-evolution) | [Forgetting, drift, and stability](#forgetting-drift-and-stability)<br>[Why they fail: failure analysis and attribution](#why-they-fail-failure-analysis-and-attribution)<br>[Safety: misevolution and defenses](#safety-misevolution-and-defenses)<br>[Benchmarks and environments](#benchmarks-and-environments)<br>[Interoperability protocols](#interoperability-protocols)<br>[Domain applications](#domain-applications) | [Community spotlight](#community-spotlight)<br>[Reference implementations](#reference-implementations)<br>[A reading path](#a-reading-path)<br>[Updates](#updates)<br>[How this list is maintained](#how-this-list-is-maintained)<br>[Beyond papers](#beyond-papers)<br>[Related lists](#related-lists)<br>[Contributing](#contributing)<br>[License](#license) |
 
 ---
 
