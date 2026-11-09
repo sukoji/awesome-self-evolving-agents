@@ -29,6 +29,14 @@ ENTRY = re.compile(
     r"\[[^\]]{4,120}\]\((https?://[^\s)]+)\)"
     r"(?: · \[code\]\((https://github\.com/[^\s)]+)\))?\. "
     r"[A-Z][^\n]{15,400}$")
+# The same entry as a README table row, after format_entries.py:
+# | **Title**<br><sub>Venue</sub> [![arXiv](badge)](url) [![code](badge)](github url) | One sentence. |
+BADGE = r"\[!\[(?:arXiv|paper|code)\]\(https://img\.shields\.io/[^\s)]+\)\]"
+PAPER_ROW = re.compile(
+    r"^\| \*\*[^*]{4,200}\*\*<br><sub>[^<]{2,60}</sub> "
+    + BADGE + r"\((https?://[^\s)]+)\)"
+    + r"(?: " + BADGE + r"\((https://github\.com/[^\s)]+)\))?"
+    + r" \| [A-Z][^\n]{15,400} \|$")
 # | [**name**](url) | author | pathway | focus |
 ROW = re.compile(
     r"^\| \[\*\*[^*]{2,80}\*\*\]\((https?://[^\s)]+)\) \| [^|]{1,60}"
@@ -108,7 +116,7 @@ def main():
 
     for name, line in body:
         stripped = line.strip()
-        match = ENTRY.match(stripped) or ROW.match(stripped)
+        match = ENTRY.match(stripped) or PAPER_ROW.match(stripped) or ROW.match(stripped)
         if not match:
             problems.append("line does not match the entry format: %.90s" % stripped)
             continue
