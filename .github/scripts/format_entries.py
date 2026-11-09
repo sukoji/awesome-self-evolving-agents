@@ -31,7 +31,7 @@ BADGE = {
 }
 # The run of no-break spaces sets the Paper column's minimum width, so titles
 # wrap onto two lines instead of four; GitHub strips column-width attributes.
-HEADER = ["| Paper" + "&nbsp;" * 72 + " | What it does |", "|:---|:---|"]
+HEADER = ["| Paper" + "&nbsp;" * 50 + " | What it does |", "|:---|:---|"]
 OLD_HEADERS = {"| Paper | What it does |"}
 PLAIN = re.compile(
     r"^- \*\*(?P<title>[^*]+)\*\* — (?P<venue>.+?)\. "
