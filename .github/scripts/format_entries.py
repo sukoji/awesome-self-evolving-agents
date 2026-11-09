@@ -32,7 +32,7 @@ BADGE = {
 # The run of no-break spaces sets the Paper column's minimum width, so titles
 # wrap onto two lines instead of four; GitHub strips column-width attributes.
 HEADER = ["| Paper" + "&nbsp;" * 50 + " | What it does |", "|:---|:---|"]
-OLD_HEADERS = {"| Paper | What it does |"}
+HEAD = re.compile(r"^\| Paper(?:&nbsp;)* \| What it does \|$|^\|:---\|:---\|$")
 PLAIN = re.compile(
     r"^- \*\*(?P<title>[^*]+)\*\* — (?P<venue>.+?)\. "
     r"\[(?P<label>[^\]]+)\]\((?P<url>https?://[^\s)]+)\)"
@@ -49,6 +49,10 @@ def row(m):
         links += f" [![code]({BADGE['code']})]({m['code']})"
     desc = (m["desc"] or "").replace("|", "\\|")
     return f"| **{m['title']}**<br><sub>{m['venue']}</sub> {links} | {desc} |"
+
+
+def in_table(line):
+    return bool(PLAIN.match(line) or ROW.match(line) or HEAD.match(line))
 
 
 def tag(line, new):
@@ -69,9 +73,9 @@ def main():
     end = next(i for i, l in enumerate(lines) if l.startswith("## Updates"))
     out, i, converted = [], 0, 0
     while i < len(lines):
-        if i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER or lines[i] in OLD_HEADERS):
+        if i < end and in_table(lines[i]):
             rows = []
-            while i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER or lines[i] in OLD_HEADERS):
+            while i < end and in_table(lines[i]):
                 m = PLAIN.match(lines[i])
                 if m:
                     rows.append(row(m))
