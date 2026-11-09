@@ -169,7 +169,7 @@ Five threads through the list, drawn as metro lines. Each station is a paper lis
 
 Start here to get the shape of the field before diving into primary work.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence**<br><sub>TMLR 2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.21046) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/CharlesQ9/Self-Evolving-Agents) | Organizes work by the *what/when/how/where* of evolution and traces the ADAS→AFlow→MaAS lineage. |
 | **A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.07407) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/ANative-Lab/Awesome-Self-Evolving-Agents) | Section 5.2 on self-evolving multi-agent systems is the cleanest short treatment of design-as-search. |
@@ -189,7 +189,7 @@ Start here to get the shape of the field before diving into primary work.
 
 Not self-evolving on their own, but every later method assumes these.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Self-Refine: Iterative Refinement with Self-Feedback**<br><sub>NeurIPS 2023</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.17651) | The agent critiques and revises its own output in a loop. |
 | **Reflexion: Language Agents with Verbal Reinforcement Learning**<br><sub>NeurIPS 2023</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.11366) | Verbal reflection appended to the prompt across episodes — still the baseline everyone compares against. |
@@ -213,7 +213,7 @@ Not self-evolving on their own, but every later method assumes these.
 
 Design the multi-agent system by *searching* over prompts, roles, and topology instead of hand-crafting it. This is the most mature sub-area; the ADAS→AFlow→MaAS arc is the backbone.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **GPTSwarm: Language Agents as Optimizable Graphs**<br><sub>ICML 2024</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16823) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/metauto-ai/gptswarm) | Models agents as optimizable computational graphs with node- and edge-level search. |
 | **Automated Design of Agentic Systems (ADAS)**<br><sub>ICLR 2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.08435) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/shengranhu/adas) | Frames design as search over a Turing-complete code space with a meta-agent + archive. Frames agentic-system design as meta-level search over a code/archive space. |
@@ -244,7 +244,7 @@ Design the multi-agent system by *searching* over prompts, roles, and topology i
 
 Improve *during deployment*, with or without weight updates. The fastest-moving cluster right now.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Self-Improving LLM Agents at Test-Time (TT-SI)**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.07841) | Generates its own targeted practice data at test time for uncertain cases. |
 | **AREX: Towards a Recursively Self-Improving Agent for Deep Research**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.21461) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/VectorSpaceLab/arex-model) | Exploits the gap between costly discovery and cheap constraint-wise verification: an outer loop audits the provisional answer and launches targeted follow-up research. Named for RSI, but what recurses is the answer to one task, not the system. |
@@ -266,7 +266,7 @@ Improve *during deployment*, with or without weight updates. The fastest-moving 
 
 The sharpest current design axis: keep experience as *text you retrieve* or write it *into weights*.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **MemoryBank: Enhancing LLMs with Long-Term Memory**<br><sub>2024</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2305.10250) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/zhongwanjun/memorybank-siliconfriend) | Forgetting-curve-inspired hierarchical memory updates. |
 | **Memento: Fine-tuning LLM Agents without Fine-tuning LLMs**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.16153) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/Memento-Teams/Memento) | Case-based memory with online reinforcement learning, without weight updates. |
@@ -287,7 +287,7 @@ The sharpest current design axis: keep experience as *text you retrieve* or writ
 
 Accumulate reusable capability across a long life of tasks — and try not to forget or drift.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.11373) | Evolves a repertoire of functions across sequential tasks, refining existing functions for compatible updates and creating new ones for conflicting updates without changing model parameters. |
 | **RewardHarness: Self-Evolving Agentic Post-Training**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.08703) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/TIGER-AI-Lab/RewardHarness) | Evolves a reusable library of scoring skills and tools from preference feedback while keeping the evaluator model frozen. |
@@ -318,7 +318,7 @@ Accumulate reusable capability across a long life of tasks — and try not to fo
 
 The most striking recent claim in the field: an agent can bootstrap capability with **no human-curated tasks or labels at all**, by generating its own curriculum. Usually a *proposer* invents tasks and a *solver* learns to solve them, with an executor or majority vote supplying verification in place of ground truth.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Absolute Zero: Reinforced Self-play Reasoning with Zero Data**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.03335) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/LeapLabTHU/Absolute-Zero-Reasoner) | A single model proposes tasks that maximize its own learning progress and improves by solving them, using a code executor as the unified source of verifiable feedback. Reaches strong coding/math results with no external data. |
 | **R-Zero: Self-Evolving Reasoning LLM from Zero Data**<br><sub>ICLR 2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.05004) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/Chengsong-Huang/R-Zero) | A Challenger and a Solver, both initialized from the same base model, co-evolve; filtering plus majority vote substitutes for labels. Reports roughly +6.5 on math and +7.5 on general reasoning for a 4B backbone. |
@@ -344,7 +344,7 @@ The most striking recent claim in the field: an agent can bootstrap capability w
 
 Software engineering has become the flagship domain for self-evolution, because executable feedback, repository context, and test suites give an unusually reliable reward signal.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Self-Evolving Coding Agents: A Survey**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.03392) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/iSEngLab/Awesome-Self-Evolving-Coding-Agents) | A target-centered taxonomy of *what* evolves, plus *when* evolution happens and which code-specific signals drive it. Notes that executable feedback and repo-level context make software a natural fit — while introducing feedback reliability, benchmark overfitting, reversibility, and cost problems. Ships a curated companion list updated through August 2026. |
 | **A Self-Improving Coding Agent**<br><sub>2025</sub> [![paper](https://img.shields.io/badge/paper-59636e?style=flat-square)](https://openreview.net/forum?id=rShJCyLsOr) | An agent that edits its own codebase to get better at editing codebases. |
@@ -373,7 +373,7 @@ Software engineering has become the flagship domain for self-evolution, because 
 
 The narrow end of the field, and the one with the most new work this year. *Recursive* self-improvement (RSI) means improving the process that produces the next system — the harness, the training algorithm, the exploration policy, the evaluator — so the gain compounds instead of being spent on one answer. The line runs from Gödel Agent and the Darwin Gödel Machine in the [coding section](#self-evolving-coding-agents) to the papers below; ICLR 2026 gave it a [dedicated workshop](https://iclr.cc/virtual/2026/workshop/10000796).
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.07663) | Surveys 1,250 papers along what is improved (behaviour, policy, evaluator, research process) and how closed the loop is, and finds that demonstrated improvement strength tracks the strength of the verification signal — formal verifiers at the top, intrinsic self-assessment at the bottom. Start here. |
 | **Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.13406) | Casts RSI and classical policy iteration as one cycle distinguished by two dials — whether the improver is part of the agent, and whether the standard it is measured against is grounded outside it — so existing systems, and their defects, sit on the same axes. |
@@ -425,7 +425,7 @@ The narrow end of the field, and the one with the most new work this year. *Recu
 
 The harness — prompts, tools, memory, context management, and control flow around a frozen model — has become the thing self-improving agents most often change, because it can be edited, tested, and rolled back without training. ModularRSI and HELIX in the [RSI section](#recursive-self-improvement) belong to this line too. The first group below evolves harnesses; the second asks what the evolution actually buys.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **From Question Answering to Task Completion: A Survey on Agent System and Harness Design**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.20683) | Treats an agent as a model coupled to a harness, decomposes the harness into observation, context, control, action, state, and verification, and asks where the bottleneck actually sits. Start here. |
 | **Recursive Harness Distillation across Agents for Robot Manipulation**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.33378) | Distills Astra's robot-intervention experience into a reusable playbook for Luna and recursively refines it from Luna's execution feedback while keeping all model weights frozen. |
@@ -452,7 +452,7 @@ The harness — prompts, tools, memory, context management, and control flow aro
 
 **What evolved harnesses encode, and whether the gains hold**
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **One Recipe, Many Harnesses: What Self-Evolution Encodes Across Languages and Models**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.10178) | Holds one evolution recipe fixed across eight programming languages and three models to ask what evolved harnesses encode: they compensate recoverable execution defects, and share an abstract playbook across languages while implementing it with language-specific machinery. |
 | **An Empirical Study of Harness Design for Coding Agents**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.20804) | Varies planning, action space, and context management across 176 matched settings: context management pays off mainly under tight context budgets, planning turns from an accuracy aid for weaker models into a cost saver for stronger ones, and bash-capable models do well with bash alone. |
@@ -483,7 +483,7 @@ The harness — prompts, tools, memory, context management, and control flow aro
 
 Instead of hand-designing the improvement rule, learn the *capacity to improve*.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Evolving-RL: End-to-End Optimization of Experience-Driven Self-Evolving Capability within Agents**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.10663) | Jointly optimizes experience *extraction* and *utilization* rather than treating them separately. Notably reports that skills a base model extracts on its own can *degrade* performance versus injecting nothing. |
 | **Self-Evolved Reward Learning for LLMs**<br><sub>2024</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.00418) | The reward model bootstraps itself. |
@@ -499,7 +499,7 @@ Instead of hand-designing the improvement rule, learn the *capacity to improve*.
 
 Several agents (or an agent and its data generator) improve against each other.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Multi-Agent Evolve: LLM Self-Improve through Co-Evolution**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.23595) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/ulab-uiuc/Multi-agent-evolve) | Self-play-style improvement among cooperating or competing agents. |
 | **AgentNet: Decentralized Evolutionary Coordination for LLM-Based Multi-Agent Systems**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.00587) | Decentralized evolutionary coordination among LLM agents. |
@@ -518,7 +518,7 @@ Several agents (or an agent and its data generator) improve against each other.
 
 An agent that keeps updating itself can quietly *lose* capabilities it already had. This is the plasticity-vs-stability problem, and it is the second-biggest corrective thread after misevolution.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Do Self-Evolving Agents Forget? Capability Degradation and Preservation in Lifelong LLM Agent Adaptation**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.09315) | Documents classical catastrophic forgetting under vanilla self-evolution: later updates overwrite parameter regions supporting earlier behaviors. Proposes Capability-Preserving Evolution, an EWC-style regularizer using Fisher importance weights, and argues stable long-horizon evolution requires *explicitly preserving* old capabilities, not just acquiring new ones. |
 | **Self-Evolving Agents with Anytime-Valid Certificates**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2607.00871) | Names the **endogenous-loop failure mode**: the evolving policy generates the data it trains on, the evaluator it is judged by, and the hypothesis space it searches — so continual-learning and PAC-Bayes guarantees proved for *exogenous* environments no longer apply. The sharpest theoretical critique in the field right now. |
@@ -543,7 +543,7 @@ An agent that keeps updating itself can quietly *lose* capabilities it already h
 
 The corrective literature. If you are building any of the above, read this section before you trust your numbers.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Why Do Multi-Agent LLM Systems Fail?**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.13657) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/multi-agent-systems-failure-taxonomy/MAST) | Introduces the MAST taxonomy: 14 failure modes across system design, inter-agent misalignment, and verification, from 1,600+ annotated traces. The key finding: better base models will not fix most of them. |
 | **Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems**<br><sub>ICML 2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.00212) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/mingyin1/Agents_Failure_Attribution) | Attributes multi-agent failures to the responsible agent and step. |
@@ -586,7 +586,7 @@ The corrective literature. If you are building any of the above, read this secti
 
 The part of the field that is under-appreciated relative to how important it is. Self-improvement can silently erode alignment.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Your Agent May Misevolve: Emergent Risks in Self-Evolving LLM Agents**<br><sub>ICLR 2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.26354) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/ShaoShuai0605/Misevolution) | The paper this list is oriented around. Defines *misevolution* along the model/memory/tool/workflow pathways and shows it is pervasive even on top-tier backbones — including safety-refusal rates dropping sharply after self-training. Its four distinguishing traits (temporal emergence, environmental origin, limited data control, expanded risk surface) are why static safety evaluation misses it. |
 | **TAME: A Trustworthy Test-Time Evolution of Agent Memory with Systematic Benchmarking**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.03224) | The closest thing to a defense. Introduces the Trust-Memevo benchmark, confirms trustworthiness declines even under *benign* task evolution, and proposes a dual-memory framework that evolves executor memory and evaluator memory separately so utility and safety improve together rather than trading off. |
@@ -631,7 +631,7 @@ The part of the field that is under-appreciated relative to how important it is.
 
 Evaluation is the field's bottleneck; static one-shot benchmarks cannot see drift, forgetting, or safety erosion.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **StuLife**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2508.19005) | Simulated college journey testing long-term memory, proactivity, and learning-from-experience. |
 | **Evo-Memory**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.20857) | Benchmarks test-time learning with self-evolving memory across sequential tasks. |
@@ -677,7 +677,7 @@ Self-evolving tool use and multi-agent delegation increasingly ride on shared pr
 - **A2A (Agent-to-Agent)** — Google, 2025. Agent-to-agent discovery, delegation, and collaboration across vendors.
 - **ACP (Agent Communication Protocol)** — IBM. REST-native agent messaging (later converging with A2A).
 - **ANP (Agent Network Protocol)** — community. Decentralized, DID-based agent networks.
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **Beyond Message Passing: A Semantic View of Agent Communication Protocols**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2604.02369) | Analyzes 18 protocols across communication, syntactic, and semantic layers, finding transport and schema support mature while clarification, context alignment, and verification remain thin. |
 | **Permission Manifests for Web Agents**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.02371) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/las-wg/agent-permissions.json) | Capability scoping for agents acting on the web. |
@@ -690,7 +690,7 @@ Self-evolving tool use and multi-agent delegation increasingly ride on shared pr
 
 Self-evolution grounded in a specific domain, useful as end-to-end case studies.
 
-| Paper | What it does |
+| Paper&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | What it does |
 |:---|:---|
 | **GenoMAS: A Multi-Agent Framework for Scientific Discovery via Code-Driven Gene Expression Analysis**<br><sub>2025</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.21035) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/Liu-Hy/GenoMAS) | Multi-agent scientific discovery via code-driven gene-expression analysis. |
 | **EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery**<br><sub>2026</sub> [![arXiv](https://img.shields.io/badge/arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2603.08127) [![code](https://img.shields.io/badge/code-1f2328?style=flat-square&logo=github&logoColor=white)](https://github.com/EvoScientist/EvoScientist) | Evolves both ideation and experiment-execution strategies under one objective across the full discovery pipeline. |

@@ -29,7 +29,10 @@ BADGE = {
     "code": f"https://img.shields.io/badge/code-1f2328?{S}&logo=github&logoColor=white",
     "new": f"https://img.shields.io/badge/new-1a7f64?{S}",
 }
-HEADER = ["| Paper | What it does |", "|:---|:---|"]
+# The run of no-break spaces sets the Paper column's minimum width, so titles
+# wrap onto two lines instead of four; GitHub strips column-width attributes.
+HEADER = ["| Paper" + "&nbsp;" * 72 + " | What it does |", "|:---|:---|"]
+OLD_HEADERS = {"| Paper | What it does |"}
 PLAIN = re.compile(
     r"^- \*\*(?P<title>[^*]+)\*\* — (?P<venue>.+?)\. "
     r"\[(?P<label>[^\]]+)\]\((?P<url>https?://[^\s)]+)\)"
@@ -66,9 +69,9 @@ def main():
     end = next(i for i, l in enumerate(lines) if l.startswith("## Updates"))
     out, i, converted = [], 0, 0
     while i < len(lines):
-        if i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER):
+        if i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER or lines[i] in OLD_HEADERS):
             rows = []
-            while i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER):
+            while i < end and (PLAIN.match(lines[i]) or ROW.match(lines[i]) or lines[i] in HEADER or lines[i] in OLD_HEADERS):
                 m = PLAIN.match(lines[i])
                 if m:
                     rows.append(row(m))
