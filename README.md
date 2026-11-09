@@ -23,9 +23,9 @@
 </p>
 
 <p align="center">
-  <a href="docs/primer.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-read-dark.svg"><img src="assets/card-read-light.svg" width="280" alt="The primer: builds the ideas from the ground up."></picture></a>
-  <a href="#evolution-map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-see-dark.svg"><img src="assets/card-see-light.svg" width="280" alt="Evolution map: five threads through the field."></picture></a>
-  <a href="#reference-implementations"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-run-dark.svg"><img src="assets/card-run-light.svg" width="280" alt="Reference code: two short Python demos."></picture></a>
+  <a href="docs/primer.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-read-dark.svg"><img src="assets/card-read-light.svg" width="256" alt="The primer: builds the ideas from the ground up."></picture></a>
+  <a href="#evolution-map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-see-dark.svg"><img src="assets/card-see-light.svg" width="256" alt="Evolution map: five threads through the field."></picture></a>
+  <a href="#reference-implementations"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-run-dark.svg"><img src="assets/card-run-light.svg" width="256" alt="Reference code: two short Python demos."></picture></a>
 </p>
 
 <p align="center">
