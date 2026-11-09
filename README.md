@@ -57,9 +57,50 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 
 ## Contents
 
-| **Start here** | **How agents evolve** | **Does it hold up?** | **Beyond the list** |
-|---|---|---|---|
-| [Scope and stance](#scope-and-stance)<br>[A one-diagram primer](#a-one-diagram-primer)<br>[The four evolution pathways](#the-four-evolution-pathways)<br>[Evolution map](#evolution-map)<br>[Surveys and roadmaps](#surveys-and-roadmaps)<br>[Foundations and precursors](#foundations-and-precursors) | [Automated and self-evolving system design](#automated-and-self-evolving-system-design)<br>[Test-time learning and self-improvement](#test-time-learning-and-self-improvement)<br>[Memory: non-parametric to parametric](#memory-non-parametric-to-parametric)<br>[Experience-driven lifelong learning and skills](#experience-driven-lifelong-learning-and-skills)<br>[Zero-data self-evolution and self-play](#zero-data-self-evolution-and-self-play)<br>[Self-evolving coding agents](#self-evolving-coding-agents)<br>[Recursive self-improvement](#recursive-self-improvement)<br>[Harness evolution](#harness-evolution)<br>[Reinforcement learning for self-evolution](#reinforcement-learning-for-self-evolution)<br>[Multi-agent co-evolution](#multi-agent-co-evolution) | [Forgetting, drift, and stability](#forgetting-drift-and-stability)<br>[Why they fail: failure analysis and attribution](#why-they-fail-failure-analysis-and-attribution)<br>[Safety: misevolution and defenses](#safety-misevolution-and-defenses)<br>[Benchmarks and environments](#benchmarks-and-environments)<br>[Interoperability protocols](#interoperability-protocols)<br>[Domain applications](#domain-applications) | [Community spotlight](#community-spotlight)<br>[Reference implementations](#reference-implementations)<br>[A reading path](#a-reading-path)<br>[Updates](#updates)<br>[How this list is maintained](#how-this-list-is-maintained)<br>[Beyond papers](#beyond-papers)<br>[Related lists](#related-lists)<br>[Contributing](#contributing)<br>[License](#license) |
+<table>
+<tr><th>Start here</th><th>How agents evolve</th><th>Does it hold up?</th><th>Beyond the list</th></tr>
+<tr>
+<td valign="top">
+<a href="#scope-and-stance">Scope and stance</a><br>
+<a href="#a-one-diagram-primer">A one-diagram primer</a><br>
+<a href="#the-four-evolution-pathways">The four evolution pathways</a><br>
+<a href="#evolution-map">Evolution map</a><br>
+<a href="#surveys-and-roadmaps">Surveys and roadmaps</a><br>
+<a href="#foundations-and-precursors">Foundations and precursors</a>
+</td>
+<td valign="top">
+<a href="#automated-and-self-evolving-system-design">Automated and self-evolving system design</a><br>
+<a href="#test-time-learning-and-self-improvement">Test-time learning and self-improvement</a><br>
+<a href="#memory-non-parametric-to-parametric">Memory: non-parametric to parametric</a><br>
+<a href="#experience-driven-lifelong-learning-and-skills">Experience-driven lifelong learning and skills</a><br>
+<a href="#zero-data-self-evolution-and-self-play">Zero-data self-evolution and self-play</a><br>
+<a href="#self-evolving-coding-agents">Self-evolving coding agents</a><br>
+<a href="#recursive-self-improvement">Recursive self-improvement</a><br>
+<a href="#harness-evolution">Harness evolution</a><br>
+<a href="#reinforcement-learning-for-self-evolution">Reinforcement learning for self-evolution</a><br>
+<a href="#multi-agent-co-evolution">Multi-agent co-evolution</a>
+</td>
+<td valign="top">
+<a href="#forgetting-drift-and-stability">Forgetting, drift, and stability</a><br>
+<a href="#why-they-fail-failure-analysis-and-attribution">Why they fail: failure analysis and attribution</a><br>
+<a href="#safety-misevolution-and-defenses">Safety: misevolution and defenses</a><br>
+<a href="#benchmarks-and-environments">Benchmarks and environments</a><br>
+<a href="#interoperability-protocols">Interoperability protocols</a><br>
+<a href="#domain-applications">Domain applications</a>
+</td>
+<td valign="top">
+<a href="#community-spotlight">Community spotlight</a><br>
+<a href="#reference-implementations">Reference implementations</a><br>
+<a href="#a-reading-path">A reading path</a><br>
+<a href="#updates">Updates</a><br>
+<a href="#how-this-list-is-maintained">How this list is maintained</a><br>
+<a href="#beyond-papers">Beyond papers</a><br>
+<a href="#related-lists">Related lists</a><br>
+<a href="#contributing">Contributing</a><br>
+<a href="#license">License</a>
+</td>
+</tr>
+</table>
 
 ---
 
