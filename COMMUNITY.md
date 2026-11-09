@@ -29,6 +29,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 | [**DSPy**](https://github.com/stanfordnlp/dspy) | Stanford NLP | workflow | Compile declarative LM pipelines into self-improving programs (prompt/weight optimizers). |
 | [**EvoAgentX**](https://github.com/ANative-Lab/EvoAgentX) | EvoAgentX | workflow | Framework for evolving multi-agent workflows with search and evaluation hooks. |
 | [**smolagents**](https://github.com/huggingface/smolagents) | Hugging Face | tool · workflow | Minimal agent library — code actions, tool routing, small surface area for experiments. |
+| [**Sage**](https://github.com/ZHangZHengEric/Sage) | ZHangZHengEric | workflow | Agent harness whose Runner–Evaluator–Tuner loop proposes and evaluates versioned package changes from task feedback, keeps the evidence, and leaves adoption to the user; no weight training. |
 
 ---
 
@@ -78,6 +79,7 @@ Open-source **projects, harnesses, and benchmarks** that implement or evaluate s
 
 | Date | Project | Contributor |
 |------|---------|-------------|
+| 2026-11 | [Sage](https://github.com/ZHangZHengEric/Sage) | @ZHangZHengEric (#43) |
 | 2026-10 | [MAIOS Project Kernel](https://github.com/GrazianoGuiducci/maios-project-kernel) | @GrazianoGuiducci (#34) |
 
 ---
