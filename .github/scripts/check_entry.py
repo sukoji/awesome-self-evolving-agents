@@ -30,13 +30,13 @@ ENTRY = re.compile(
     r"(?: · \[code\]\((https://github\.com/[^\s)]+)\))?\. "
     r"[A-Z][^\n]{15,400}$")
 # The same entry as a README table row, after format_entries.py:
-# | **Title**<br><sub>Venue</sub> [![arXiv](badge)](url) [![code](badge)](github url) | One sentence. |
-BADGE = r"\[!\[(?:arXiv|paper|code)\]\(https://img\.shields\.io/[^\s)]+\)\]"
+# <tr><td valign="top"><b>Title</b><br><img venue> <a href="url"><img arXiv></a> <a href="github url"><img code></a></td><td valign="top">One sentence.</td></tr>
+SHIELD = r'<img src="https://img\.shields\.io/[^"]+" alt="%s">'
 PAPER_ROW = re.compile(
-    r"^\| \*\*[^*]{4,200}\*\*<br><sub>[^<]{2,60}</sub> "
-    + BADGE + r"\((https?://[^\s)]+)\)"
-    + r"(?: " + BADGE + r"\((https://github\.com/[^\s)]+)\))?"
-    + r" \| [A-Z][^\n]{15,400} \|$")
+    r'^<tr><td valign="top"><b>[^<]{4,200}</b><br>' + SHIELD % r'[^"]{2,60}'
+    + r' <a href="(https?://[^"]+)">' + SHIELD % r"(?:arXiv|paper)" + r"</a>"
+    + r'(?: <a href="(https://github\.com/[^"]+)">' + SHIELD % "code" + r"</a>)?"
+    + r'</td><td valign="top">[A-Z][^\n]{15,600}</td></tr>$')
 # | [**name**](url) | author | pathway | focus |
 ROW = re.compile(
     r"^\| \[\*\*[^*]{2,80}\*\*\]\((https?://[^\s)]+)\) \| [^|]{1,60}"
@@ -123,7 +123,8 @@ def main():
         for url in filter(None, match.groups()):
             if not link_ok(url):
                 problems.append("link does not resolve: %s" % url)
-        title = stripped.split("**")[1]
+        title = (stripped.split("**")[1] if "**" in stripped
+                 else re.search(r"<b>([^<]+)</b>", stripped).group(1))
         if title in existing:
             problems.append("%r is already in the list" % title)
 

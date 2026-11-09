@@ -101,7 +101,8 @@ def collect(root):
                 url = url.rstrip(".,;")
                 match = re.search(r"arxiv\.org/abs/(\d{4}\.\d{4,5})", url)
                 if match:
-                    title = line.split("**")[1] if line.count("**") >= 2 else line[:60]
+                    bold = re.search(r"\*\*([^*]+)\*\*|<b>([^<]+)</b>", line)
+                    title = (bold.group(1) or bold.group(2)) if bold else line[:60]
                     papers.setdefault(match.group(1), []).append(title)
                 elif skippable(url):
                     continue
