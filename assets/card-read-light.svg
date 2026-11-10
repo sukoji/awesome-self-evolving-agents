@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150" role="img" aria-label="The primer: Builds the ideas from the ground up, from one agent loop to misevolution.">
 <rect x="1" y="1" width="298" height="148" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
 <rect x="24" y="24" width="40" height="40" rx="5" fill="#bcd6f5"/><rect x="30" y="30" width="28" height="28" rx="5" fill="#6da7ec"/><rect x="36" y="36" width="16" height="16" rx="5" fill="#1a7f64"/>
-<text x="84" y="38" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="2" fill="#59636e">01 · READ</text>
-<text x="84" y="62" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1f2328">The primer</text>
+<text x="84" y="51" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1f2328">The primer</text>
 <text x="22" y="98" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#59636e">Builds the ideas from the ground up,</text>
 <text x="22" y="117" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#59636e">from one agent loop to misevolution.</text>
-<text x="278" y="136" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" fill="#1a7f64">docs/primer.md →</text>
+<text x="278" y="136" text-anchor="end" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#2a78d6">docs/primer.md →</text>
 </svg>

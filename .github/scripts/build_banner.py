@@ -5,9 +5,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SERIF = "Georgia,'Times New Roman',serif"
 SANS = "-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 # sequential single hue, outer (light) -> inner (dark); inner accent separate
 T = {
@@ -40,12 +38,11 @@ def banner(t):
          f'aria-label="Awesome Self-Evolving Agents. Concentric layers an agent has learned to rewrite, outermost first: its prompts (2023), '
          f'its memory (2023), its workflow (2024), its own code (2025), its harness (2026), its training (2026), and at the centre the process that improves it (2026).">\n',
          f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n',
-         f'<text x="56" y="100" font-family="{MONO}" font-size="13" letter-spacing="3" fill="{c["sub"]}">AWESOME LIST · 315+ PAPERS · NOVEMBER 2026</text>\n',
-         f'<text x="52" y="176" font-family="{SERIF}" font-size="66" font-style="italic" fill="{c["ink"]}">Self-Evolving</text>\n',
-         f'<text x="52" y="244" font-family="{SERIF}" font-size="66" fill="{c["ink"]}">Agents</text>\n',
-         f'<rect x="56" y="270" width="56" height="3" fill="{c["core"]}"/>\n',
-         f'<text x="56" y="306" font-family="{SANS}" font-size="20" fill="{c["sub"]}">Agents that rewrite themselves —</text>\n',
-         f'<text x="56" y="334" font-family="{SANS}" font-size="20" fill="{c["sub"]}">each year, one layer deeper.</text>\n']
+         f'<g font-family="{SANS}">\n',
+         f'<text x="54" y="160" font-size="60" font-weight="700" fill="{c["ink"]}">Self-Evolving</text>\n',
+         f'<text x="54" y="230" font-size="60" font-weight="700" fill="{c["ink"]}">Agents</text>\n',
+         f'<text x="56" y="282" font-size="19" fill="{c["sub"]}">Papers on agents that rewrite their own</text>\n',
+         f'<text x="56" y="308" font-size="19" fill="{c["sub"]}">prompts, memory, code, and training.</text>\n']
     X0, Y0, X1, Y1 = 560, 28, 1168, 382
     dx, dy = 40, 42
     levels = LAYERS + [CORE]
@@ -59,12 +56,12 @@ def banner(t):
         col = "#ffffff" if light_text else ("#0d1117" if core else c["ink"])
         subc = col if (light_text or core) else c["sub"]
         s.append(f'<text x="{x+16}" y="{y+27}" font-family="{SANS}" font-size="16" font-weight="600" fill="{col}">{label}'
-                 f'<tspan font-family="{MONO}" font-weight="400" font-size="13.5" dx="10" fill="{subc}">{year}</tspan></text>\n')
+                 f'<tspan font-weight="400" font-size="13.5" dx="10" fill="{subc}">{year}</tspan></text>\n')
         if core:
-            s.append(f'<text x="{x+16}" y="{y+52}" font-family="{MONO}" font-size="13" fill="{subc}">{ex}</text>\n')
+            s.append(f'<text x="{x+16}" y="{y+52}" font-size="13" fill="{subc}">{ex}</text>\n')
         else:
-            s.append(f'<text x="{x+w-16}" y="{y+27}" text-anchor="end" font-family="{MONO}" font-size="13" fill="{subc}">{ex}</text>\n')
-    s.append("</svg>\n")
+            s.append(f'<text x="{x+w-16}" y="{y+27}" text-anchor="end" font-size="13" fill="{subc}">{ex}</text>\n')
+    s.append("</g>\n</svg>\n")
     return "".join(s)
 
 
@@ -74,7 +71,7 @@ def social():
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">\n'
             f'<rect width="1280" height="640" fill="{c["bg"]}"/>\n'
             f'<g transform="translate(0,72) scale(1.0667)">\n{inner}</g>\n'
-            f'<text x="60" y="580" font-family="{MONO}" font-size="20" fill="{c["sub"]}">github.com/sukoji/awesome-self-evolving-agents</text>\n'
+            f'<text x="60" y="580" font-family="{SANS}" font-size="20" fill="{c["sub"]}">github.com/sukoji/awesome-self-evolving-agents</text>\n'
             f'</svg>\n')
 
 

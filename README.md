@@ -847,7 +847,7 @@ A few notes on process, because a curated list is only as good as its upkeep:
 - **Entries are read, not scraped.** Each one gets a single neutral sentence describing what the work *does*. If a description reads like a press release, it hasn't been reviewed yet — open an issue.
 - **Links are checked, not guessed.** Every arXiv identifier in the list has been resolved against the arXiv API and its title compared with the entry's, so no link here is a guess. Where a work has no stable paper ID, the entry links its canonical repository instead; where neither exists, it is kept without a link and marked `needs-link` rather than given a fabricated one. No entry currently carries that marker.
 - **The link policy is enforced by CI.** [`.github/workflows/link-check.yml`](.github/workflows/link-check.yml) re-resolves every arXiv identifier through the arXiv API, compares the returned title with the entry's, and requests every other link — on each pull request and once a month. A broken or mislabelled link fails the check.
-- **Monthly review pass.** Roughly once a month the newest work is triaged into the taxonomy and the [Updates](#updates) log is appended. The date in the banner reflects the last pass.
+- **Monthly review pass.** Roughly once a month the newest work is triaged into the taxonomy and the [Updates](#updates) log is appended. The `last_pass` badge at the top shows when that was.
 - **Scope is enforced.** New sub-areas are added only when several papers justify them, to keep the list walkable rather than exhaustive. See [related lists](#related-lists) for wider, more encyclopedic coverage.
 
 Found something wrong or missing? Corrections are the most welcome PRs of all — see [CONTRIBUTING.md](CONTRIBUTING.md).

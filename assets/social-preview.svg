@@ -2,33 +2,33 @@
 <rect width="1280" height="640" fill="#0d1117"/>
 <g transform="translate(0,72) scale(1.0667)">
 <rect width="1200" height="400" fill="#0d1117"/>
-<text x="56" y="100" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" letter-spacing="3" fill="#9198a1">AWESOME LIST · 315+ PAPERS · NOVEMBER 2026</text>
-<text x="52" y="176" font-family="Georgia,'Times New Roman',serif" font-size="66" font-style="italic" fill="#e6edf3">Self-Evolving</text>
-<text x="52" y="244" font-family="Georgia,'Times New Roman',serif" font-size="66" fill="#e6edf3">Agents</text>
-<rect x="56" y="270" width="56" height="3" fill="#2fbf88"/>
-<text x="56" y="306" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" fill="#9198a1">Agents that rewrite themselves —</text>
-<text x="56" y="334" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" fill="#9198a1">each year, one layer deeper.</text>
+<g font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<text x="54" y="160" font-size="60" font-weight="700" fill="#e6edf3">Self-Evolving</text>
+<text x="54" y="230" font-size="60" font-weight="700" fill="#e6edf3">Agents</text>
+<text x="56" y="282" font-size="19" fill="#9198a1">Papers on agents that rewrite their own</text>
+<text x="56" y="308" font-size="19" fill="#9198a1">prompts, memory, code, and training.</text>
 <rect x="560" y="28" width="608" height="354" rx="12" fill="#1b2c44"/>
-<text x="576" y="55" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its prompts<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2023</tspan></text>
-<text x="1152" y="55" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#9198a1">Reflexion · Promptbreeder</text>
+<text x="576" y="55" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its prompts<tspan font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2023</tspan></text>
+<text x="1152" y="55" text-anchor="end" font-size="13" fill="#9198a1">Reflexion · Promptbreeder</text>
 <rect x="600" y="70" width="565" height="309" rx="12" fill="#1d3a60"/>
-<text x="616" y="97" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its memory<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2023</tspan></text>
-<text x="1149" y="97" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#9198a1">MemGPT · ExpeL</text>
+<text x="616" y="97" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its memory<tspan font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2023</tspan></text>
+<text x="1149" y="97" text-anchor="end" font-size="13" fill="#9198a1">MemGPT · ExpeL</text>
 <rect x="640" y="112" width="522" height="264" rx="12" fill="#21497d"/>
-<text x="656" y="139" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its workflow<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2024</tspan></text>
-<text x="1146" y="139" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#9198a1">ADAS · AFlow</text>
+<text x="656" y="139" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its workflow<tspan font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2024</tspan></text>
+<text x="1146" y="139" text-anchor="end" font-size="13" fill="#9198a1">ADAS · AFlow</text>
 <rect x="680" y="154" width="479" height="219" rx="12" fill="#28599a"/>
-<text x="696" y="181" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its own code<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2025</tspan></text>
-<text x="1143" y="181" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#9198a1">Darwin Gödel Machine</text>
+<text x="696" y="181" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#e6edf3">its own code<tspan font-weight="400" font-size="13.5" dx="10" fill="#9198a1">2025</tspan></text>
+<text x="1143" y="181" text-anchor="end" font-size="13" fill="#9198a1">Darwin Gödel Machine</text>
 <rect x="720" y="196" width="436" height="174" rx="12" fill="#326cb8"/>
-<text x="736" y="223" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#ffffff">its harness<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#ffffff">2026</tspan></text>
-<text x="1140" y="223" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#ffffff">Self-Harness · RRSI</text>
+<text x="736" y="223" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#ffffff">its harness<tspan font-weight="400" font-size="13.5" dx="10" fill="#ffffff">2026</tspan></text>
+<text x="1140" y="223" text-anchor="end" font-size="13" fill="#ffffff">Self-Harness · RRSI</text>
 <rect x="760" y="238" width="393" height="129" rx="12" fill="#3987e5"/>
-<text x="776" y="265" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#ffffff">its training<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#ffffff">2026</tspan></text>
-<text x="1137" y="265" text-anchor="end" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#ffffff">A-Evolve-Training · AIDE²</text>
+<text x="776" y="265" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#ffffff">its training<tspan font-weight="400" font-size="13.5" dx="10" fill="#ffffff">2026</tspan></text>
+<text x="1137" y="265" text-anchor="end" font-size="13" fill="#ffffff">A-Evolve-Training · AIDE²</text>
 <rect x="800" y="280" width="350" height="84" rx="12" fill="#2fbf88"/>
-<text x="816" y="307" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#0d1117">the process that improves it<tspan font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-weight="400" font-size="13.5" dx="10" fill="#0d1117">2026</tspan></text>
-<text x="816" y="332" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#0d1117">Hyperagents</text>
+<text x="816" y="307" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#0d1117">the process that improves it<tspan font-weight="400" font-size="13.5" dx="10" fill="#0d1117">2026</tspan></text>
+<text x="816" y="332" font-size="13" fill="#0d1117">Hyperagents</text>
 </g>
-<text x="60" y="580" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="20" fill="#9198a1">github.com/sukoji/awesome-self-evolving-agents</text>
+</g>
+<text x="60" y="580" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" fill="#9198a1">github.com/sukoji/awesome-self-evolving-agents</text>
 </svg>
