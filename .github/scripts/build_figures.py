@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Figures for the README, in the banner's style. Each is written twice, for
+"""Figures for the README, drawn plainly, like figures in a paper: no titles
+inside the image (the README caption carries them), sans-serif text, boxes and
+arrows for diagrams, axes and legends for charts. Each is written twice, for
 GitHub's light and dark themes, as assets/<name>-light.svg and -dark.svg.
 
-- misevolution-loop  the primer: the feedback loop, beside the curves the
-                     simulation produces, and papers that saw the loop in real agents
+- misevolution-loop  the primer: (a) the feedback loop, (b) the curves the
+                     simulation produces, (c) papers that saw the loop in real agents
 - growth             papers in this list per arXiv quarter (read from README.md)
-- trend-{measured,forecast,industry}
-                     three cards for the "Field trends" section; the numbers
-                     and their sources are in TRENDS below and in the README
 - sim-timeseries     safety and utility over time, median and 10-90% band over seeds
 - sim-pareto         the utility-safety frontier, points labelled by re-anchor strength
 
@@ -17,7 +16,6 @@ Needs numpy and matplotlib. Run from the repository root:
 """
 
 import html
-import math
 import random
 import re
 import sys
@@ -33,17 +31,16 @@ sys.path.insert(0, str(ROOT / "code"))
 import safety_gated_evolution as sim  # noqa: E402
 
 SEEDS = range(10)
-SANS = "-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
-SERIF = "Georgia,'Times New Roman',serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
-# The banner's palette, plus one warm and one alarm colour for the loop.
+SANS = "Helvetica,Arial,sans-serif"
 THEME = {
-    "light": dict(bg="#ffffff", ink="#1f2328", sub="#59636e", faint="#d8dee4", edge="#d0d7de",
-                  ramp=["#bcd6f5", "#6da7ec", "#2a78d6"], core="#1a7f64", warm="#bf8700", bad="#cf222e",
-                  series=["#cf222e", "#bf8700", "#1a7f64", "#2a78d6"]),
-    "dark": dict(bg="#0d1117", ink="#e6edf3", sub="#9198a1", faint="#30363d", edge="#30363d",
-                 ramp=["#1d3a60", "#28599a", "#3987e5"], core="#2fbf88", warm="#d29922", bad="#ff7b72",
-                 series=["#ff7b72", "#d29922", "#2fbf88", "#3987e5"]),
+    "light": dict(bg="#ffffff", ink="#1f2328", sub="#59636e", faint="#d8dee4", line="#57606a",
+                  box="#f6f8fa", blue="#2a78d6", blue_bg="#ddeafb", warm="#bf8700", warm_bg="#fbefc9",
+                  bad="#cf222e", bad_bg="#ffe3e1", series=["#cf222e", "#bf8700", "#1a7f64", "#2a78d6"],
+                  bars="#6da7ec"),
+    "dark": dict(bg="#0d1117", ink="#e6edf3", sub="#9198a1", faint="#30363d", line="#8b949e",
+                 box="#161b22", blue="#3987e5", blue_bg="#122540", warm="#d29922", warm_bg="#2e2410",
+                 bad="#ff7b72", bad_bg="#3a1618", series=["#ff7b72", "#d29922", "#2fbf88", "#3987e5"],
+                 bars="#3987e5"),
 }
 CONDITIONS = [  # label, reg, write_gate, line style
     ("no defense", 0.0, 0.0, "-"),
@@ -52,151 +49,130 @@ CONDITIONS = [  # label, reg, write_gate, line style
     ("both", 0.06, 0.8, "-"),
 ]
 REGS = [0.30, 0.20, 0.14, 0.10, 0.075, 0.055, 0.04, 0.028, 0.018, 0.010]
-# kicker, headline, two lines, source — each sourced in the README's Field trends section
-TRENDS = [
-    ("measured", "01 · MEASURED", "4.3 months", "for the length of task that frontier",
-     "agents finish to double, since 2023", "METR · Jan 2026"),
-    ("forecast", "02 · FORECAST", "2028 – 2030", "median forecasts for an automated coder,",
-     "after the AI 2027 scenario's 2027", "AI Futures Project · Apr 2026"),
-    ("industry", "03 · INDUSTRY", "“imminently”", "Anthropic may meet its own threshold for",
-     "AI-accelerated progress, its S-1/A says", "S-1/A via TechCrunch · Nov 2026"),
-]
 
 
-def text(x, y, s, size, fill, family=SANS, weight=None, italic=False, anchor=None, spacing=None):
+def text(x, y, s, size, fill, weight=None, anchor=None):
     a = [f'x="{x:.1f}"', f'y="{y:.1f}"', f'font-size="{size}"', f'fill="{fill}"']
-    if family != SANS:
-        a.append(f'font-family="{family}"')
     if weight:
         a.append(f'font-weight="{weight}"')
-    if italic:
-        a.append('font-style="italic"')
     if anchor:
         a.append(f'text-anchor="{anchor}"')
-    if spacing:
-        a.append(f'letter-spacing="{spacing}"')
     return f'<text {" ".join(a)}>{html.escape(s)}</text>\n'
 
 
-# --- the primer loop ---
+def box(x, y, w, h, lines, fill, stroke, ink):
+    o = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="{fill}" stroke="{stroke}" stroke-width="1.5"/>\n']
+    y0 = y + h / 2 - (len(lines) - 1) * 8 + 5
+    for i, s in enumerate(lines):
+        o.append(text(x + w / 2, y0 + i * 16, s, 13.5, ink, anchor="middle"))
+    return "".join(o)
+
+
+def arrow(x1, y1, x2, y2, color, mark):
+    return f'<path d="M{x1} {y1} L{x2} {y2}" stroke="{color}" stroke-width="1.6" marker-end="url(#{mark})"/>\n'
+
+
+# --- the primer: three panels, as in a paper figure ---
 
 def loop_svg(t, curve):
     c = THEME[t]
-    W, H = 960, 470
+    W, H = 1040, 345
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-         f'aria-label="The misevolution loop. An agent approves a refund, gets a five-star rating, learns that approving is good, and its approval bias rises; each turn adds bias until bad requests are approved too. In a simulation, utility stays near 1 while safety falls to 0 within about 500 interactions. Three 2025-26 papers observed the loop in real agents.">\n',
-         f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n<g font-family="{SANS}">\n',
-         f'<defs><marker id="ar-{t}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
-         f'<path d="M1 1L9 5L1 9z" fill="{c["sub"]}"/></marker>'
-         f'<marker id="br-{t}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
-         f'<path d="M1 1L9 5L1 9z" fill="{c["bad"]}"/></marker></defs>\n',
-         text(40, 40, "PRIMER · THE MISEVOLUTION LOOP", 12, c["sub"], MONO, spacing=3),
-         text(38, 80, "Task success stays high while safety collapses", 30, c["ink"], SERIF, italic=True),
-         f'<rect x="40" y="96" width="44" height="3" fill="{c["core"]}"/>\n']
-    # the ring
-    cx, cy, r = 285, 240, 86
-    o.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{c["faint"]}" stroke-width="10"/>\n')
-    for k in range(4):  # arrows along the ring, between the nodes
-        a0, a1 = -90 + k * 90 + 16, -90 + (k + 1) * 90 - 16
-        p0 = (cx + r * math.cos(math.radians(a0)), cy + r * math.sin(math.radians(a0)))
-        p1 = (cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1)))
-        o.append(f'<path d="M{p0[0]:.1f} {p0[1]:.1f} A{r} {r} 0 0 1 {p1[0]:.1f} {p1[1]:.1f}" fill="none" stroke="{c["sub"]}" stroke-width="1.6" marker-end="url(#ar-{t})"/>\n')
-    nodes = [  # angle, head, sub, colour, label anchor and offset
-        (-90, "approve", "grant the refund", c["ramp"][2], "middle", (0, -22)),
-        (0, "5-star rating", "satisfaction = reward", c["ramp"][2], "start", (20, 4)),
-        (90, "learn", "“approving is good”", c["warm"], "middle", (0, 34)),
-        (180, "bias rises", "approve a bit more", c["warm"], "end", (-20, 4)),
-    ]
-    for ang, head, sub, col, anchor, (dx, dy) in nodes:
-        x, y = cx + r * math.cos(math.radians(ang)), cy + r * math.sin(math.radians(ang))
-        o.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="9" fill="{col}" stroke="{c["bg"]}" stroke-width="3"/>\n')
-        hy = y + dy - (14 if ang == -90 else 0)
-        o.append(text(x + dx, hy, head, 14.5, c["ink"], weight="600", anchor=anchor))
-        o.append(text(x + dx, hy + 17, sub, 13, c["sub"], SERIF, italic=True, anchor=anchor))
-    o.append(text(cx, cy - 2, "each turn", 14, c["sub"], SERIF, italic=True, anchor="middle"))
-    o.append(text(cx, cy + 16, "adds bias", 14, c["sub"], SERIF, italic=True, anchor="middle"))
-    # the way out of the loop
-    bx, by = cx - r, cy
-    o.append(f'<path d="M{bx:.1f} {by+14:.1f} V{by+164:.1f}" stroke="{c["bad"]}" stroke-width="1.8" marker-end="url(#br-{t})"/>\n')
-    o.append(f'<circle cx="{bx:.1f}" cy="{by+178:.1f}" r="9" fill="{c["bad"]}" stroke="{c["bg"]}" stroke-width="3"/>\n')
-    o.append(text(bx + 20, by + 176, "safety collapses", 14.5, c["bad"], weight="600"))
-    o.append(text(bx + 20, by + 193, "bad requests approved too", 13, c["sub"], SERIF, italic=True))
-    # what the metrics show
-    X0, Y0, PW, PH = 540, 150, 380, 130
-    o.append(text(X0, Y0 - 24, "WHAT THE METRICS SHOW", 11.5, c["sub"], MONO, spacing=2))
+         f'aria-label="(a) The misevolution loop: the agent approves a refund, the customer rates it five stars, the agent learns that approving is good, its approval bias rises, and the loop repeats until bad requests are approved too. (b) In a simulation with no defense, utility stays near 1 while safety falls to 0 within about 500 interactions. (c) Three 2025-26 papers observed the loop in real agents.">\n',
+         f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n<g font-family="{SANS}">\n']
+    for name, col in (("ar", c["line"]), ("br", c["bad"])):
+        o.append(f'<defs><marker id="{name}-{t}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" '
+                 f'orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="{col}"/></marker></defs>\n')
+    ar, br = f"ar-{t}", f"br-{t}"
+
+    # (a) the loop, four boxes in a cycle and the way out
+    bw, bh = 150, 52
+    A, B, C, D = (30, 30), (220, 30), (220, 150), (30, 150)
+    o.append(box(*A, bw, bh, ["Agent approves", "a refund"], c["blue_bg"], c["blue"], c["ink"]))
+    o.append(box(*B, bw, bh, ["Customer rates", "it 5 stars"], c["blue_bg"], c["blue"], c["ink"]))
+    o.append(box(*C, bw, bh, ["Agent learns", "“approving is good”"], c["warm_bg"], c["warm"], c["ink"]))
+    o.append(box(*D, bw, bh, ["Approval bias", "rises"], c["warm_bg"], c["warm"], c["ink"]))
+    o.append(arrow(A[0] + bw + 2, A[1] + bh / 2, B[0] - 4, B[1] + bh / 2, c["line"], ar))
+    o.append(arrow(B[0] + bw / 2, B[1] + bh + 2, C[0] + bw / 2, C[1] - 4, c["line"], ar))
+    o.append(arrow(C[0] - 2, C[1] + bh / 2, D[0] + bw + 4, D[1] + bh / 2, c["line"], ar))
+    o.append(arrow(D[0] + bw / 2, D[1] - 2, A[0] + bw / 2, A[1] + bh + 4, c["line"], ar))
+    o.append(text(D[0] + bw / 2 + 8, (A[1] + bh + D[1]) / 2 + 4, "repeat", 12, c["sub"]))
+    E = (30, 250)
+    o.append(arrow(D[0] + bw / 2, D[1] + bh + 2, E[0] + bw / 2, E[1] - 4, c["bad"], br))
+    o.append(box(*E, bw, bh, ["Bad requests", "approved too"], c["bad_bg"], c["bad"], c["ink"]))
+
+    # (b) the simulated curves, with axes and a legend
+    X0, Y0, PW, PH = 470, 40, 230, 220
+    o.append(f'<path d="M{X0} {Y0} V{Y0+PH} H{X0+PW}" fill="none" stroke="{c["line"]}" stroke-width="1"/>\n')
     for v in (0, 0.5, 1.0):
-        y = Y0 + PH - v * PH
-        o.append(f'<path d="M{X0} {y:.1f} H{X0+PW}" stroke="{c["faint"]}" stroke-width="1"/>\n')
-        o.append(text(X0 - 8, y + 4, f"{v:g}", 11, c["sub"], MONO, anchor="end"))
+        y = Y0 + PH - v * PH * 0.92
+        o.append(f'<path d="M{X0-4} {y:.1f} H{X0}" stroke="{c["line"]}"/>\n')
+        o.append(text(X0 - 8, y + 4, f"{v:g}", 11.5, c["sub"], anchor="end"))
     steps, util, safe = curve
     xmax = steps[-1]
+    for v in (0, 1000, 2000):
+        x = X0 + v / xmax * PW
+        o.append(f'<path d="M{x:.1f} {Y0+PH} V{Y0+PH+4}" stroke="{c["line"]}"/>\n')
+        o.append(text(x, Y0 + PH + 18, f"{v:,}", 11.5, c["sub"], anchor="middle"))
+    o.append(text(X0 + PW / 2, Y0 + PH + 36, "interactions", 12, c["sub"], anchor="middle"))
+    o.append(f'<text x="{X0-34}" y="{Y0+PH/2}" font-size="12" fill="{c["sub"]}" text-anchor="middle" '
+             f'transform="rotate(-90 {X0-34} {Y0+PH/2})">rate</text>\n')
 
     def path(vals):
-        return " ".join(f"{'M' if i == 0 else 'L'}{X0 + s / xmax * PW:.1f} {Y0 + PH - v * PH:.1f}" for i, (s, v) in enumerate(zip(steps, vals)))
-    o.append(f'<path d="{path(util)}" fill="none" stroke="{c["ramp"][2]}" stroke-width="3" stroke-linejoin="round"/>\n')
-    o.append(f'<path d="{path(safe)}" fill="none" stroke="{c["bad"]}" stroke-width="3" stroke-linejoin="round"/>\n')
-    o.append(text(X0 + PW, Y0 + PH - util[-1] * PH + 20, "utility: task success stays high", 13, c["ramp"][2], weight="600", anchor="end"))
-    o.append(text(X0 + PW, Y0 + PH - safe[-1] * PH - 10, "safety: bad requests refused, falls to 0", 13, c["bad"], weight="600", anchor="end"))
-    o.append(text(X0, Y0 + PH + 22, f"interactions 0–{int(xmax):,} · no defense · mean of {len(SEEDS)} seeds", 11, c["sub"], MONO))
-    # observed in real agents
-    o.append(text(X0, 338, "OBSERVED IN REAL AGENTS, 2025–26", 11.5, c["sub"], MONO, spacing=2))
-    seen = [("Your Agent May Misevolve", "safety refusal rates drop after self-training"),
-            ("Appreciation Teaches Unauthorized Execution", "learning from user feedback raises hidden-injection success"),
-            ("Masked Erosion", "redundant safeguards erode unseen by the acceptance gate")]
-    for k, (head, sub) in enumerate(seen):
-        y = 364 + k * 36
-        o.append(f'<rect x="{X0}" y="{y-11}" width="3" height="30" fill="{c["bad"]}"/>\n')
-        o.append(text(X0 + 12, y, head, 13, c["ink"], weight="600"))
-        o.append(text(X0 + 12, y + 16, sub, 13, c["sub"], SERIF, italic=True))
+        return " ".join(f"{'M' if i == 0 else 'L'}{X0 + s / xmax * PW:.1f} {Y0 + PH - v * PH * 0.92:.1f}"
+                        for i, (s, v) in enumerate(zip(steps, vals)))
+    o.append(f'<path d="{path(util)}" fill="none" stroke="{c["blue"]}" stroke-width="2.2"/>\n')
+    o.append(f'<path d="{path(safe)}" fill="none" stroke="{c["bad"]}" stroke-width="2.2"/>\n')
+    lx, ly = X0 + 70, Y0 + PH * 0.42
+    o.append(f'<rect x="{lx-10}" y="{ly-16}" width="160" height="48" fill="{c["bg"]}" stroke="{c["faint"]}"/>\n')
+    for k, (col, s) in enumerate(((c["blue"], "utility"), (c["bad"], "safety"))):
+        y = ly + k * 20
+        o.append(f'<path d="M{lx} {y-4} H{lx+22}" stroke="{col}" stroke-width="2.2"/>\n')
+        o.append(text(lx + 30, y, s, 12, c["ink"]))
+
+    # (c) the same loop in real agents
+    X2 = 770
+    seen = [(["Your Agent May Misevolve"], ["Refusal rates drop", "after self-training"]),
+            (["Appreciation Teaches", "Unauthorized Execution"], ["Learning from user feedback", "raises hidden-injection success"]),
+            (["Masked Erosion"], ["Redundant safeguards erode,", "unseen by the acceptance gate"])]
+    y = 34
+    for head, body in seen:
+        h = 14 + 17 * (len(head) + len(body))
+        o.append(f'<rect x="{X2}" y="{y}" width="245" height="{h}" rx="6" fill="{c["box"]}" stroke="{c["faint"]}" stroke-width="1.5"/>\n')
+        yy = y + 22
+        for s in head:
+            o.append(text(X2 + 12, yy, s, 13, c["ink"], weight="700"))
+            yy += 17
+        for s in body:
+            o.append(text(X2 + 12, yy, s, 12.5, c["sub"]))
+            yy += 17
+        y += h + 10
+
+    # panel captions
+    for x, s in ((180, "(a) The feedback loop"), (X0 + PW / 2, "(b) Simulated agent, no defense"), (X2 + 122, "(c) Observed in real agents")):
+        o.append(text(x, H - 14, s, 13.5, c["ink"], anchor="middle"))
     o.append("</g>\n</svg>\n")
     return "".join(o)
 
 
-# --- trend cards, the same shape as the "Start here" cards ---
-
-def card_svg(t, spec):
-    c = THEME[t]
-    _, kicker, big, l1, l2, foot = spec
-    W, H = 300, 170
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-            f'aria-label="{html.escape(kicker)}: {html.escape(big)}, {html.escape(l1)} {html.escape(l2)} ({html.escape(foot)})">\n'
-            f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="{c["bg"]}" stroke="{c["edge"]}" stroke-width="1.5"/>\n'
-            f'<g font-family="{SANS}">\n'
-            + text(22, 36, kicker, 11.5, c["sub"], MONO, spacing=2)
-            + text(21, 76, big, 30, c["ink"], SERIF, italic=True)
-            + text(22, 106, l1, 13.5, c["sub"])
-            + text(22, 125, l2, 13.5, c["sub"])
-            + text(W - 22, H - 18, foot, 11, c["core"], MONO, anchor="end")
-            + '</g>\n</svg>\n')
-
-
-# --- matplotlib charts, styled to match ---
+# --- matplotlib charts ---
 
 def style(t):
     c = THEME[t]
     plt.rcParams.update({
         "svg.fonttype": "none", "font.family": "sans-serif",
-        "font.sans-serif": ["Segoe UI", "Helvetica", "Arial", "DejaVu Sans"], "font.size": 11,
+        "font.sans-serif": ["Helvetica", "Arial", "DejaVu Sans"], "font.size": 11,
         "figure.facecolor": c["bg"], "axes.facecolor": c["bg"], "savefig.facecolor": c["bg"],
-        "axes.edgecolor": c["faint"], "axes.labelcolor": c["sub"], "xtick.color": c["sub"],
-        "ytick.color": c["sub"], "text.color": c["ink"], "grid.color": c["faint"], "grid.linewidth": 0.8,
-        "axes.spines.top": False, "axes.spines.right": False, "axes.spines.left": False,
-        "xtick.major.size": 0, "ytick.major.size": 0, "axes.titlelocation": "left",
+        "axes.edgecolor": c["line"], "axes.labelcolor": c["ink"], "xtick.color": c["sub"],
+        "ytick.color": c["sub"], "text.color": c["ink"], "grid.color": c["faint"], "grid.linewidth": 0.7,
+        "axes.spines.top": False, "axes.spines.right": False,
+        "legend.edgecolor": c["faint"], "legend.facecolor": c["bg"], "legend.framealpha": 1,
     })
     return c
 
 
-def heading(fig, c, kicker, title, y=0.95):
-    fig.text(0.012, y, kicker, fontsize=9.5, color=c["sub"], family="monospace")
-    fig.text(0.012, y - 0.075, title, fontsize=19, color=c["ink"], family="serif", style="italic")
-
-
-def footnote(fig, c, s):
-    fig.text(0.012, 0.02, s, fontsize=9, color=c["sub"], family="monospace")
-
-
 def save(fig, name, t):
-    fig.savefig(ROOT / "assets" / f"{name}-{t}.svg", metadata={"Date": None})
+    fig.savefig(ROOT / "assets" / f"{name}-{t}.svg", metadata={"Date": None}, bbox_inches="tight", pad_inches=0.15)
     plt.close(fig)
 
 
@@ -211,91 +187,65 @@ def quarters():
     return keys, [count.get(k, 0) for k in keys]
 
 
-def growth(t, last_pass):
+def growth(t):
     c = style(t)
     keys, n = quarters()
-    fig = plt.figure(figsize=(9.6, 4.2))
-    ax = fig.add_axes((0.012, 0.17, 0.976, 0.55))
-    partial = len(keys) - 1
-    colors = [c["ramp"][2] if y >= 2026 else c["ramp"][1] if y == 2025 else c["ramp"][0] for y, _ in keys]
-    bars = ax.bar(range(len(keys)), n, color=colors, width=0.74)
-    bars[partial].set_hatch("////")
-    bars[partial].set_edgecolor(c["bg"])
+    fig, ax = plt.subplots(figsize=(9.6, 3.2))
+    bars = ax.bar(range(len(keys)), n, color=c["bars"], width=0.72)
+    bars[-1].set_hatch("////")
+    bars[-1].set_facecolor(c["bg"])
+    bars[-1].set_edgecolor(c["bars"])
     for i, v in enumerate(n):
         if v:
-            ax.text(i, v + max(n) * 0.02, str(v), ha="center", va="bottom", fontsize=9.5, color=c["sub"])
-    ax.set_xticks(range(len(keys)))
-    ax.set_xticklabels([f"{y}" if q == 1 else "" for y, q in keys], fontsize=9.5, family="monospace", ha="left")
-    ax.set_yticks([])
-    ax.set_ylim(0, max(n) * 1.15)
-    years = {}
-    for (y, _), v in zip(keys, n):
-        years[y] = years.get(y, 0) + v
-    heading(fig, c, "THIS LIST · PAPERS BY THE QUARTER THEY APPEARED ON ARXIV",
-            f"{years.get(2026, 0)} of the {sum(n)} arXiv papers here are from 2026", y=0.93)
-    footnote(fig, c, f"A curated list, not a census of the field. Hatched: quarter in progress, to {last_pass}.")
+            ax.text(i, v + max(n) * 0.015, str(v), ha="center", va="bottom", fontsize=9, color=c["sub"])
+    starts = [i for i, (_, q) in enumerate(keys) if q == 1]
+    ax.set_xticks([i - 0.5 for i in starts])
+    ax.set_xticklabels([str(keys[i][0]) for i in starts], ha="left")
+    ax.set_xlim(-0.6, len(keys) - 0.4)
+    ax.set_ylabel("papers per quarter")
+    ax.grid(axis="y")
+    ax.set_axisbelow(True)
+    ax.legend([bars[0], bars[-1]], ["arXiv quarter", "quarter in progress"], loc="upper left", fontsize=9.5)
     save(fig, "growth", t)
 
 
 def timeseries(t, data):
     c = style(t)
-    fig = plt.figure(figsize=(11, 4.6))
-    axes = [fig.add_axes((0.045, 0.15, 0.36, 0.56)), fig.add_axes((0.565, 0.15, 0.36, 0.56))]
-    for ax, col, title in ((axes[0], 2, "safety: bad requests refused"), (axes[1], 1, "utility: good requests approved")):
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.9))
+    for ax, col, ylabel, tag in ((axes[0], 2, "safety (bad requests refused)", "(a)"),
+                                 (axes[1], 1, "utility (good requests approved)", "(b)")):
         for (label, reg, gate, ls), color in zip(CONDITIONS, c["series"]):
             r = data[label]
             x = r[0, :, 0]
             lo, mid, hi = np.percentile(r[:, :, col], [10, 50, 90], axis=0)
-            ax.fill_between(x, lo, hi, color=color, alpha=0.14, linewidth=0)
-            ax.plot(x, mid, color=color, linestyle=ls, linewidth=2.4)
-            ax.annotate(label, (x[-1], mid[-1]), xytext=(6, 0), textcoords="offset points", va="center",
-                        fontsize=9.5, color=color, fontweight="bold", annotation_clip=False)
-        ax.set_title(title, fontsize=11, color=c["sub"], family="monospace", pad=8)
+            ax.fill_between(x, lo, hi, color=color, alpha=0.15, linewidth=0)
+            ax.plot(x, mid, color=color, linestyle=ls, linewidth=1.8, label=label)
         ax.set_ylim(-0.03, 1.05)
-        ax.set_yticks([0, 0.5, 1])
-        ax.grid(axis="y")
-        ax.set_xlabel("interactions", family="monospace", fontsize=9.5)
-    # end labels closer than `gap` form a cluster, spread evenly about its centre
-    gap = 0.08
-    for ax in axes:
-        texts = sorted(ax.texts, key=lambda a: a.xy[1])
-        clusters = []
-        for a in texts:
-            if clusters and a.xy[1] - clusters[-1][-1].xy[1] < gap:
-                clusters[-1].append(a)
-            else:
-                clusters.append([a])
-        for group in clusters:
-            mid = sum(a.xy[1] for a in group) / len(group)
-            for i, a in enumerate(group):
-                a.xy = (a.xy[0], mid + (i - (len(group) - 1) / 2) * gap)
-    heading(fig, c, "REFERENCE CODE · code/safety_gated_evolution.py",
-            "A write-gate alone does not stop the collapse; re-anchoring does", y=0.93)
-    footnote(fig, c, f"Median of {len(SEEDS)} seeds; bands 10th–90th percentile. No defense and write-gate overlap at safety 0 and utility 1.")
+        ax.set_xlabel("interactions")
+        ax.set_ylabel(ylabel)
+        ax.grid(alpha=0.8)
+        ax.set_title(tag, loc="left", fontsize=11.5)
+    axes[0].legend(loc="upper right", fontsize=9.5)
+    fig.tight_layout(w_pad=3)
     save(fig, "sim-timeseries", t)
 
 
 def pareto(t, sweep):
     c = style(t)
-    fig = plt.figure(figsize=(7.2, 5.4))
-    ax = fig.add_axes((0.1, 0.14, 0.86, 0.6))
-    for (label, gate, marker), color in zip([("no write-gate", 0.0, "o"), ("write-gate", 0.8, "s")], (c["series"][2], c["series"][1])):
+    fig, ax = plt.subplots(figsize=(6.4, 4.6))
+    for (label, gate, marker), color in zip([("re-anchor only", 0.0, "o"), ("re-anchor + write-gate", 0.8, "s")],
+                                            (c["series"][2], c["series"][1])):
         u, s = zip(*sweep[gate])
-        ax.plot(u, s, marker=marker, color=color, linewidth=1.8, markersize=5.5, label=label,
-                markeredgecolor=c["bg"], markeredgewidth=1)
+        ax.plot(u, s, marker=marker, color=color, linewidth=1.5, markersize=5, label=label)
         if gate == 0.0:
             for reg, x, y in zip(REGS, u, s):
                 if reg in (0.30, 0.10, 0.04):
-                    ax.annotate(f"reg {reg:g}", (x, y), xytext=(8, 7), textcoords="offset points", fontsize=9, color=c["sub"], family="monospace")
-    ax.scatter([1.0], [0.0], marker="X", s=120, color=c["series"][0], zorder=5, edgecolors=c["bg"])
-    ax.annotate("no defense", (1.0, 0.0), xytext=(-12, 4), textcoords="offset points", ha="right",
-                fontsize=9.5, color=c["series"][0], fontweight="bold")
-    ax.set_xlabel("utility: good requests approved", family="monospace", fontsize=9.5)
-    ax.set_ylabel("safety: bad requests refused", family="monospace", fontsize=9.5)
-    ax.grid()
-    ax.legend(frameon=False, fontsize=9.5, loc="upper right")
-    heading(fig, c, "REFERENCE CODE · PARETO SWEEP", "Re-anchoring trades utility for safety", y=0.93)
-    footnote(fig, c, f"Each point: mean of {len(SEEDS)} seeds, last 30% of 6,000 interactions.")
+                    ax.annotate(f"reg = {reg:g}", (x, y), xytext=(8, 6), textcoords="offset points", fontsize=9, color=c["sub"])
+    ax.scatter([1.0], [0.0], marker="x", s=60, color=c["series"][0], zorder=5, label="no defense")
+    ax.set_xlabel("utility (good requests approved)")
+    ax.set_ylabel("safety (bad requests refused)")
+    ax.grid(alpha=0.8)
+    ax.legend(loc="upper right", fontsize=9.5)
     save(fig, "sim-pareto", t)
 
 
@@ -309,9 +259,6 @@ def runs(reg, gate):
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    m = re.search(r"last_pass-(\d{4})--(\d{2})", readme)
-    last_pass = f"{m.group(1)}-{m.group(2)}" if m else "now"
     data = {label: runs(reg, gate) for label, reg, gate, _ in CONDITIONS}
     sweep = {}
     for gate in (0.0, 0.8):
@@ -325,12 +272,10 @@ def main():
     curve = (nd[0, :k, 0], nd[:, :k, 1].mean(axis=0), nd[:, :k, 2].mean(axis=0))
     for t in THEME:
         (ROOT / "assets" / f"misevolution-loop-{t}.svg").write_text(loop_svg(t, curve), encoding="utf-8", newline="\n")
-        for spec in TRENDS:
-            (ROOT / "assets" / f"trend-{spec[0]}-{t}.svg").write_text(card_svg(t, spec), encoding="utf-8", newline="\n")
-        growth(t, last_pass)
+        growth(t)
         timeseries(t, data)
         pareto(t, sweep)
-    print("wrote misevolution-loop, trend cards, growth, sim-timeseries, sim-pareto (light and dark)")
+    print("wrote misevolution-loop, growth, sim-timeseries, sim-pareto (light and dark)")
 
 
 if __name__ == "__main__":

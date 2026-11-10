@@ -128,6 +128,7 @@ The canonical cautionary tale is a refund agent that learns from customer satisf
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/misevolution-loop-dark.svg"><img src="assets/misevolution-loop-light.svg" alt="The misevolution loop: approve, five-star rating, learn that approving is good, bias rises, and each turn adds bias until safety collapses. A simulated agent keeps utility near 1 while its safety falls to 0, and three 2025-26 papers observed the same loop in real agents." width="100%"></picture>
 </p>
+<p align="center"><sub><b>Figure 1.</b> (a) The loop. (b) The reference simulation with no defense, mean of 10 seeds: utility stays near 1 while safety falls to 0. (c) Papers in this list that saw the loop in real agents.</sub></p>
 
 Two root causes run through most of this list:
 
@@ -158,6 +159,7 @@ The sections below are organized roughly along these pathways, plus the cross-cu
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/metro-dark.svg"><img src="assets/metro-light.svg" alt="Evolution map: six research threads drawn as metro lines that branch from one another — self-play and zero data; Gödel machines and recursive self-improvement; design to harness, which branches from it; failure and safety, which branches from design; memory and skills; and evaluation and audit, which branches from memory. Stations are papers in this list in arXiv order; interchanges are papers on two threads; dashed rules mark the AI 2027 scenario (April 2025) and Anthropic's S-1/A (November 2026)." width="100%"></picture>
 </p>
+<p align="center"><sub><b>Figure 2.</b> Six research threads. Stations are papers in this list in arXiv order; a branch is a thread that grew out of another.</sub></p>
 
 Six threads through the list, each with the question it asks. A thread that grew out of another branches off it: automated **design** came out of the self-improvement line, the **failure and safety** literature out of designed multi-agent systems, and **evaluation and audit** alongside benchmarks for lifelong, memory-driven agents. Branch points are an editorial reading of where each question first appeared, not a citation graph. Stations are papers listed below, in the order they appeared on arXiv; interchanges sit on two threads — the *Darwin Gödel Machine* is where automated design met recursive self-improvement, and *Beneath the Surface* is where harness search met the failure literature. The two dashed rules are outside events, not papers ([Field trends](#field-trends)). The map is generated from this README by [`.github/scripts/build_metro.py`](.github/scripts/build_metro.py), which refuses to draw a paper that is not in the list.
 
@@ -172,12 +174,7 @@ What the list is riding on: one curve measured inside it, and three signals from
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/growth-dark.svg"><img src="assets/growth-light.svg" alt="Papers in this list by arXiv quarter: a handful per quarter through 2024, about 18 per quarter in 2025, and 45, 44, 74 in the first three quarters of 2026." width="100%"></picture>
 </p>
-
-<p align="center">
-  <a href="https://metr.org/blog/2026-01-29-time-horizon-1-1/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-measured-dark.svg"><img src="assets/trend-measured-light.svg" alt="Measured: the length of task frontier agents finish doubles every 4.3 months since 2023 (METR, January 2026)." width="32%"></picture></a>
-  <a href="https://blog.aifutures.org/p/q1-2026-timelines-update"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-forecast-dark.svg"><img src="assets/trend-forecast-light.svg" alt="Forecast: median forecasts of 2028 to 2030 for an automated coder (AI Futures Project, April 2026)." width="32%"></picture></a>
-  <a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-industry-dark.svg"><img src="assets/trend-industry-light.svg" alt="Industry: Anthropic says in its S-1/A that it may imminently meet its threshold for AI-accelerated progress (November 2026)." width="32%"></picture></a>
-</p>
+<p align="center"><sub><b>Figure 3.</b> Papers in this list by the quarter they appeared on arXiv. A curated list, not a census of the field.</sub></p>
 
 - **Measured.** The length of task, in human working time, that frontier agents finish half the time has doubled every 196 days over 2019-2025, every 131 days since 2023, and every 89 days since 2024; the longest horizon measured in January 2026 was about 5 hours (Claude Opus 4.5). — [METR, Time Horizon 1.1](https://metr.org/blog/2026-01-29-time-horizon-1-1/), 2026-01-29
 - **Forecast.** *AI 2027* (April 2025) is a scenario, not a measurement: it placed a superhuman coder at a frontier lab in March 2027. Its authors' later medians for an automated coder are mid-2028 (Kokotajlo) and mid-2030 (Lifland), with a time-horizon doubling of 4 to 4.5 months. — [AI 2027](https://ai-2027.com/); [Q1 2026 timelines update](https://blog.aifutures.org/p/q1-2026-timelines-update), 2026-04-02
@@ -794,10 +791,12 @@ Findings the code is built to expose:
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sim-timeseries-dark.svg"><img src="assets/sim-timeseries-light.svg" alt="Safety and utility over 6,000 interactions for four conditions, median of 10 seeds with 10-90 percent bands: with no defense or a write-gate alone, safety falls to 0 within about 500 interactions while utility stays at 1; re-anchoring holds safety near 0.6 and both defenses together near 0.7, at a utility of about 0.8." width="100%"></picture>
 </p>
+<p align="center"><sub><b>Figure 4.</b> Safety (a) and utility (b) over 6,000 interactions; median of 10 seeds, bands 10th–90th percentile. No defense and write-gate overlap at safety 0.</sub></p>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sim-pareto-dark.svg"><img src="assets/sim-pareto-light.svg" alt="Utility-safety frontier from sweeping re-anchor strength, with and without a write-gate: the two curves coincide, running from safety 0.86 at utility 0.70 to safety near 0 at utility 1." width="70%"></picture>
 </p>
+<p align="center"><sub><b>Figure 5.</b> Sweeping re-anchor strength traces a utility-safety frontier; adding a write-gate does not move it. Each point: mean of 10 seeds over the last 30% of 6,000 interactions.</sub></p>
 
 ```bash
 cd code

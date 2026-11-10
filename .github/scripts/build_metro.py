@@ -94,15 +94,8 @@ PURPOSE = {
     "Evaluation & audit": "did it really improve?",
 }
 # What agents learned to change in each period, shown under its year.
-ERAS = {
-    "2022–23": ("learn from", "experience"),
-    "2024": ("search the", "design"),
-    "2025": ("rewrite", "their code"),
-    "2026": ("harness and training evolve;", "audits ask whether gains are real"),
-}
-
-W, H = 1200, 1215
-TOP, ROW = 325, 132
+W, H = 1200, 1060
+TOP, ROW = 200, 132
 X0, X1 = 292, 1085  # first and last station
 FONT = 12.5
 
@@ -202,16 +195,9 @@ def place(obstacles, x, ys, label, bold):
 def draw(mode, readme_ids):
     c, pal = SURFACE[mode], PALETTE[mode]
     sans = "-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
-    serif = "Georgia,'Times New Roman',serif"
-    mono = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
-    n_papers = len({aid for _, _, st in LINES for aid, _ in st})
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
            f'aria-label="Evolution map: six threads of self-evolving agent research drawn as metro lines, stations ordered by arXiv date, through November 2026">\n',
-           f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n<g font-family="{sans}">\n',
-           f'<text x="40" y="44" font-family="{mono}" font-size="12" letter-spacing="3" fill="{c["sub"]}">EVOLUTION MAP · {len(LINES)} THREADS · {n_papers} PAPERS · TO NOVEMBER 2026</text>\n',
-           f'<text x="38" y="86" font-family="{serif}" font-size="34" font-style="italic" fill="{c["ink"]}">How the questions branched</text>\n',
-           f'<rect x="40" y="102" width="44" height="3" fill="{c["core"]}"/>\n',
-           f'<text x="40" y="132" font-size="14" fill="{c["sub"]}">Each line is a thread of research; a branch is a new question grown out of an old one. Stations are papers in this list, in arXiv order.</text>\n']
+           f'<rect width="{W}" height="{H}" fill="{c["bg"]}"/>\n<g font-family="{sans}">\n']
     xs, order = layout()
     def edge(k):  # boundary just before column k
         return xs[order[0]] - 10 if k == 0 else (xs[order[k - 1]] + xs[order[k]]) / 2
@@ -229,11 +215,9 @@ def draw(mode, readme_ids):
     for k, (label, col) in enumerate(years.items()):
         xa, xb = edge(min(col)), end(max(col))
         if k:
-            out.append(f'<path d="M{xa:.1f} {yband-52} V{ybot}" stroke="{c["faint"]}" stroke-width="1.2"/>\n')
+            out.append(f'<path d="M{xa:.1f} {yband-62} V{ybot}" stroke="{c["faint"]}" stroke-width="1"/>\n')
         xm = (xa + xb) / 2
-        out.append(f'<text x="{xm:.1f}" y="{yband-38}" font-family="{mono}" font-size="13" letter-spacing="2" text-anchor="middle" fill="{c["sub"]}">{label}</text>\n')
-        for i, line in enumerate(ERAS.get(label, ())):
-            out.append(f'<text x="{xm:.1f}" y="{yband-19+i*15}" font-family="{serif}" font-style="italic" font-size="13" text-anchor="middle" fill="{c["ink"]}">{html.escape(line)}</text>\n')
+        out.append(f'<text x="{xm:.1f}" y="{yband-40}" font-size="14" font-weight="700" text-anchor="middle" fill="{c["ink"]}">{label}</text>\n')
 
     at = {}  # id -> list of (line, x, y, label)
     for name, slot, stations in LINES:
@@ -248,9 +232,8 @@ def draw(mode, readme_ids):
         if not first:
             continue
         xe = edge(first[0])
-        out.append(f'<path d="M{xe:.1f} {yband} V{ybot}" stroke="{c["core"]}" stroke-width="1.4" stroke-dasharray="4 4"/>\n')
-        out.append(f'<circle cx="{xe:.1f}" cy="{ybot}" r="3.5" fill="{c["core"]}"/>'
-                   f'<text x="{xe-8:.1f}" y="{ybot+4}" font-family="{mono}" font-size="11.5" text-anchor="end" fill="{c["core"]}">{html.escape(text)}</text>\n')
+        out.append(f'<path d="M{xe:.1f} {yband} V{ybot}" stroke="{c["sub"]}" stroke-width="1.2" stroke-dasharray="5 4"/>\n')
+        out.append(f'<text x="{xe-6:.1f}" y="{ybot+4}" font-size="12" text-anchor="end" fill="{c["sub"]}">{html.escape(text)}</text>\n')
 
     obstacles = []
     # lines run from their first station to their last; a branch curves out of its parent
@@ -275,7 +258,7 @@ def draw(mode, readme_ids):
         out.append(f'<path d="{d}" fill="none" stroke="{pal[slot]}" stroke-width="7" stroke-linecap="round"/>\n')
         out.append(f'<path d="M43 {y-6} H57" stroke="{pal[slot]}" stroke-width="7" stroke-linecap="round"/>\n')
         out.append(f'<text x="68" y="{y-1}" font-size="14.5" font-weight="600" fill="{c["ink"]}">{html.escape(name)}</text>\n')
-        out.append(f'<text x="68" y="{y+16}" font-family="{serif}" font-style="italic" font-size="13" fill="{c["sub"]}">{html.escape(PURPOSE[name])}</text>\n')
+        out.append(f'<text x="68" y="{y+16}" font-size="12.5" fill="{c["sub"]}">{html.escape(PURPOSE[name])}</text>\n')
         obstacles.append(rect(xa, y - 6, xb, y + 6))
         obstacles.append(rect(40, y - 18, 66 + max(text_width(name, True), text_width(PURPOSE[name], False)), y + 20))
 
@@ -316,15 +299,13 @@ def draw(mode, readme_ids):
             print(f"  warning: {label} overlaps {hits} item(s)")
 
     # key
-    yk = H - 26
-    out.append(f'<path d="M40 {yk-30} H{W-40}" stroke="{c["faint"]}" stroke-width="1"/>\n')
+    yk = H - 20
     out.append(f'<circle cx="46" cy="{yk-4}" r="5" fill="{c["bg"]}" stroke="{c["sub"]}" stroke-width="3"/>'
-               f'<text x="60" y="{yk}" font-family="{mono}" font-size="11.5" fill="{c["sub"]}">paper</text>\n')
+               f'<text x="60" y="{yk}" font-size="12" fill="{c["sub"]}">paper</text>\n')
     out.append(f'<rect x="120" y="{yk-17}" width="16" height="26" rx="8" fill="{c["bg"]}" stroke="{c["ring"]}" stroke-width="2.5"/>'
-               f'<text x="144" y="{yk}" font-family="{mono}" font-size="11.5" fill="{c["sub"]}">interchange: one paper, two threads</text>\n')
-    out.append(f'<path d="M420 {yk-16} V{yk+8}" stroke="{c["core"]}" stroke-width="1.4" stroke-dasharray="4 4"/>'
-               f'<text x="430" y="{yk}" font-family="{mono}" font-size="11.5" fill="{c["sub"]}">outside event</text>\n')
-    out.append(f'<text x="{W-40}" y="{yk}" font-family="{mono}" font-size="11.5" text-anchor="end" fill="{c["sub"]}">.github/scripts/build_metro.py · drawn from README.md</text>\n')
+               f'<text x="144" y="{yk}" font-size="12" fill="{c["sub"]}">interchange: one paper on two threads</text>\n')
+    out.append(f'<path d="M400 {yk-16} V{yk+8}" stroke="{c["sub"]}" stroke-width="1.2" stroke-dasharray="5 4"/>'
+               f'<text x="410" y="{yk}" font-size="12" fill="{c["sub"]}">outside event</text>\n')
     out.append("</g>\n</svg>\n")
     return "".join(out)
 
