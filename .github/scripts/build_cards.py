@@ -10,19 +10,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SANS = "-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 T = {
     "light": dict(bg="#ffffff", edge="#d0d7de", ink="#1f2328", sub="#59636e",
                   ramp=["#bcd6f5", "#6da7ec", "#2a78d6"], core="#1a7f64"),
     "dark": dict(bg="#0d1117", edge="#30363d", ink="#e6edf3", sub="#9198a1",
                  ramp=["#1d3a60", "#28599a", "#3987e5"], core="#2fbf88"),
 }
-CARDS = [  # name, kicker, title, two lines, footer
-    ("read", "01 · READ", "The primer", "Builds the ideas from the ground up,",
+CARDS = [  # name, title, two lines, footer
+    ("read", "The primer", "Builds the ideas from the ground up,",
      "from one agent loop to misevolution.", "docs/primer.md"),
-    ("see", "02 · SEE", "Evolution map", "Six research threads and where",
+    ("see", "Evolution map", "Six research threads and where",
      "each branched, as a metro map.", "#evolution-map"),
-    ("run", "03 · RUN", "Reference code", "Design-as-search and safety-gated",
+    ("run", "Reference code", "Design-as-search and safety-gated",
      "evolution, two short Python demos.", "code/"),
 ]
 W, H = 300, 150
@@ -43,17 +42,16 @@ def icon(name, c):
 
 
 def card(spec, t):
-    name, kicker, title, l1, l2, foot = spec
+    name, title, l1, l2, foot = spec
     c = T[t]
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
             f'aria-label="{title}: {l1} {l2}">\n'
             f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="{c["bg"]}" stroke="{c["edge"]}" stroke-width="1.5"/>\n'
             f'{icon(name, c)}\n'
-            f'<text x="84" y="38" font-family="{MONO}" font-size="11.5" letter-spacing="2" fill="{c["sub"]}">{kicker}</text>\n'
-            f'<text x="84" y="62" font-family="{SANS}" font-size="20" font-weight="700" fill="{c["ink"]}">{title}</text>\n'
+            f'<text x="84" y="51" font-family="{SANS}" font-size="20" font-weight="700" fill="{c["ink"]}">{title}</text>\n'
             f'<text x="22" y="98" font-family="{SANS}" font-size="13.5" fill="{c["sub"]}">{l1}</text>\n'
             f'<text x="22" y="117" font-family="{SANS}" font-size="13.5" fill="{c["sub"]}">{l2}</text>\n'
-            f'<text x="{W-22}" y="{H-14}" text-anchor="end" font-family="{MONO}" font-size="11.5" fill="{c["core"]}">{foot} →</text>\n'
+            f'<text x="{W-22}" y="{H-14}" text-anchor="end" font-family="{SANS}" font-size="13" fill="{c["ramp"][2]}">{foot} →</text>\n'
             f'</svg>\n')
 
 
