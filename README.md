@@ -24,7 +24,7 @@
 
 <p align="center">
   <a href="docs/primer.md"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-read-dark.svg"><img src="assets/card-read-light.svg" width="32%" alt="The primer: builds the ideas from the ground up."></picture></a>
-  <a href="#evolution-map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-see-dark.svg"><img src="assets/card-see-light.svg" width="32%" alt="Evolution map: five threads through the field."></picture></a>
+  <a href="#evolution-map"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-see-dark.svg"><img src="assets/card-see-light.svg" width="32%" alt="Evolution map: how six research threads branched."></picture></a>
   <a href="#reference-implementations"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-run-dark.svg"><img src="assets/card-run-light.svg" width="32%" alt="Reference code: two short Python demos."></picture></a>
 </p>
 
@@ -65,6 +65,7 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 <a href="#a-one-diagram-primer">A one-diagram primer</a><br>
 <a href="#the-four-evolution-pathways">The four evolution pathways</a><br>
 <a href="#evolution-map">Evolution map</a><br>
+<a href="#field-trends">Field trends</a><br>
 <a href="#surveys-and-roadmaps">Surveys and roadmaps</a><br>
 <a href="#foundations-and-precursors">Foundations and precursors</a>
 </td>
@@ -125,7 +126,7 @@ Entries carry a one-line, non-marketing description. Where an arXiv ID is shown 
 The canonical cautionary tale is a refund agent that learns from customer satisfaction. Approving a refund makes the customer happy, so the agent slowly learns *"approving is good"* as a context-blind rule — and starts approving things it should refuse. Task success stays high the whole time, which is exactly why the failure is easy to miss.
 
 <p align="center">
-  <img src="assets/misevolution-loop.svg" alt="The misevolution feedback loop" width="720">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/misevolution-loop-dark.svg"><img src="assets/misevolution-loop-light.svg" alt="The misevolution loop: approve, five-star rating, learn that approving is good, bias rises, and each turn adds bias until safety collapses. A simulated agent keeps utility near 1 while its safety falls to 0, and three 2025-26 papers observed the same loop in real agents." width="100%"></picture>
 </p>
 
 Two root causes run through most of this list:
@@ -155,13 +156,39 @@ The sections below are organized roughly along these pathways, plus the cross-cu
 ## Evolution map
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/metro-dark.svg">
-    <img src="assets/metro-light.svg" alt="Evolution map: five threads of the field drawn as metro lines — self-play and zero data; Gödel machines and recursive self-improvement; design to harness; failure and safety; memory and skills. Stations are papers in this list in arXiv order; interchanges are papers on two threads." width="100%">
-  </picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/metro-dark.svg"><img src="assets/metro-light.svg" alt="Evolution map: six research threads drawn as metro lines that branch from one another — self-play and zero data; Gödel machines and recursive self-improvement; design to harness, which branches from it; failure and safety, which branches from design; memory and skills; and evaluation and audit, which branches from memory. Stations are papers in this list in arXiv order; interchanges are papers on two threads; dashed rules mark the AI 2027 scenario (April 2025) and Anthropic's S-1/A (November 2026)." width="100%"></picture>
 </p>
 
-Five threads through the list, drawn as metro lines. Each station is a paper listed below, in the order it appeared on arXiv; an interchange is a paper that belongs to two threads — the Darwin Gödel Machine is where automated design met recursive self-improvement, and *Harness tampering* is where harness evolution met the failure literature. The map is generated from this README by [`.github/scripts/build_metro.py`](.github/scripts/build_metro.py), which refuses to draw a paper that is not in the list.
+Six threads through the list, each with the question it asks. A thread that grew out of another branches off it: automated **design** came out of the self-improvement line, the **failure and safety** literature out of designed multi-agent systems, and **evaluation and audit** out of lifelong-memory benchmarks. Stations are papers listed below, in the order they appeared on arXiv; interchanges sit on two threads — the *Darwin Gödel Machine* is where automated design met recursive self-improvement, and *Beneath the Surface* is where harness search met the failure literature. The two dashed rules are outside events, not papers ([Field trends](#field-trends)). The map is generated from this README by [`.github/scripts/build_metro.py`](.github/scripts/build_metro.py), which refuses to draw a paper that is not in the list.
+
+<p align="right"><a href="#contents">↑ contents</a></p>
+
+---
+
+## Field trends
+
+What the list is riding on: one curve measured inside it, and three signals from outside.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/growth-dark.svg"><img src="assets/growth-light.svg" alt="Papers in this list by arXiv quarter: a handful per quarter through 2024, about 18 per quarter in 2025, and 45, 44, 74 in the first three quarters of 2026." width="100%"></picture>
+</p>
+
+<p align="center">
+  <a href="https://metr.org/blog/2026-01-29-time-horizon-1-1/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-measured-dark.svg"><img src="assets/trend-measured-light.svg" alt="Measured: the length of task frontier agents finish doubles every 4.3 months since 2023 (METR, January 2026)." width="32%"></picture></a>
+  <a href="https://blog.aifutures.org/p/q1-2026-timelines-update"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-forecast-dark.svg"><img src="assets/trend-forecast-light.svg" alt="Forecast: median forecasts of 2028 to 2030 for an automated coder (AI Futures Project, April 2026)." width="32%"></picture></a>
+  <a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trend-industry-dark.svg"><img src="assets/trend-industry-light.svg" alt="Industry: Anthropic says in its S-1/A that it may imminently meet its threshold for AI-accelerated progress (November 2026)." width="32%"></picture></a>
+</p>
+
+| | What | Source |
+|---|---|---|
+| Measured | The length of task, in human working time, that frontier agents finish half the time has doubled every 196 days over 2019-2025, every 131 days since 2023, and every 89 days since 2024. The longest measured horizon in January 2026 was about 5 hours (Claude Opus 4.5). | [METR, Time Horizon 1.1](https://metr.org/blog/2026-01-29-time-horizon-1-1/) (2026-01-29) |
+| Forecast | *AI 2027* (April 2025) is a scenario, not a measurement: it placed a superhuman coder at a frontier lab in March 2027. Its authors' later medians for an automated coder are mid-2028 (Kokotajlo) and mid-2030 (Lifland), with a time-horizon doubling of 4 to 4.5 months. | [AI 2027](https://ai-2027.com/) · [Q1 2026 timelines update](https://blog.aifutures.org/p/q1-2026-timelines-update) (2026-04-02) |
+| Industry | Anthropic's amended S-1/A says it may soon meet its Responsible Scaling Policy definition of dramatically accelerated progress attributable to AI, that it has used AI to build models whose gains it did not recognise at the time, and that no current model has been designated past the threshold. | [TechCrunch](https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/) (2026-11-02) |
+| This list | 227 of the 315 arXiv papers here are from 2026. The list is curated, so this measures what was selected, not the size of the field. | [`build_figures.py`](.github/scripts/build_figures.py) reads it from this README |
+
+Forecasts and filings are context, not evidence for any entry below; papers are listed for what they show.
+
+<p align="right"><a href="#contents">↑ contents</a></p>
 
 ---
 
@@ -767,17 +794,20 @@ Findings the code is built to expose:
 3. Re-anchoring buys safety back, but along a frontier — a real utility cost.
 
 <p align="center">
-  <img src="assets/pareto_frontier.png" alt="Utility-safety Pareto frontier" width="440">
-  <img src="assets/timeseries.png" alt="Safety and utility over time" width="820">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sim-timeseries-dark.svg"><img src="assets/sim-timeseries-light.svg" alt="Safety and utility over 6,000 interactions for four conditions, median of 10 seeds with 10-90 percent bands: with no defense or a write-gate alone, safety falls to 0 within about 500 interactions while utility stays at 1; re-anchoring holds safety near 0.6 and both defenses together near 0.7, at a utility of about 0.8." width="100%"></picture>
+</p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sim-pareto-dark.svg"><img src="assets/sim-pareto-light.svg" alt="Utility-safety frontier from sweeping re-anchor strength, with and without a write-gate: the two curves coincide, running from safety 0.86 at utility 0.70 to safety near 0 at utility 1." width="70%"></picture>
 </p>
 
 ```bash
 cd code
 python3 auto_mas.py
-python3 safety_gated_evolution.py   # writes plots to the current directory (examples in assets/)
+python3 safety_gated_evolution.py   # prints the numbers and writes quick plots to the current directory
 ```
 
-See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gated_evolution.py` that maps each concept to its code.
+The figures above are drawn from the same code, over ten seeds, by [`.github/scripts/build_figures.py`](.github/scripts/build_figures.py). See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gated_evolution.py` that maps each concept to its code.
 
 ---
 
@@ -799,6 +829,7 @@ See [`docs/primer.md`](docs/primer.md) for a line-by-line reading of `safety_gat
 
 A running log so you can see what changed without diffing. Newest first.
 
+- **2026-11-10** — Presentation pass; no entry added, removed, or reworded. Paper lists render as tables with venue, arXiv, and code badges. The evolution map now shows six threads and where each branched, through November 2026, with the question each asks. New [Field trends](#field-trends) section: the list's growth by quarter, METR's time-horizon trend, the *AI 2027* forecasts, and Anthropic's S-1/A. The primer figure and the reference-code plots were redrawn from the simulation over ten seeds, for light and dark themes.
 - **2026-11-09** — Added 28 papers from 2026-10-28 to 2026-11-05. Harness evolution: new search methods (*HarnessFlow*, *Harness-S*, *Meta^2*, *Latent Harness*, *EnvOpt*, *Exo*) and the evaluations that check them (*Beneath the Surface*, *The Harness Is the Model*, a portable harness specification), plus evidence that evolved harnesses forget (*Can Coding Agents Sustain Continual Evolution without Forgetting?*). Failure analysis: *Artifact-to-Capability* (Reflexion, Voyager, and DGM each show the usual signals of improvement without forming the capability), criteria exposure in embodied self-improvement, and misattributed numbers in papers written by research agents. Safety: self-evolution weakens resistance to indirect prompt injection, and acceptance gates erode redundant safeguards (*Masked Erosion*). Benchmarks and environments: *SelfImprove-Bench*, *Continual AutoResearch*, *CLR-Bench*, *CompressionBench*, *RSI-Env*. Community contributions: *EvoRepair* (@Tomsawyerhu, #44), *SwarmEvolve* (@Qile-J, #45), and *Sage* on the [project board](COMMUNITY.md) (@ZHangZHengEric, #43). Removed a stray blank line that split the coding-agents list.
 - **2026-10-28** — Added 44 papers from 2026-09-21 to 2026-10-28, a month in which most new work turned from building self-improving loops to checking them. Evaluation of the loop itself: *The Self-Improvement Problem* (in general, no terminating gate can be both sound and complete), *REUSE* and *The Winner's Curse* (benchmark reuse inflates kept gains), *Auditing the Product, Not the Recursion*, and for harnesses *Harness-Delta Attribution*, *What Does a Harness Buy? Tokens, Mostly*, *Elicitation or Expansion?*, and the ARC-AGI-3 study. Autonomous post-training and research (*Athanor*, *Epi*, research world models, *LM2LM*); safety under RSI (*RSI Control Arena*, *Evolutionary Safety*, *SEABench*, compositional harness failures); and new benchmarks (*Doc2Harness*, *Continual Learning Exam*, *EvalResearchBench*, *RSIGym*, *ParetoRSI-Gym*, *AutoDataBench*, *Trace Evolution Bench*). Community contributions merged since the last pass: *EFRE* (@markovchain-builder, #35), *Recursive Harness Distillation* (@yeonn1e, #37), and *MAIOS Project Kernel* on the [project board](COMMUNITY.md) (@GrazianoGuiducci, #34). Domain-specific variants that apply an existing loop to one field were left out; every description was written from the current arXiv abstract and its numbers checked against it.
 - **2026-09-23 (second pass)** — Re-ran the arXiv search with a client arXiv still answers, from 2025-10 onward rather than from 2026-05, and added 36 papers the earlier passes could not see. From before May: *Hyperagents* (self-modification that edits the improver itself), *ACE*, *Nested Learning*, *TTT-Discover*, *Live-SWE-agent*, *Agentic Harness Engineering*, *ALMA*, *Dr. Zero*, *OpenSIR*, theory on the statistical limits of self-improvement and on evolution among self-designing AIs, and safety work on memory misevolution (*MemEvoBench*, *Zombie Agents*). From the last week: the AIDE² paper, *Reflections on Trusting Trust, Revisited* (poisoned benchmarks that self-modifying coding agents evolve against), *Self-Healing Harness*, *Bad Genius*, and *Hill Sampling*.

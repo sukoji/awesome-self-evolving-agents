@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img" aria-label="The misevolution loop. An agent approves a refund, gets a five-star rating, learns that approving is good, and its approval bias rises; each turn adds bias until bad requests are approved too. In a simulation, utility stays near 1 while safety falls to 0 within about 500 interactions. Three 2025-26 papers observed the loop in real agents.">
+<rect width="960" height="470" fill="#ffffff"/>
+<g font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<defs><marker id="ar-light" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="#59636e"/></marker><marker id="br-light" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="#cf222e"/></marker></defs>
+<text x="40.0" y="40.0" font-size="12" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" letter-spacing="3">PRIMER · THE MISEVOLUTION LOOP</text>
+<text x="38.0" y="80.0" font-size="30" fill="#1f2328" font-family="Georgia,'Times New Roman',serif" font-style="italic">Task success stays high while safety collapses</text>
+<rect x="40" y="96" width="44" height="3" fill="#1a7f64"/>
+<circle cx="285" cy="240" r="86" fill="none" stroke="#d8dee4" stroke-width="10"/>
+<path d="M308.7 157.3 A86 86 0 0 1 367.7 216.3" fill="none" stroke="#59636e" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M367.7 263.7 A86 86 0 0 1 308.7 322.7" fill="none" stroke="#59636e" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M261.3 322.7 A86 86 0 0 1 202.3 263.7" fill="none" stroke="#59636e" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M202.3 216.3 A86 86 0 0 1 261.3 157.3" fill="none" stroke="#59636e" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<circle cx="285.0" cy="154.0" r="9" fill="#2a78d6" stroke="#ffffff" stroke-width="3"/>
+<text x="285.0" y="118.0" font-size="14.5" fill="#1f2328" font-weight="600" text-anchor="middle">approve</text>
+<text x="285.0" y="135.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="middle">grant the refund</text>
+<circle cx="371.0" cy="240.0" r="9" fill="#2a78d6" stroke="#ffffff" stroke-width="3"/>
+<text x="391.0" y="244.0" font-size="14.5" fill="#1f2328" font-weight="600" text-anchor="start">5-star rating</text>
+<text x="391.0" y="261.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="start">satisfaction = reward</text>
+<circle cx="285.0" cy="326.0" r="9" fill="#bf8700" stroke="#ffffff" stroke-width="3"/>
+<text x="285.0" y="360.0" font-size="14.5" fill="#1f2328" font-weight="600" text-anchor="middle">learn</text>
+<text x="285.0" y="377.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="middle">“approving is good”</text>
+<circle cx="199.0" cy="240.0" r="9" fill="#bf8700" stroke="#ffffff" stroke-width="3"/>
+<text x="179.0" y="244.0" font-size="14.5" fill="#1f2328" font-weight="600" text-anchor="end">bias rises</text>
+<text x="179.0" y="261.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="end">approve a bit more</text>
+<text x="285.0" y="238.0" font-size="14" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="middle">each turn</text>
+<text x="285.0" y="256.0" font-size="14" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic" text-anchor="middle">adds bias</text>
+<path d="M199.0 254.0 V404.0" stroke="#cf222e" stroke-width="1.8" marker-end="url(#br-light)"/>
+<circle cx="199.0" cy="418.0" r="9" fill="#cf222e" stroke="#ffffff" stroke-width="3"/>
+<text x="219.0" y="416.0" font-size="14.5" fill="#cf222e" font-weight="600">safety collapses</text>
+<text x="219.0" y="433.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">bad requests approved too</text>
+<text x="540.0" y="126.0" font-size="11.5" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" letter-spacing="2">WHAT THE METRICS SHOW</text>
+<path d="M540 280.0 H920" stroke="#d8dee4" stroke-width="1"/>
+<text x="532.0" y="284.0" font-size="11" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">0</text>
+<path d="M540 215.0 H920" stroke="#d8dee4" stroke-width="1"/>
+<text x="532.0" y="219.0" font-size="11" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">0.5</text>
+<path d="M540 150.0 H920" stroke="#d8dee4" stroke-width="1"/>
+<text x="532.0" y="154.0" font-size="11" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" text-anchor="end">1</text>
+<path d="M587.5 153.5 L635.0 150.0 L682.5 150.0 L730.0 150.0 L777.5 150.0 L825.0 150.0 L872.5 150.0 L920.0 150.0" fill="none" stroke="#2a78d6" stroke-width="3" stroke-linejoin="round"/>
+<path d="M587.5 264.8 L635.0 280.0 L682.5 280.0 L730.0 280.0 L777.5 280.0 L825.0 280.0 L872.5 280.0 L920.0 280.0" fill="none" stroke="#cf222e" stroke-width="3" stroke-linejoin="round"/>
+<text x="920.0" y="170.0" font-size="13" fill="#2a78d6" font-weight="600" text-anchor="end">utility: task success stays high</text>
+<text x="920.0" y="270.0" font-size="13" fill="#cf222e" font-weight="600" text-anchor="end">safety: bad requests refused, falls to 0</text>
+<text x="540.0" y="302.0" font-size="11" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">interactions 0–2,000 · no defense · mean of 10 seeds</text>
+<text x="540.0" y="338.0" font-size="11.5" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" letter-spacing="2">OBSERVED IN REAL AGENTS, 2025–26</text>
+<rect x="540" y="353" width="3" height="30" fill="#cf222e"/>
+<text x="552.0" y="364.0" font-size="13" fill="#1f2328" font-weight="600">Your Agent May Misevolve</text>
+<text x="552.0" y="380.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">safety refusal rates drop after self-training</text>
+<rect x="540" y="389" width="3" height="30" fill="#cf222e"/>
+<text x="552.0" y="400.0" font-size="13" fill="#1f2328" font-weight="600">Appreciation Teaches Unauthorized Execution</text>
+<text x="552.0" y="416.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">learning from praise raises injection success 14–49 pts</text>
+<rect x="540" y="425" width="3" height="30" fill="#cf222e"/>
+<text x="552.0" y="436.0" font-size="13" fill="#1f2328" font-weight="600">Masked Erosion</text>
+<text x="552.0" y="452.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">acceptance gates drop redundant safeguards unseen</text>
+</g>
+</svg>
