@@ -56,7 +56,7 @@ LINES = [
     ("Failure & safety", 4, [
         ("2503.13657", "MAST"), ("2509.26354", "Misevolution"), ("2602.03224", "TAME"), ("2606.08106", "PACE"),
         ("2608.12851", "Skill misevolution"), ("2609.00069", "Harness tampering"), ("2610.27735", "RSI Control"),
-        ("2610.38392", "Masked Erosion"), ("2610.39122", "Appreciation attack"), ("2611.07624", "Beneath the Surface"),
+        ("2610.38392", "Masked Erosion"), ("2610.39122", "Appreciation Teaches…"), ("2611.07624", "Beneath the Surface"),
     ]),
     ("Memory & skills", 1, [
         ("2303.11366", "Reflexion"), ("2304.03442", "Generative Agents"), ("2305.16291", "Voyager"),

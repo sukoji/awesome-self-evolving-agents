@@ -46,9 +46,9 @@
 <text x="552.0" y="380.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">safety refusal rates drop after self-training</text>
 <rect x="540" y="389" width="3" height="30" fill="#cf222e"/>
 <text x="552.0" y="400.0" font-size="13" fill="#1f2328" font-weight="600">Appreciation Teaches Unauthorized Execution</text>
-<text x="552.0" y="416.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">learning from praise raises injection success 14–49 pts</text>
+<text x="552.0" y="416.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">learning from user feedback raises hidden-injection success</text>
 <rect x="540" y="425" width="3" height="30" fill="#cf222e"/>
 <text x="552.0" y="436.0" font-size="13" fill="#1f2328" font-weight="600">Masked Erosion</text>
-<text x="552.0" y="452.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">acceptance gates drop redundant safeguards unseen</text>
+<text x="552.0" y="452.0" font-size="13" fill="#59636e" font-family="Georgia,'Times New Roman',serif" font-style="italic">redundant safeguards erode unseen by the acceptance gate</text>
 </g>
 </svg>

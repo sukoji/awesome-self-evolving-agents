@@ -94,7 +94,7 @@
 <circle cx="820.2" cy="721" r="5" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"><title>Harness tampering · arXiv:2609.00069</title></circle>
 <circle cx="928.5" cy="721" r="5" fill="#ffffff" stroke="#e87ba4" stroke-width="3"><title>RSI Control · arXiv:2610.27735</title></circle>
 <circle cx="954.6" cy="721" r="5" fill="#ffffff" stroke="#e87ba4" stroke-width="3"><title>Masked Erosion · arXiv:2610.38392</title></circle>
-<circle cx="980.7" cy="721" r="5" fill="#ffffff" stroke="#e87ba4" stroke-width="3"><title>Appreciation attack · arXiv:2610.39122</title></circle>
+<circle cx="980.7" cy="721" r="5" fill="#ffffff" stroke="#e87ba4" stroke-width="3"><title>Appreciation Teaches… · arXiv:2610.39122</title></circle>
 <circle cx="1085.0" cy="721" r="5" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"><title>Beneath the Surface · arXiv:2611.07624</title></circle>
 <circle cx="298.5" cy="853" r="5" fill="#ffffff" stroke="#eb6834" stroke-width="3"><title>Reflexion · arXiv:2303.11366</title></circle>
 <circle cx="324.6" cy="853" r="5" fill="#ffffff" stroke="#eb6834" stroke-width="3"><title>Generative Agents · arXiv:2304.03442</title></circle>
@@ -168,7 +168,7 @@
 <text x="931.0" y="994.0" transform="rotate(55 931.0 994.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Auditing the Product<title>Auditing the Product · arXiv:2610.27610</title></text>
 <text x="934.5" y="709.0" transform="rotate(-55 934.5 709.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">RSI Control<title>RSI Control · arXiv:2610.27735</title></text>
 <text x="960.6" y="709.0" transform="rotate(-55 960.6 709.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Masked Erosion<title>Masked Erosion · arXiv:2610.38392</title></text>
-<text x="989.7" y="730.0" transform="rotate(55 989.7 730.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Appreciation attack<title>Appreciation attack · arXiv:2610.39122</title></text>
+<text x="989.7" y="730.0" transform="rotate(55 989.7 730.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Appreciation Teaches…<title>Appreciation Teaches… · arXiv:2610.39122</title></text>
 <text x="993.2" y="841.0" transform="rotate(-55 993.2 841.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Skill++<title>Skill++ · arXiv:2611.00544</title></text>
 <text x="999.7" y="973.0" transform="rotate(-55 999.7 973.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">RSI-Env<title>RSI-Env · arXiv:2611.01736</title></text>
 <text x="1025.8" y="973.0" transform="rotate(-55 1025.8 973.0)" font-size="12.5" fill="#1f2328" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">SelfImprove-Bench<title>SelfImprove-Bench · arXiv:2611.02797</title></text>

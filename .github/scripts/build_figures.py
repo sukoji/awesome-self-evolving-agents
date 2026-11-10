@@ -141,8 +141,8 @@ def loop_svg(t, curve):
     # observed in real agents
     o.append(text(X0, 338, "OBSERVED IN REAL AGENTS, 2025–26", 11.5, c["sub"], MONO, spacing=2))
     seen = [("Your Agent May Misevolve", "safety refusal rates drop after self-training"),
-            ("Appreciation Teaches Unauthorized Execution", "learning from praise raises injection success 14–49 pts"),
-            ("Masked Erosion", "acceptance gates drop redundant safeguards unseen")]
+            ("Appreciation Teaches Unauthorized Execution", "learning from user feedback raises hidden-injection success"),
+            ("Masked Erosion", "redundant safeguards erode unseen by the acceptance gate")]
     for k, (head, sub) in enumerate(seen):
         y = 364 + k * 36
         o.append(f'<rect x="{X0}" y="{y-11}" width="3" height="30" fill="{c["bad"]}"/>\n')
@@ -270,7 +270,7 @@ def timeseries(t, data):
             for i, a in enumerate(group):
                 a.xy = (a.xy[0], mid + (i - (len(group) - 1) / 2) * gap)
     heading(fig, c, "REFERENCE CODE · code/safety_gated_evolution.py",
-            "A write-gate alone changes nothing; re-anchoring buys safety back", y=0.93)
+            "A write-gate alone does not stop the collapse; re-anchoring does", y=0.93)
     footnote(fig, c, f"Median of {len(SEEDS)} seeds; bands 10th–90th percentile. No defense and write-gate overlap at safety 0 and utility 1.")
     save(fig, "sim-timeseries", t)
 
