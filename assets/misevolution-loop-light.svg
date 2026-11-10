@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="345" viewBox="0 0 1040 345" role="img" aria-label="(a) The misevolution loop: the agent approves a refund, the customer rates it five stars, the agent learns that approving is good, its approval bias rises, and the loop repeats until bad requests are approved too. (b) In a simulation with no defense, utility stays near 1 while safety falls to 0 within about 500 interactions. (c) Three 2025-26 papers observed the loop in real agents.">
+<rect width="1040" height="345" fill="#ffffff"/>
+<g font-family="Helvetica,Arial,sans-serif">
+<defs><marker id="ar-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="#57606a"/></marker></defs>
+<defs><marker id="br-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9z" fill="#cf222e"/></marker></defs>
+<rect x="30" y="30" width="150" height="52" rx="6" fill="#ddeafb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="105.0" y="53.0" font-size="13.5" fill="#1f2328" text-anchor="middle">Agent approves</text>
+<text x="105.0" y="69.0" font-size="13.5" fill="#1f2328" text-anchor="middle">a refund</text>
+<rect x="220" y="30" width="150" height="52" rx="6" fill="#ddeafb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="295.0" y="53.0" font-size="13.5" fill="#1f2328" text-anchor="middle">Customer rates</text>
+<text x="295.0" y="69.0" font-size="13.5" fill="#1f2328" text-anchor="middle">it 5 stars</text>
+<rect x="220" y="150" width="150" height="52" rx="6" fill="#fbefc9" stroke="#bf8700" stroke-width="1.5"/>
+<text x="295.0" y="173.0" font-size="13.5" fill="#1f2328" text-anchor="middle">Agent learns</text>
+<text x="295.0" y="189.0" font-size="13.5" fill="#1f2328" text-anchor="middle">“approving is good”</text>
+<rect x="30" y="150" width="150" height="52" rx="6" fill="#fbefc9" stroke="#bf8700" stroke-width="1.5"/>
+<text x="105.0" y="173.0" font-size="13.5" fill="#1f2328" text-anchor="middle">Approval bias</text>
+<text x="105.0" y="189.0" font-size="13.5" fill="#1f2328" text-anchor="middle">rises</text>
+<path d="M182 56.0 L216 56.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M295.0 84 L295.0 146" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M218 176.0 L184 176.0" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<path d="M105.0 148 L105.0 86" stroke="#57606a" stroke-width="1.6" marker-end="url(#ar-light)"/>
+<text x="113.0" y="120.0" font-size="12" fill="#59636e">repeat</text>
+<path d="M105.0 204 L105.0 246" stroke="#cf222e" stroke-width="1.6" marker-end="url(#br-light)"/>
+<rect x="30" y="250" width="150" height="52" rx="6" fill="#ffe3e1" stroke="#cf222e" stroke-width="1.5"/>
+<text x="105.0" y="273.0" font-size="13.5" fill="#1f2328" text-anchor="middle">Bad requests</text>
+<text x="105.0" y="289.0" font-size="13.5" fill="#1f2328" text-anchor="middle">approved too</text>
+<path d="M470 40 V260 H700" fill="none" stroke="#57606a" stroke-width="1"/>
+<path d="M466 260.0 H470" stroke="#57606a"/>
+<text x="462.0" y="264.0" font-size="11.5" fill="#59636e" text-anchor="end">0</text>
+<path d="M466 158.8 H470" stroke="#57606a"/>
+<text x="462.0" y="162.8" font-size="11.5" fill="#59636e" text-anchor="end">0.5</text>
+<path d="M466 57.6 H470" stroke="#57606a"/>
+<text x="462.0" y="61.6" font-size="11.5" fill="#59636e" text-anchor="end">1</text>
+<path d="M470.0 260 V264" stroke="#57606a"/>
+<text x="470.0" y="278.0" font-size="11.5" fill="#59636e" text-anchor="middle">0</text>
+<path d="M585.0 260 V264" stroke="#57606a"/>
+<text x="585.0" y="278.0" font-size="11.5" fill="#59636e" text-anchor="middle">1,000</text>
+<path d="M700.0 260 V264" stroke="#57606a"/>
+<text x="700.0" y="278.0" font-size="11.5" fill="#59636e" text-anchor="middle">2,000</text>
+<text x="585.0" y="296.0" font-size="12" fill="#59636e" text-anchor="middle">interactions</text>
+<text x="436" y="150.0" font-size="12" fill="#59636e" text-anchor="middle" transform="rotate(-90 436 150.0)">rate</text>
+<path d="M498.8 63.1 L527.5 57.6 L556.2 57.6 L585.0 57.6 L613.8 57.6 L642.5 57.6 L671.2 57.6 L700.0 57.6" fill="none" stroke="#2a78d6" stroke-width="2.2"/>
+<path d="M498.8 236.4 L527.5 260.0 L556.2 260.0 L585.0 260.0 L613.8 260.0 L642.5 260.0 L671.2 260.0 L700.0 260.0" fill="none" stroke="#cf222e" stroke-width="2.2"/>
+<rect x="530" y="116.39999999999998" width="160" height="48" fill="#ffffff" stroke="#d8dee4"/>
+<path d="M540 128.39999999999998 H562" stroke="#2a78d6" stroke-width="2.2"/>
+<text x="570.0" y="132.4" font-size="12" fill="#1f2328">utility</text>
+<path d="M540 148.39999999999998 H562" stroke="#cf222e" stroke-width="2.2"/>
+<text x="570.0" y="152.4" font-size="12" fill="#1f2328">safety</text>
+<rect x="770" y="34" width="245" height="65" rx="6" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<text x="782.0" y="56.0" font-size="13" fill="#1f2328" font-weight="700">Your Agent May Misevolve</text>
+<text x="782.0" y="73.0" font-size="12.5" fill="#59636e">Refusal rates drop</text>
+<text x="782.0" y="90.0" font-size="12.5" fill="#59636e">after self-training</text>
+<rect x="770" y="109" width="245" height="82" rx="6" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<text x="782.0" y="131.0" font-size="13" fill="#1f2328" font-weight="700">Appreciation Teaches</text>
+<text x="782.0" y="148.0" font-size="13" fill="#1f2328" font-weight="700">Unauthorized Execution</text>
+<text x="782.0" y="165.0" font-size="12.5" fill="#59636e">Learning from user feedback</text>
+<text x="782.0" y="182.0" font-size="12.5" fill="#59636e">raises hidden-injection success</text>
+<rect x="770" y="201" width="245" height="65" rx="6" fill="#f6f8fa" stroke="#d8dee4" stroke-width="1.5"/>
+<text x="782.0" y="223.0" font-size="13" fill="#1f2328" font-weight="700">Masked Erosion</text>
+<text x="782.0" y="240.0" font-size="12.5" fill="#59636e">Redundant safeguards erode,</text>
+<text x="782.0" y="257.0" font-size="12.5" fill="#59636e">unseen by the acceptance gate</text>
+<text x="180.0" y="331.0" font-size="13.5" fill="#1f2328" text-anchor="middle">(a) The feedback loop</text>
+<text x="585.0" y="331.0" font-size="13.5" fill="#1f2328" text-anchor="middle">(b) Simulated agent, no defense</text>
+<text x="892.0" y="331.0" font-size="13.5" fill="#1f2328" text-anchor="middle">(c) Observed in real agents</text>
+</g>
+</svg>

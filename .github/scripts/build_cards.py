@@ -20,8 +20,8 @@ T = {
 CARDS = [  # name, kicker, title, two lines, footer
     ("read", "01 · READ", "The primer", "Builds the ideas from the ground up,",
      "from one agent loop to misevolution.", "docs/primer.md"),
-    ("see", "02 · SEE", "Evolution map", "Five threads through the field,",
-     "drawn as metro lines by arXiv date.", "#evolution-map"),
+    ("see", "02 · SEE", "Evolution map", "Six research threads and where",
+     "each branched, as a metro map.", "#evolution-map"),
     ("run", "03 · RUN", "Reference code", "Design-as-search and safety-gated",
      "evolution, two short Python demos.", "code/"),
 ]
