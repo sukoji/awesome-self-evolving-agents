@@ -58,8 +58,6 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 ## Contents
 
 <table>
-<tr><th width="38%" align="left">Paper</th><th align="left">What it does</th></tr>
-</table>
 <tr><th>Start here</th><th>How agents evolve</th><th>Does it hold up?</th><th>Beyond the list</th></tr>
 <tr>
 <td valign="top">
@@ -102,8 +100,6 @@ If you read one thing first, read the [**primer**](docs/primer.md). If you run o
 <a href="#license">License</a>
 </td>
 </tr>
-<table>
-<tr><th width="38%" align="left">Paper</th><th align="left">What it does</th></tr>
 </table>
 
 ---
