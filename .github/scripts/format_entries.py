@@ -77,8 +77,19 @@ def tag(line, new):
     return line
 
 
-def part(line):
-    return bool(PLAIN.match(line) or ROW.match(line) or line in (OPEN, CLOSE, HEAD))
+def entry(line):
+    return bool(PLAIN.match(line) or ROW.match(line) or line == HEAD)
+
+
+def part(lines, i):
+    """Whether line i belongs to a paper table. A bare <table> or </table> counts
+    only next to paper rows, so other HTML tables (Contents) are left alone."""
+    line = lines[i]
+    if line == OPEN:
+        return i + 1 < len(lines) and entry(lines[i + 1])
+    if line == CLOSE:
+        return i > 0 and entry(lines[i - 1])
+    return entry(line)
 
 
 def main():
@@ -90,13 +101,13 @@ def main():
     end = next(i for i, l in enumerate(lines) if l.startswith("## Updates"))
     out, i, converted = [], 0, 0
     while i < len(lines):
-        if not (i < end and part(lines[i])):
+        if not (i < end and part(lines, i)):
             out.append(lines[i])
             i += 1
             continue
         rows = []
         while i < end:
-            if part(lines[i]):
+            if part(lines, i):
                 m = PLAIN.match(lines[i])
                 if m:
                     rows.append(row(m))
