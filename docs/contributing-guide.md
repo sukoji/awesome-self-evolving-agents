@@ -48,6 +48,8 @@ If you cannot verify a stable ID:
 - **Paper Title** — Venue'Year. `needs-link`. One neutral sentence. (PR note: could not verify arXiv ID.)
 ```
 
+The README shows papers as table rows. Add your line at the end of the right section, or copy a neighbouring row; on the next pass a maintainer folds plain lines into the table with `.github/scripts/format_entries.py`. A `needs-link` entry is folded in once its link is verified.
+
 ### 4. Open a PR
 
 - Branch name: `add/paper-short-name`
